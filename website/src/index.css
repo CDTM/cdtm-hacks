@@ -1,0 +1,381 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/Avenir-Roman.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/Avenir-Heavy.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/Avenir-Black.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/Avenir-Oblique.ttf") format("truetype");
+  font-weight: 400;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/Avenir-HeavyOblique.ttf") format("truetype");
+  font-weight: 600;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/Avenir-BlackOblique.ttf") format("truetype");
+  font-weight: 700;
+  font-style: oblique;
+}
+
+/* @font-face {
+  font-family: "HealTheWebB";
+  src: url("/fonts/HealTheWebB-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: oblique;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 219 100% 94%; /* Pale blue (#e0ebff) */
+    --foreground: 220 20% 35%; /* Dark gray (#4a5568) */
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 35%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 35%;
+
+    --primary: 218 85% 34%; /* Primary blue (#0d4da1) */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%; /* Light gray (#f5f7fa) */
+    --secondary-foreground: 220 20% 35%;
+
+    --accent: 218 85% 34%; /* Primary blue for accents */
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 220 13% 46%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 71% 45%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 0% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-springPaleBlue text-springText antialiased;
+    font-family: "Avenir", sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply tracking-tight text-springText;
+    font-family: "Avenir", sans-serif;
+  }
+
+  h1 {
+    @apply text-4xl font-bold md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl font-bold md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold md:text-3xl;
+  }
+
+  p {
+    @apply leading-7 text-springText;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+}
+
+.parallax-container {
+  @apply relative overflow-hidden;
+  min-height: 90vh;
+  width: 100%;
+  background: linear-gradient(180deg, #e0ebff 0%, #ffffff 100%);
+}
+
+.parallax-layer {
+  @apply absolute w-full h-full left-0;
+  background-size: cover;
+  background-position: bottom center;
+  will-change: transform;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@media (max-width: 767px) {
+  .parallax-container {
+    @apply static;
+    background: linear-gradient(180deg, #e0ebff 0%, #ffffff 100%);
+    min-height: 75vh;
+  }
+
+  .parallax-layer {
+    @apply absolute w-full h-full left-0;
+    background-attachment: scroll;
+  }
+}
+
+.section-transition {
+  @apply py-24 md:pt-16 md:pb-24 relative overflow-hidden;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.link-underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-underline:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.link-underline:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.glass {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-sm;
+}
+
+.timeline-container {
+  @apply relative mx-auto;
+}
+
+.timeline-container::after {
+  content: "";
+  @apply absolute top-0 bottom-0 w-1 bg-springMint left-1/2 -ml-0.5;
+}
+
+.timeline-item {
+  @apply relative w-full mb-8 flex items-center justify-between;
+}
+
+.timeline-content {
+  @apply relative p-6 rounded-lg shadow-sm border border-springGreen bg-white/90 backdrop-blur-sm w-5/12;
+}
+
+.timeline-content::after {
+  content: "";
+  @apply absolute top-1/2 w-4 h-4 rounded-full bg-springMint border-4 border-white z-10;
+}
+
+.timeline-left .timeline-content::after {
+  @apply -right-8;
+}
+
+.timeline-right .timeline-content::after {
+  @apply -left-8;
+}
+
+.timeline-left {
+  @apply justify-start;
+}
+
+.timeline-right {
+  @apply justify-end;
+}
+
+@media (max-width: 767px) {
+  .timeline-container::after {
+    @apply left-4;
+  }
+
+  .timeline-item {
+    @apply flex-col items-start;
+  }
+
+  .timeline-content {
+    @apply w-full ml-12;
+  }
+
+  .timeline-left .timeline-content::after,
+  .timeline-right .timeline-content::after {
+    @apply -left-8;
+  }
+}
+
+.btn-hover-effect {
+  @apply relative transition-colors duration-150 
+    bg-springBlue text-white 
+    hover:bg-springBlue/80;
+  box-shadow: 0 2px 10px rgba(13, 77, 161, 0.1);
+}
+
+.form-input {
+  @apply w-full px-4 py-2 rounded-md border border-gray-200 bg-white/80 focus:ring-2 focus:ring-springBlue/30 focus:border-springBlue outline-none transition duration-200;
+}
+
+.form-label {
+  @apply block text-springText text-sm font-medium mb-1;
+}
+
+.form-select {
+  @apply w-full px-4 py-2 rounded-md border border-gray-200 bg-white/80 focus:ring-2 focus:ring-springBlue/30 focus:border-springBlue outline-none transition duration-200;
+}
+
+html {
+  scroll-behavior: smooth;
+  @apply bg-springPaleBlue text-springText;
+}
+
+.mobile-menu {
+  @apply fixed top-0 right-0 h-screen w-4/5 max-w-sm bg-white/95 backdrop-blur-md shadow-lg z-50 
+  transform transition-transform duration-300 ease-in-out;
+}
+
+.mobile-menu.hidden {
+  @apply translate-x-full;
+}
+
+.mobile-menu.visible {
+  @apply translate-x-0;
+}
+
+.hamburger {
+  @apply relative w-6 h-5 flex flex-col justify-between z-50 cursor-pointer;
+}
+
+.hamburger span {
+  @apply block h-0.5 w-full bg-springText transition-all duration-300 ease-in-out;
+}
+
+.hamburger.active span:nth-child(1) {
+  @apply transform rotate-45 translate-y-2;
+}
+
+.hamburger.active span:nth-child(2) {
+  @apply opacity-0;
+}
+
+.hamburger.active span:nth-child(3) {
+  @apply transform -rotate-45 -translate-y-2;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
