@@ -12,7 +12,7 @@ export const MAIN_SPONSOR: Sponsor = {
 export const CASE_SPONSORS: Sponsor[] = [
   {
     name: "Trade Republic",
-    image: "/images/partners/tr.png",
+    image: "/images/partners/trade_republic.svg",
     link: "https://traderepublic.com/",
   },
   {
@@ -55,7 +55,7 @@ export const CHALLENGE_SPONSORS: Sponsor[] = [
 export const SUPPORT_SPONSORS: Sponsor[] = [
   {
     name: "OpenAI",
-    image: "/images/partners/OpenAI_Logo.png",
+    image: "/images/partners/OpenAI_Logo.svg",
     link: "https://openai.com/",
   },
   {
