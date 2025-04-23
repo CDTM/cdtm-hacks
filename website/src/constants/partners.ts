@@ -48,7 +48,10 @@ export const CHALLENGE_SPONSORS: Sponsor[] = [
     class: "max-w-[200px]",
   },
   {
-    name: "To be announced",
+    name: "paid.ai",
+    image: "/images/partners/paid_ai.svg",
+    class: "max-w-[130px]",
+    link: "https://paid.ai/",
   },
 ];
 
