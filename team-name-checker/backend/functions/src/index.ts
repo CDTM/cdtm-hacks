@@ -38,14 +38,16 @@ export const handleFormbricksWebhook = functions.https.onRequest(
       return;
     }
 
-    const teamRef = admin.firestore().collection("Teams").doc();
+    const teamRef = admin.firestore().collection("Teams").where("name", "==", teamName);
     const teamDoc = await teamRef.get();
-    if (!teamDoc.exists) {
-      console.log("Team not found, creating");
-      await teamRef.set({name: teamName});
-    } else {
+    if (!teamDoc.empty) {
       console.log("Team already exists");
+      response.status(200).send("OK");
+      return;
     }
+
+    console.log("Team not found, creating");
+    await teamRef.set({name: teamName});
 
     response.status(200).send("OK");
   },
