@@ -50,7 +50,12 @@ const Navbar = () => {
           { id: "partners", label: "Partners", url: "#partners" },
           { id: "speakers", label: "Speakers", url: "#speakers" },
           { id: "schedule", label: "Schedule", url: "#schedule" },
-          { id: "about-us", label: "CDTM", url: "#about-us" },
+          { id: "about-us", label: "Organisers", url: "#about-us" },
+          {
+            id: "github",
+            label: "GitHub",
+            url: "https://github.com/CDTM/cdtm-hacks",
+          },
         ],
       },
     ],
@@ -103,6 +108,14 @@ const Navbar = () => {
             className="text-springText/80 hover:text-springBlue transition-colors flex items-center gap-2"
           >
             Organisers
+          </a>
+          <a
+            href="https://github.com/CDTM/cdtm-hacks"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-springText/80 hover:text-springBlue transition-colors flex items-center gap-1"
+          >
+            GitHub
           </a>
           <a
             href="https://app.formbricks.com/s/cm87i0iq40000ji039uyra9hq"

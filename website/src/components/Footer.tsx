@@ -66,6 +66,14 @@ const Footer = () => {
             >
               Impressum
             </a>
+            <a
+              href="https://github.com/CDTM/cdtm-hacks"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-200 hover:text-white underline"
+            >
+              GitHub
+            </a>
           </div>
         </div>
       </div>
