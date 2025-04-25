@@ -92,6 +92,16 @@ export const SUPPORT_SPONSORS: Sponsor[] = [
     link: "https://cognition.ai/",
   },
   {
+    name: "Ciao Coffee",
+    image: "/images/partners/ciao.png",
+    link: "https://www.ciaocoffee.eu/",
+  },
+  {
+    name: "VollCorner bio",
+    image: "/images/partners/vollcorner.jpg",
+    link: "hhttps://www.vollcorner.de/",
+  },
+  {
     name: "To be announced",
   },
 ];
