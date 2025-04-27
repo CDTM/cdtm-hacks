@@ -48,9 +48,19 @@ export const CHALLENGE_SPONSORS: Sponsor[] = [
     class: "max-w-[200px]",
   },
   {
+    name: "Beyond Presence",
+    image: "/images/partners/beyond_presence.svg",
+    link: "https://www.beyondpresence.ai/",
+  },
+  {
+    name: "Lightspeed",
+    image: "/images/partners/lightspeed.png",
+    link: "https://lsvp.com/",
+  },
+  {
     name: "paid.ai",
     image: "/images/partners/paid_ai.svg",
-    class: "max-w-[130px]",
+    class: "max-h-[30px]",
     link: "https://paid.ai/",
   },
 ];
@@ -92,6 +102,11 @@ export const SUPPORT_SPONSORS: Sponsor[] = [
     link: "https://cognition.ai/",
   },
   {
+    name: "Reimann Investors",
+    image: "/images/partners/reimann.svg",
+    link: "https://www.reimann-investors.com/en",
+  },
+  {
     name: "Momento",
     image: "/images/partners/momento.svg",
     link: "https://www.instagram.com/momento_ita/",
@@ -104,7 +119,7 @@ export const SUPPORT_SPONSORS: Sponsor[] = [
   {
     name: "VollCorner bio",
     image: "/images/partners/vollcorner.jpg",
-    link: "hhttps://www.vollcorner.de/",
+    link: "https://www.vollcorner.de/",
   },
   {
     name: "To be announced",
