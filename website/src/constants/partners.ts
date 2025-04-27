@@ -92,6 +92,11 @@ export const SUPPORT_SPONSORS: Sponsor[] = [
     link: "https://cognition.ai/",
   },
   {
+    name: "Momento",
+    image: "/images/partners/momento.svg",
+    link: "https://www.instagram.com/momento_ita/",
+  },
+  {
     name: "Ciao Coffee",
     image: "/images/partners/ciao.png",
     link: "https://www.ciaocoffee.eu/",
