@@ -6,7 +6,9 @@ export interface Sponsor {
 }
 
 export const MAIN_SPONSOR: Sponsor = {
-  name: "To be announced",
+  name: "Speedinvest",
+  image: "/images/partners/speedinvest.png",
+  link: "https://speedinvest.com/",
 };
 
 export const CASE_SPONSORS: Sponsor[] = [
@@ -65,11 +67,6 @@ export const TECH_SPONSORS: Sponsor[] = [
     name: "Lightspeed",
     image: "/images/partners/lightspeed.png",
     link: "https://lsvp.com/",
-  },
-  {
-    name: "Speedinvest",
-    image: "/images/partners/speedinvest.png",
-    link: "https://speedinvest.com/",
   },
   {
     name: "OpenAI",
@@ -133,6 +130,16 @@ export const FOOD_SPONSORS: Sponsor[] = [
     name: "Leuchtturm1917",
     image: "/images/partners/leuchtturm.svg",
     link: "https://www.leuchtturm1917.de/",
+  },
+  {
+    name: "Red Bull Energy Drink",
+    image: "/images/partners/redbull.svg",
+    link: "https://www.redbull.com/de-de",
+  },
+  {
+    name: "Fruiton",
+    image: "/images/partners/fruiton.jpeg",
+    link: "https://www.fruiton.de/",
   },
   {
     name: "To be announced",
