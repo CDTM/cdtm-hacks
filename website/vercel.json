@@ -9,5 +9,12 @@
       "source": "/(.*)",
       "destination": "/"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/apply",
+      "destination": "https://app.formbricks.com/s/cm87i0iq40000ji039uyra9hq",
+      "permanent": true
+    }
   ]
 }
