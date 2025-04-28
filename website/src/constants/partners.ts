@@ -132,6 +132,11 @@ export const FOOD_SPONSORS: Sponsor[] = [
     link: "https://www.leuchtturm1917.de/",
   },
   {
+    name: "CHECK24",
+    image: "/images/partners/check24.png",
+    link: "https://www.check24.de/",
+  },
+  {
     name: "Red Bull Energy Drink",
     image: "/images/partners/redbull.svg",
     link: "https://www.redbull.com/de-de",
