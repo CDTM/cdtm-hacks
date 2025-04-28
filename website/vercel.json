@@ -15,6 +15,11 @@
       "source": "/apply",
       "destination": "https://app.formbricks.com/s/cm87i0iq40000ji039uyra9hq",
       "permanent": true
+    },
+    {
+      "source": "/discord",
+      "destination": "https://discord.gg/UPG8h74VAU",
+      "permanent": true
     }
   ]
 }
