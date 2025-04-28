@@ -53,11 +53,6 @@ export const CHALLENGE_SPONSORS: Sponsor[] = [
     link: "https://www.beyondpresence.ai/",
   },
   {
-    name: "Lightspeed",
-    image: "/images/partners/lightspeed.png",
-    link: "https://lsvp.com/",
-  },
-  {
     name: "paid.ai",
     image: "/images/partners/paid_ai.svg",
     class: "max-h-[30px]",
@@ -65,7 +60,17 @@ export const CHALLENGE_SPONSORS: Sponsor[] = [
   },
 ];
 
-export const SUPPORT_SPONSORS: Sponsor[] = [
+export const TECH_SPONSORS: Sponsor[] = [
+  {
+    name: "Lightspeed",
+    image: "/images/partners/lightspeed.png",
+    link: "https://lsvp.com/",
+  },
+  {
+    name: "Speedinvest",
+    image: "/images/partners/speedinvest.png",
+    link: "https://speedinvest.com/",
+  },
   {
     name: "OpenAI",
     image: "/images/partners/OpenAI_Logo.svg",
@@ -75,11 +80,6 @@ export const SUPPORT_SPONSORS: Sponsor[] = [
     name: "Lovable",
     image: "/images/partners/lovable_logo.svg",
     link: "https://lovable.dev/",
-  },
-  {
-    name: "Speedinvest",
-    image: "/images/partners/speedinvest.png",
-    link: "https://speedinvest.com/",
   },
   {
     name: "Langfuse",
@@ -101,6 +101,9 @@ export const SUPPORT_SPONSORS: Sponsor[] = [
     image: "/images/partners/cognition.png",
     link: "https://cognition.ai/",
   },
+];
+
+export const FOOD_SPONSORS: Sponsor[] = [
   {
     name: "Reimann Investors",
     image: "/images/partners/reimann.svg",
@@ -120,6 +123,16 @@ export const SUPPORT_SPONSORS: Sponsor[] = [
     name: "VollCorner bio",
     image: "/images/partners/vollcorner.jpg",
     link: "https://www.vollcorner.de/",
+  },
+  {
+    name: "Gustavo Gusto",
+    image: "/images/partners/gustavo_gusto.png",
+    link: "https://gustavo-gusto.de/",
+  },
+  {
+    name: "Leuchtturm1917",
+    image: "/images/partners/leuchtturm.svg",
+    link: "https://www.leuchtturm1917.de/",
   },
   {
     name: "To be announced",

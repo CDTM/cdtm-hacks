@@ -1,7 +1,8 @@
 import {
   CASE_SPONSORS,
   CHALLENGE_SPONSORS,
-  SUPPORT_SPONSORS,
+  FOOD_SPONSORS,
+  TECH_SPONSORS,
 } from "@/constants/partners";
 import { Lock } from "lucide-react";
 
@@ -83,7 +84,7 @@ const Partners = () => {
           <h3 className="text-center text-xl text-springText/80 mb-8">
             Challenge Sponsors
           </h3>
-          <div className="flex flex-wrap justify-center gap-6 max-w-7xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
             {CHALLENGE_SPONSORS.map((sponsor, index) => (
               <div
                 key={index}
@@ -111,13 +112,46 @@ const Partners = () => {
           </div>
         </div>
 
-        {/* Tech & Food Sponsors */}
+        {/* Tech Sponsors */}
         <div className="mb-12">
           <h3 className="text-center text-xl text-springText/80 mb-8">
-            Tech & Food Sponsors
+            Tech Sponsors
           </h3>
           <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
-            {SUPPORT_SPONSORS.map((sponsor, index) => (
+            {TECH_SPONSORS.map((sponsor, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center p-6 rounded-lg bg-white border border-springBlue/5 shadow-sm w-[calc(33%-1rem)] min-w-[230px] max-w-[250px] h-[120px] transition-all hover:shadow-md relative overflow-hidden md:w-[calc(33%-1rem)] md:max-w-[200px]"
+              >
+                {sponsor.image ? (
+                  <img
+                    src={sponsor.image}
+                    alt={sponsor.name}
+                    className={`object-contain w-full h-full ${sponsor.class}`}
+                  />
+                ) : (
+                  <SponsorPlaceholder index={index} />
+                )}
+                {sponsor.link && (
+                  <a
+                    href={sponsor.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity"
+                  />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Food Sponsors */}
+        <div className="mb-12">
+          <h3 className="text-center text-xl text-springText/80 mb-8">
+            Event Sponsors
+          </h3>
+          <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
+            {FOOD_SPONSORS.map((sponsor, index) => (
               <div
                 key={index}
                 className="flex items-center justify-center p-6 rounded-lg bg-white border border-springBlue/5 shadow-sm w-[calc(33%-1rem)] min-w-[230px] max-w-[250px] h-[120px] transition-all hover:shadow-md relative overflow-hidden md:w-[calc(33%-1rem)] md:max-w-[200px]"
