@@ -32,7 +32,7 @@ export const FAQS: FAQItem[] = [
   {
     question: "What should I bring?",
     answer:
-      "Bring your laptop, charger, and any other devices you might need. Don't forget personal items like a change of clothes and toiletries if you plan to stay overnight. We'll provide the rest!",
+      "Bring your laptop, charger, and any other devices you might need. Don't forget a sleeping mat, change of clothes and toiletries if you plan to stay overnight. We'll provide the rest!",
   },
   {
     question: "Will there be food and drinks?",
