@@ -15,7 +15,7 @@ export const SCHEDULE_DAYS: ScheduleDay[] = [
     title: "Friday, 9th May",
     events: [
       {
-        time: "18:00",
+        time: "16:00",
         title: "Doors Open",
         description: "Welcome & Registration",
       },
@@ -81,7 +81,7 @@ export const SCHEDULE_DAYS: ScheduleDay[] = [
         description: "Evaluation and award ceremony",
       },
       {
-        time: "14:00",
+        time: "15:00",
         title: "Event Ends",
         description: "Official conclusion",
       },
