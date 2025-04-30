@@ -137,11 +137,6 @@ export const FOOD_SPONSORS: Sponsor[] = [
     link: "https://www.check24.de/",
   },
   {
-    name: "Red Bull Energy Drink",
-    image: "/images/partners/redbull.svg",
-    link: "https://www.redbull.com/de-de",
-  },
-  {
     name: "Fruiton",
     image: "/images/partners/fruiton.jpeg",
     link: "https://www.fruiton.de/",
