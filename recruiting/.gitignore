@@ -1,0 +1,2 @@
+# Ignore the confirmed participants CSV file since it contains personal data
+confirmed_participants.csv
