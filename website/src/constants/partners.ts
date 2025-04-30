@@ -39,6 +39,11 @@ export const CHALLENGE_SPONSORS: Sponsor[] = [
     link: "https://www.tanso.de/en",
   },
   {
+    name: "Mistral",
+    image: "/images/partners/mistral-ai-2025.svg",
+    link: "https://mistral.ai/",
+  },
+  {
     name: "Visionaries Club",
     image: "/images/partners/visionaries_club.svg",
     class: "max-w-[200px]",
@@ -82,11 +87,6 @@ export const TECH_SPONSORS: Sponsor[] = [
     name: "Langfuse",
     image: "/images/partners/langfuse_logo.svg",
     link: "https://langfuse.com/",
-  },
-  {
-    name: "Mistral",
-    image: "/images/partners/mistral-ai-2025.svg",
-    link: "https://mistral.ai/",
   },
   {
     name: "Make",
