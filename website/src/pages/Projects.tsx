@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
-import { projects, caseNames, Project } from "@/constants/projects";
+import { projects, caseNames, challenges, Project } from "@/constants/projects";
 import { ProjectDialog } from "@/components/ProjectDialog";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useParams, useNavigate } from "react-router-dom";
-import { Trophy } from "lucide-react";
+import { Trophy, Award } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 // Define the order of cases
 const caseOrder = ['trade-republic', 'avi', 'beam'] as const;
@@ -38,6 +40,17 @@ export default function Projects() {
 
     // Use predefined case order
     const sortedCases = caseOrder;
+
+    // Group projects by challenge
+    const projectsByChallenge = projects.reduce((acc, project) => {
+        project.challenges?.forEach(challenge => {
+            if (!acc[challenge.name]) {
+                acc[challenge.name] = [];
+            }
+            acc[challenge.name].push(project);
+        });
+        return acc;
+    }, {} as Record<string, Project[]>);
 
     // Handle project selection from URL
     useEffect(() => {
@@ -78,47 +91,95 @@ export default function Projects() {
         );
     };
 
-    return (
-        <div className="bg-gradient-to-b from-green-50/30 to-white/10 z-0">
-            <div className="container mx-auto py-12 px-4 min-h-screen">
-                <header className="text-center mb-16">
-                    <h1 className="text-4xl font-bold mb-4">Projects from CDTM Hacks 2025</h1>
-                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        Explore the innovative solutions created by our talented teams. Each project represents a unique approach to solving real-world challenges.
-                    </p>
-                </header>
-
-                <div className="space-y-12">
-                    {sortedCases.map((caseKey) => (
-                        <section key={caseKey}>
-                            <h2 className="text-2xl font-semibold mb-6">{caseNames[caseKey as keyof typeof caseNames]}</h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {projectsByCase[caseKey].map((project) => (
-                                    <Card 
-                                        key={project.id}
-                                        className="cursor-pointer hover:shadow-lg transition-shadow relative"
-                                        onClick={() => handleProjectSelect(project)}
-                                    >
-                                        {getPlacementBadge(project.placement)}
-                                        <CardHeader>
-                                            <CardTitle>{project.name}</CardTitle>
-                                        </CardHeader>
-                                        <CardContent>
-                                            <CardDescription>{project.pitch}</CardDescription>
-                                        </CardContent>
-                                    </Card>
-                                ))}
-                            </div>
-                        </section>
-                    ))}
-                </div>
-
-                <ProjectDialog
-                    project={selectedProject}
-                    open={!!selectedProject}
-                    onOpenChange={handleDialogClose}
-                />
+    const getChallengeIndicator = (challenges?: Project['challenges']) => {
+        if (!challenges?.length) return null;
+        
+        return (
+            <div className="absolute -bottom-3 -right-3 w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center shadow-md transform rotate-12">
+                <Award className="w-6 h-6 text-white" />
             </div>
+        );
+    };
+
+    return (
+        <div className="min-h-[80vh] overflow-x-hidden">
+            <Navbar />
+            <div className="bg-gradient-to-b from-green-50/30 to-white/10 z-0 mt-16">
+                <div className="container mx-auto py-12 px-4 min-h-screen">
+                    <header className="text-center mb-16">
+                        <h1 className="text-4xl font-bold mb-4">Projects from CDTM Hacks 2025</h1>
+                        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                            Explore the innovative solutions created by our talented teams. Each project represents a unique approach to solving real-world challenges.
+                        </p>
+                    </header>
+
+                    {/* Cases Section */}
+                    <div className="space-y-12 mb-16">
+                        {sortedCases.map((caseKey) => (
+                            <section key={caseKey}>
+                                <h2 className="text-2xl font-semibold mb-6">{caseNames[caseKey as keyof typeof caseNames]}</h2>
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                    {projectsByCase[caseKey].map((project) => (
+                                        <Card 
+                                            key={project.id}
+                                            className="cursor-pointer hover:shadow-lg transition-shadow relative"
+                                            onClick={() => handleProjectSelect(project)}
+                                        >
+                                            {getPlacementBadge(project.placement)}
+                                            {getChallengeIndicator(project.challenges)}
+                                            <CardHeader>
+                                                <CardTitle>{project.name}</CardTitle>
+                                            </CardHeader>
+                                            <CardContent>
+                                                <CardDescription>{project.pitch}</CardDescription>
+                                            </CardContent>
+                                        </Card>
+                                    ))}
+                                </div>
+                            </section>
+                        ))}
+                    </div>
+
+                    {/* Challenges Section */}
+                    <div className="space-y-12">
+                        <h2 className="text-2xl font-semibold mb-6">Challenge Winners</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {Object.entries(challenges).map(([key, challenge]) => (
+                                <Card key={key} className="relative">
+                                    <CardHeader>
+                                        <div className="flex items-center gap-2">
+                                            <Award className="w-5 h-5 text-purple-500" />
+                                            <CardTitle>{challenge.name}</CardTitle>
+                                        </div>
+                                        <CardDescription>{challenge.description}</CardDescription>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <div className="space-y-2 bg-gray-50 rounded-lg">
+                                            {projectsByChallenge[challenge.name]?.map(project => (
+                                                <div 
+                                                    key={project.id}
+                                                    className="cursor-pointer hover:bg-gray-100 p-4 rounded-md transition-colors"
+                                                    onClick={() => handleProjectSelect(project)}
+                                                >
+                                                    <div className="font-medium">{project.name}</div>
+                                                    <div className="text-sm text-gray-500">{project.pitch}</div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            ))}
+                        </div>
+                    </div>
+
+                    <ProjectDialog
+                        project={selectedProject}
+                        open={!!selectedProject}
+                        onOpenChange={handleDialogClose}
+                    />
+                </div>
+            </div>
+            <Footer />
         </div>
     );
 } 

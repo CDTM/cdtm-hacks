@@ -7,6 +7,10 @@ export interface Project {
   githubUrl: string;
   videoUrl: string;
   placement?: 1 | 2;
+  challenges?: Array<{
+    name: "Tanso" | "Visionaries Club" | "Mistral AI";
+    description: string;
+  }>;
 }
 
 export const projects: Project[] = [
@@ -21,6 +25,12 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/demo/wealthwave",
     videoUrl: "https://youtube.com/watch?v=demo1",
     placement: 1,
+    challenges: [
+      {
+        name: "Visionaries Club",
+        description: "Most potential to earn real money"
+      },
+    ]
   },
   {
     id: "project-tr-2",
@@ -238,6 +248,12 @@ export const projects: Project[] = [
     pitch: "One-click crypto payments, powered by Beam.",
     githubUrl: "https://github.com/demo/paybeam",
     videoUrl: "https://youtube.com/watch?v=demo22",
+    challenges: [
+      {
+        name: "Mistral AI",
+        description: "Best use of MistralAI API"
+      },
+    ]
   },
   {
     id: "project-beam-3",
@@ -310,6 +326,12 @@ export const projects: Project[] = [
     pitch: "Prove things about yourself without revealing your identity.",
     githubUrl: "https://github.com/demo/proofme",
     videoUrl: "https://youtube.com/watch?v=demo29",
+    challenges: [
+        {
+            name: "Tanso",
+            description: "SMEs would love this"
+        },
+    ]
   },
   {
     id: "project-beam-10",
@@ -327,4 +349,19 @@ export const caseNames = {
   "trade-republic": "Trade Republic",
   avi: "avi",
   beam: "Beam",
+} as const;
+
+export const challenges = {
+  tanso: {
+    name: "Tanso",
+    description: "SMEs would love this"
+  },
+  visionariesClub: {
+    name: "Visionaries Club",
+    description: "Most potential to earn real money"
+  },
+  mistralAI: {
+    name: "Mistral AI",
+    description: "Best use of MistralAI API"
+  }
 } as const;
