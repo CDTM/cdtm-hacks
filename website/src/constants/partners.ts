@@ -14,7 +14,7 @@ export const MAIN_SPONSOR: Sponsor = {
 export const CASE_SPONSORS: Sponsor[] = [
   {
     name: "Trade Republic",
-    image: "/images/partners/trade_republic.svg",
+    image: "/images/partners/trade_republic.png",
     link: "https://traderepublic.com/",
   },
   {
