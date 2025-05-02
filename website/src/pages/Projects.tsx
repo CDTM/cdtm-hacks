@@ -7,6 +7,7 @@ import { Trophy, Award } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { MAIN_SPONSOR, CASE_SPONSORS, CHALLENGE_SPONSORS, TECH_SPONSORS, FOOD_SPONSORS, VENUE_SPONSORS } from "@/constants/partners";
 
 // Define the order of cases
 const caseOrder = ['trade-republic', 'avi', 'beam'] as const;
@@ -287,6 +288,31 @@ export default function Projects() {
                                     </Card>
                                 );
                             })}
+                        </div>
+                    </div>
+
+                    {/* Sponsor Wall Section */}
+                    <div className="mt-24 mb-16">
+                        <h2 className="text-2xl font-semibold mb-4 text-center">Our Sponsors</h2>
+                        <p className="text-springText/80 text-center mb-12 max-w-2xl mx-auto">
+                            A special thanks to our sponsors who made this event possible. Their support and commitment to innovation help us create an unforgettable experience for all participants.
+                        </p>
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 md:gap-12 lg:gap-20 items-center justify-items-center">
+                            {[...CASE_SPONSORS, MAIN_SPONSOR, VENUE_SPONSORS, ...CHALLENGE_SPONSORS, ...TECH_SPONSORS, ...FOOD_SPONSORS].map((sponsor) => (
+                                <a
+                                    key={sponsor.name}
+                                    href={sponsor.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block hover:opacity-80 transition-opacity"
+                                >
+                                    <img
+                                        src={sponsor.image}
+                                        alt={sponsor.name}
+                                        className={`h-8 md:h-10 lg:h-12 w-auto object-contain ${sponsor.class || ''}`}
+                                    />
+                                </a>
+                            ))}
                         </div>
                     </div>
 
