@@ -74,6 +74,30 @@ export const challenges: Record<string, Challenge> = {
       },
     ],
   },
+  mistral: {
+    name: "Best use of MistralAI API",
+    sponsoredBy: "Mistral AI",
+    companies: [
+      {
+        name: "Mistral AI",
+        url: "https://mistral.ai/",
+        logoPath: "/images/partners/mistral-ai-2025.svg",
+        logoClass: "max-h-[20px] max-w-[200px]",
+      },
+    ],
+  },
+  'beyond-presence': {
+    name: "Best use of Beyond Presence API",
+    sponsoredBy: "Beyond Presence",
+    companies: [
+      {
+        name: "Beyond Presence",
+        url: "https://www.beyondpresence.ai/",
+        logoPath: "/images/partners/beyond_presence.svg",
+        logoClass: "max-h-[20px] max-w-[200px]",
+      },
+    ]
+  },
   visionaries: {
     name: "Most potential to earn real money",
     sponsoredBy: "Visionaries Club, Everyday Intelligence and paid.ai",
@@ -98,30 +122,18 @@ export const challenges: Record<string, Challenge> = {
       },
     ],
   },
-  mistral: {
-    name: "Best use of MistralAI API",
-    sponsoredBy: "Mistral AI",
+  celonis: {
+    name: "Best use of Celonis API",
+    sponsoredBy: "Celonis",
     companies: [
       {
-        name: "Mistral AI",
-        url: "https://mistral.ai/",
-        logoPath: "/images/partners/mistral-ai-2025.svg",
+        name: "Celonis",
+        url: "https://celonis.com/",
+        logoPath: "/images/partners/celonis_logo.svg",
         logoClass: "max-h-[20px] max-w-[200px]",
       },
     ],
   },
-  'beyond-presence': {
-    name: "Best use of Beyond Presence API",
-    sponsoredBy: "Beyond Presence",
-    companies: [
-      {
-        name: "Beyond Presence",
-        url: "https://www.beyondpresence.ai/",
-        logoPath: "/images/partners/beyond_presence.svg",
-        logoClass: "max-h-[20px] max-w-[200px]",
-      },
-    ]
-  }
 } as const;
 
 export const projects: Project[] = [
