@@ -137,7 +137,7 @@ export default function Projects() {
     return (
         <div className="min-h-[80vh] overflow-x-hidden">
             <Navbar />
-            <div className="bg-gradient-to-b from-green-50/30 to-white/10 z-0 mt-16">
+            <div className="bg-white z-0 mt-16">
                 <div className="container mx-auto py-12 px-4 min-h-screen">
                     <header className="text-center mb-16">
                         <h1 className="text-4xl font-bold mb-4">Projects from CDTM Hacks 2025</h1>
@@ -165,11 +165,11 @@ export default function Projects() {
                                     </a>
                                 </div>
                                 <p className="text-gray-600 mb-4">{cases[caseKey as keyof typeof cases].description}</p>
-                                <div className="grid grid-cols-1 gap-8">
+                                <div className="grid grid-cols-1 gap-8 overflow-visible relative">
                                     {projectsByCase[caseKey].map((project) => (
                                         <Card
                                             key={project.id}
-                                            className="cursor-pointer hover:shadow-lg transition-shadow relative"
+                                            className="cursor-pointer hover:shadow-lg transition-shadow relative bg-springPaleBlue/30 backdrop-blur-sm border border-springBlue/10 z-0"
                                             onClick={() => handleProjectSelect(project)}
                                         >
                                             {getPlacementBadge(project.placement, cases[caseKey as keyof typeof cases].name)}
@@ -188,7 +188,7 @@ export default function Projects() {
                     </div>
 
                     {/* Desktop view - Column layout */}
-                    <div className="hidden md:grid md:grid-cols-3 gap-8 mb-16">
+                    <div className="hidden md:grid md:grid-cols-3 gap-8 mb-16 overflow-visible relative">
                         {sortedCases.map((caseKey) => (
                             <section key={caseKey}>
                                 <div className="flex items-center gap-3 mb-4">
@@ -205,7 +205,7 @@ export default function Projects() {
                                     {projectsByCase[caseKey].map((project) => (
                                         <Card
                                             key={project.id}
-                                            className="cursor-pointer hover:shadow-lg transition-shadow relative"
+                                            className="cursor-pointer hover:shadow-lg transition-shadow relative bg-springPaleBlue/30 backdrop-blur-sm border border-springBlue/10 z-0"
                                             onClick={() => handleProjectSelect(project)}
                                         >
                                             {getPlacementBadge(project.placement, cases[caseKey as keyof typeof cases].name)}
@@ -237,12 +237,12 @@ export default function Projects() {
                         </p>
                     </div>
                     <div className="space-y-12">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-visible relative">
                             {challengeOrder.map((challengeKey) => {
                                 const challenge = challenges[challengeKey];
                                 if (!challenge) return null;
                                 return (
-                                    <Card key={challengeKey} className="relative">
+                                    <Card key={challengeKey} className="relative bg-springPaleBlue/30 backdrop-blur-sm border border-springBlue/10 z-0">
                                         <CardHeader>
                                             <div className="flex items-center gap-3 min-h-[32px]">
                                                 <Award className="w-5 h-5 text-purple-500 flex-shrink-0 mb-4" />
@@ -268,7 +268,7 @@ export default function Projects() {
                                                 {projectsByChallenge[challenge.sponsoredBy]?.map(project => (
                                                     <div
                                                         key={project.id}
-                                                        className="cursor-pointer bg-gray-50 hover:bg-gray-100 p-4 rounded-md transition-colors"
+                                                        className="cursor-pointer bg-white hover:bg-gray-50 p-4 rounded-md transition-colors"
                                                         onClick={() => handleProjectSelect(project)}
                                                     >
                                                         <div className="font-medium">{project.name}</div>
