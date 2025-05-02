@@ -6,6 +6,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { Trophy, Award } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 // Define the order of cases
 const caseOrder = ['trade-republic', 'avi', 'beam'] as const;
@@ -76,28 +77,51 @@ export default function Projects() {
         navigate(`/projects/2025/${project.id}`, { replace: true });
     };
 
-    const getPlacementBadge = (placement?: 1 | 2) => {
+    const getPlacementBadge = (placement?: 1 | 2, caseName?: string) => {
         if (!placement) return null;
         
         return (
-            <div className={`absolute -top-3 -right-3 w-12 h-12 rounded-full flex items-center justify-center ${
-                placement === 1 ? 'bg-yellow-400' : 'bg-gray-300'
-            } shadow-lg transform rotate-12`}>
-                <Trophy className={`w-6 h-6 ${placement === 1 ? 'text-yellow-900' : 'text-gray-700'}`} />
-                <span className="absolute text-sm font-bold">
-                    {placement}
-                </span>
-            </div>
+            <TooltipProvider>
+                <Tooltip delayDuration={100}>
+                    <TooltipTrigger asChild>
+                        <div className={`absolute -top-3 -right-3 w-12 h-12 rounded-full flex items-center justify-center ${
+                            placement === 1 ? 'bg-yellow-400' : 'bg-gray-300'
+                        } shadow-lg transform rotate-12`}>
+                            <Trophy className={`w-6 h-6 ${placement === 1 ? 'text-yellow-900' : 'text-gray-700'}`} />
+                            <span className="absolute text-sm font-bold">
+                                {placement}
+                            </span>
+                        </div>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                        <p>{placement === 1 ? `1st Place of ${caseName} Case` : `2nd Place of ${caseName} Case`}</p>
+                    </TooltipContent>
+                </Tooltip>
+            </TooltipProvider>
         );
     };
 
     const getChallengeIndicator = (challenges?: Project['challenges']) => {
         if (!challenges?.length) return null;
         
+        const challengeNames = challenges.map(c => c.name);
+        const tooltipText = challengeNames.length === 1 
+            ? `Winner of the "${challengeNames[0]}" Challenge`
+            : `Winner of the ${challengeNames.map(name => `"${name}"`).join(' and ')} Challenges`;
+        
         return (
-            <div className="absolute -bottom-3 -right-3 w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center shadow-md transform rotate-12">
-                <Award className="w-6 h-6 text-white" />
-            </div>
+            <TooltipProvider>
+                <Tooltip delayDuration={100}>
+                    <TooltipTrigger asChild>
+                        <div className="absolute -bottom-3 -right-3 w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center shadow-md transform rotate-12">
+                            <Award className="w-6 h-6 text-white" />
+                        </div>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                        <p>{tooltipText}</p>
+                    </TooltipContent>
+                </Tooltip>
+            </TooltipProvider>
         );
     };
 
@@ -125,7 +149,7 @@ export default function Projects() {
                                             className="cursor-pointer hover:shadow-lg transition-shadow relative"
                                             onClick={() => handleProjectSelect(project)}
                                         >
-                                            {getPlacementBadge(project.placement)}
+                                            {getPlacementBadge(project.placement, caseNames[caseKey as keyof typeof caseNames])}
                                             {getChallengeIndicator(project.challenges)}
                                             <CardHeader>
                                                 <CardTitle>{project.name}</CardTitle>
@@ -149,13 +173,13 @@ export default function Projects() {
                                     <CardHeader>
                                         <div className="flex items-center gap-2">
                                             <Award className="w-5 h-5 text-purple-500" />
-                                            <CardTitle>{challenge.name}</CardTitle>
+                                            <CardTitle>{challenge.company}</CardTitle>
                                         </div>
-                                        <CardDescription>{challenge.description}</CardDescription>
+                                        <CardDescription>{challenge.name}</CardDescription>
                                     </CardHeader>
                                     <CardContent>
                                         <div className="space-y-2 bg-gray-50 rounded-lg">
-                                            {projectsByChallenge[challenge.name]?.map(project => (
+                                            {projectsByChallenge[challenge.company]?.map(project => (
                                                 <div 
                                                     key={project.id}
                                                     className="cursor-pointer hover:bg-gray-100 p-4 rounded-md transition-colors"

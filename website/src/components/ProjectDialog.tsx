@@ -48,7 +48,7 @@ export function ProjectDialog({ project, open, onOpenChange }: ProjectDialogProp
                   {project.placement && (
                     <div className="flex items-center gap-2">
                       <Trophy className="w-5 h-5 text-yellow-500" />
-                      <Badge variant="secondary" className="bg-yellow-100 text-yellow-800">
+                      <Badge variant="secondary" className="bg-yellow-100 hover:bg-yellow-100 text-yellow-800">
                         {project.placement === 1 ? "1st Place" : "2nd Place"} in {project.case.charAt(0).toUpperCase() + project.case.slice(1)} Case
                       </Badge>
                     </div>
@@ -56,8 +56,8 @@ export function ProjectDialog({ project, open, onOpenChange }: ProjectDialogProp
                   {project.challenges?.map((challenge, index) => (
                     <div key={index} className="flex items-center gap-2">
                       <Award className="w-5 h-5 text-blue-500" />
-                      <Badge variant="secondary" className="bg-blue-100 text-blue-800">
-                        {challenge.name} Challenge: {challenge.description}
+                      <Badge variant="secondary" className="bg-blue-200/60 hover:bg-blue-200/60 text-blue-800">
+                        "{challenge.name}" Challenge by {challenge.company}
                       </Badge>
                     </div>
                   ))}

@@ -7,11 +7,34 @@ export interface Project {
   githubUrl: string;
   videoUrl: string;
   placement?: 1 | 2;
-  challenges?: Array<{
-    name: "Tanso" | "Visionaries Club" | "Mistral AI";
-    description: string;
-  }>;
+  challenges?: Array<Challenge>;
 }
+
+export type Challenge = {
+  company: string;
+  name: string;
+};
+
+export const caseNames = {
+  "trade-republic": "Trade Republic",
+  avi: "avi",
+  beam: "Beam",
+} as const;
+
+export const challenges: Record<string, Challenge> = {
+  tanso: {
+    company: "Tanso",
+    name: "SMEs would love this",
+  },
+  visionariesClub: {
+    company: "Visionaries Club",
+    name: "Most potential to earn real money",
+  },
+  mistralAI: {
+    company: "Mistral AI",
+    name: "Best use of MistralAI API",
+  },
+} as const;
 
 export const projects: Project[] = [
   // Trade Republic Projects
@@ -25,12 +48,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/demo/wealthwave",
     videoUrl: "https://youtube.com/watch?v=demo1",
     placement: 1,
-    challenges: [
-      {
-        name: "Visionaries Club",
-        description: "Most potential to earn real money"
-      },
-    ]
+    challenges: [challenges.visionariesClub],
   },
   {
     id: "project-tr-2",
@@ -248,12 +266,7 @@ export const projects: Project[] = [
     pitch: "One-click crypto payments, powered by Beam.",
     githubUrl: "https://github.com/demo/paybeam",
     videoUrl: "https://youtube.com/watch?v=demo22",
-    challenges: [
-      {
-        name: "Mistral AI",
-        description: "Best use of MistralAI API"
-      },
-    ]
+    challenges: [challenges.mistralAI],
   },
   {
     id: "project-beam-3",
@@ -326,12 +339,7 @@ export const projects: Project[] = [
     pitch: "Prove things about yourself without revealing your identity.",
     githubUrl: "https://github.com/demo/proofme",
     videoUrl: "https://youtube.com/watch?v=demo29",
-    challenges: [
-        {
-            name: "Tanso",
-            description: "SMEs would love this"
-        },
-    ]
+    challenges: [challenges.tanso],
   },
   {
     id: "project-beam-10",
@@ -344,24 +352,3 @@ export const projects: Project[] = [
     videoUrl: "https://youtube.com/watch?v=demo30",
   },
 ];
-
-export const caseNames = {
-  "trade-republic": "Trade Republic",
-  avi: "avi",
-  beam: "Beam",
-} as const;
-
-export const challenges = {
-  tanso: {
-    name: "Tanso",
-    description: "SMEs would love this"
-  },
-  visionariesClub: {
-    name: "Visionaries Club",
-    description: "Most potential to earn real money"
-  },
-  mistralAI: {
-    name: "Mistral AI",
-    description: "Best use of MistralAI API"
-  }
-} as const;
