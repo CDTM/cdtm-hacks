@@ -78,6 +78,14 @@ const Partners = () => {
               ) : (
                 <SponsorPlaceholder index={0} />
               )}
+              {MAIN_SPONSOR.link && (
+                  <a
+                    href={MAIN_SPONSOR.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity"
+                  />
+                )}
             </div>
           </div>
         </div>
