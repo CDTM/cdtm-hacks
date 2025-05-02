@@ -145,3 +145,9 @@ export const FOOD_SPONSORS: Sponsor[] = [
     name: "To be announced",
   },
 ];
+
+export const VENUE_SPONSORS: Sponsor = {
+  name: "Celonis",
+  image: "/images/partners/celonis_logo.svg",
+  link: "https://celonis.com",
+};
