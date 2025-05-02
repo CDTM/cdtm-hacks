@@ -20,6 +20,11 @@
       "source": "/discord",
       "destination": "https://discord.gg/UPG8h74VAU",
       "permanent": true
+    },
+    {
+      "source": "/calendar",
+      "destination": "https://calendar.google.com/calendar/u/0?cid=Y19jNGYyYWFjOTQzMWUwNTNmODBiZmQxNzgwZTE4NWQ0MTliMGVlOTk5YjVjNjZlOTg3MDAyYzQ1YzlhYjhhMWIwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20",
+      "permanent": true
     }
   ]
 }
