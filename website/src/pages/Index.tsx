@@ -105,8 +105,8 @@ const Index = () => {
     };
   }, []);
   return (
-    <div className="min-h-[80vh] overflow-x-hidden">
-      <Navbar />
+    <div className="min-h-[80vh] overflow-x-hidden bg-springPaleBlue">
+      <Navbar backgroundColor="bg-springPaleBlue/30" />
       {/* Hero section with parallax effect */}
       <div
         ref={parallaxRef}

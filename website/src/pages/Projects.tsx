@@ -134,9 +134,16 @@ export default function Projects() {
         );
     };
 
+    useEffect(() => {
+        document.documentElement.style.backgroundColor = "#fff";
+        return () => {
+            document.documentElement.style.backgroundColor = "";
+        };
+    }, []);
+
     return (
-        <div className="min-h-[80vh] overflow-x-hidden">
-            <Navbar />
+        <div className="min-h-[80vh] overflow-x-hidden bg-white">
+            <Navbar backgroundColor="bg-white" />
             <div className="bg-white z-0 mt-16">
                 <div className="container mx-auto py-12 px-4 min-h-screen">
                     <header className="text-center mb-16">

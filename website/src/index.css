@@ -130,7 +130,7 @@
   }
 
   body {
-    @apply bg-springPaleBlue text-springText antialiased;
+    @apply text-springText antialiased;
     font-family: "Avenir", sans-serif;
     overflow-x: hidden;
   }

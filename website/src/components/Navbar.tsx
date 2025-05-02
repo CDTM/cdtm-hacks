@@ -17,7 +17,11 @@ interface Menu {
   items: MenuItem[];
 }
 
-const Navbar = () => {
+interface NavbarProps {
+  backgroundColor?: string;
+}
+
+const Navbar = ({ backgroundColor = "bg-transparent" }: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -64,7 +68,7 @@ const Navbar = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/90 backdrop-blur-sm shadow-sm" : "bg-transparent"
+        scrolled ? "bg-white/90 backdrop-blur-sm shadow-sm" : backgroundColor
       }`}
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
