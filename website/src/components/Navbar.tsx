@@ -1,6 +1,8 @@
 import { ExternalLink, Menu as MenuIcon, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import MobileNavigation from "./MobileNavigation";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+
 interface SubMenuItem {
   id: string;
   label: string;
@@ -24,6 +26,8 @@ interface NavbarProps {
 const Navbar = ({ backgroundColor = "bg-transparent" }: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   // Handle scroll event to change navbar appearance
   useEffect(() => {
@@ -42,6 +46,42 @@ const Navbar = ({ backgroundColor = "bg-transparent" }: NavbarProps) => {
   const handleLinkClick = () => {
     setIsMenuOpen(false);
   };
+
+  // Handle navigation with hash
+  const handleNavigation = (hash: string) => {
+    if (location.pathname !== '/') {
+      navigate(`/${hash}`);
+    } else {
+      // If we're already on the home page, just scroll to the section
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
+  // Add effect to handle hash navigation after page load
+  useEffect(() => {
+    const handleHashNavigation = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const element = document.querySelector(hash);
+        if (element) {
+          // Small delay to ensure the page is fully loaded
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+        }
+      }
+    };
+
+    // Handle initial load
+    handleHashNavigation();
+
+    // Handle hash changes
+    window.addEventListener('hashchange', handleHashNavigation);
+    return () => window.removeEventListener('hashchange', handleHashNavigation);
+  }, []);
 
   // Define the menu structure
   const navMenu: Menu = {
@@ -73,46 +113,46 @@ const Navbar = ({ backgroundColor = "bg-transparent" }: NavbarProps) => {
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="font-bold text-xl text-springBlue">
+        <Link to="/" className="font-bold text-xl text-springBlue">
           <img
             src="/images/CDTM_Hacks_Logo.svg"
             alt="CDTM Hacks Logo"
             className="h-8 md:h-10 w-auto"
           />
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a
-            href="#about"
+          <button
+            onClick={() => handleNavigation('#about')}
             className="text-springText/80 hover:text-springBlue transition-colors"
           >
             About
-          </a>
-          <a
-            href="#partners"
+          </button>
+          <button
+            onClick={() => handleNavigation('#partners')}
             className="text-springText/80 hover:text-springBlue transition-colors"
           >
             Partners
-          </a>
-          <a
-            href="#speakers"
+          </button>
+          <button
+            onClick={() => handleNavigation('#speakers')}
             className="text-springText/80 hover:text-springBlue transition-colors"
           >
             Speakers
-          </a>
-          <a
-            href="#schedule"
+          </button>
+          <button
+            onClick={() => handleNavigation('#schedule')}
             className="text-springText/80 hover:text-springBlue transition-colors"
           >
             Schedule
-          </a>
-          <a
-            href="#about-us"
+          </button>
+          <button
+            onClick={() => handleNavigation('#about-us')}
             className="text-springText/80 hover:text-springBlue transition-colors flex items-center gap-2"
           >
             Organisers
-          </a>
+          </button>
           <a
             href="https://github.com/CDTM/cdtm-hacks"
             target="_blank"
