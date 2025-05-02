@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { AnimatedLink } from "./animatedLink";
 import PaddedSection from "./paddedSection";
+import ApplicationsClosedDialog from "./ApplicationsClosedDialog";
+import { useState } from "react";
 
 interface SubMenuItem {
   id: string;
@@ -17,109 +18,86 @@ interface MenuItem {
 interface Menu {
   items: MenuItem[];
 }
-interface Props {
+
+interface MobileNavigationProps {
   menu: Menu;
   onItemClick: () => void;
   isOpen: boolean;
 }
-const navigationVariants = {
-  open: { y: 0, display: "flex" },
-  closed: {
-    y: "-100%",
-    transitionEnd: {
-      display: "none",
-    },
-  },
-};
 
-const menuVariants = {
-  open: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      delay: 0.3,
-      duration: 0.35,
-      ease: "easeIn",
-    },
-  },
-  closed: {
-    y: -5,
-    opacity: 0,
-    transition: {
-      duration: 0.2,
-      ease: "easeIn",
-    },
-  },
-};
+const MobileNavigation = ({ menu, onItemClick, isOpen }: MobileNavigationProps) => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
-export default function MobileNavigation({ menu, onItemClick, isOpen }: Props) {
+  const menuVariants = {
+    open: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 30,
+      },
+    },
+    closed: {
+      opacity: 0,
+      x: "100%",
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 30,
+      },
+    },
+  };
+
   const menuItems = menu.items.map((item) => (
-    <MobileMenuItem key={item.id} item={item} onItemClick={onItemClick} />
+    <div key={item.id} className="flex flex-col gap-4">
+      <h3 className="text-lg font-semibold text-springBlue">{item.label}</h3>
+      {item.submenu && (
+        <div className="flex flex-col gap-2">
+          {item.submenu.map((subItem) => (
+            <a
+              key={subItem.id}
+              href={subItem.url}
+              onClick={onItemClick}
+              className="text-springText/80 hover:text-springBlue transition-colors"
+            >
+              {subItem.label}
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
   ));
 
   return (
-    <motion.nav
-      key="mobile-navigation"
+    <motion.div
       initial="closed"
       animate={isOpen ? "open" : "closed"}
-      variants={navigationVariants}
-      transition={{ duration: 0.5, ease: "circInOut" }}
-      className="absolute inset-0 top-[72px] z-20 flex-col bg-springBlue md:hidden h-[100vh]"
+      variants={menuVariants}
+      className="fixed inset-0 z-40 bg-white md:hidden"
     >
       <motion.div variants={menuVariants} className="h-full">
         <PaddedSection className="flex h-full flex-col">
           <div className="mt-6 flex flex-1 flex-col gap-8">{menuItems}</div>
 
           <div className="mt-auto">
-            <a
-              href="https://app.formbricks.com/s/cm87i0iq40000ji039uyra9hq"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={onItemClick}
+            <button
+              onClick={() => {
+                setIsDialogOpen(true);
+                onItemClick();
+              }}
               className="btn-hover-effect mt-6 block w-full rounded-lg bg-white py-4 text-center text-xl font-bold text-springBlue"
             >
               Apply
-            </a>
+            </button>
           </div>
         </PaddedSection>
       </motion.div>
-    </motion.nav>
+
+      {/* Applications Closed Dialog */}
+      <ApplicationsClosedDialog isOpen={isDialogOpen} onOpenChange={setIsDialogOpen} />
+    </motion.div>
   );
-}
+};
 
-function MobileMenuItem({
-  item,
-  onItemClick,
-}: {
-  item: MenuItem;
-  onItemClick: () => void;
-}) {
-  const subMenuItems = item.submenu?.map((subitem) => (
-    <MobileSubMenuItem
-      key={subitem.id}
-      item={subitem}
-      onItemClick={onItemClick}
-    />
-  ));
-
-  return <div className="flex w-full flex-col gap-4">{subMenuItems}</div>;
-}
-
-function MobileSubMenuItem({
-  item,
-  onItemClick,
-}: {
-  item: SubMenuItem;
-  onItemClick: () => void;
-}) {
-  return (
-    <AnimatedLink
-      className="text-xl font-bold text-white"
-      href={item.url}
-      text={item.label}
-      onClick={onItemClick}
-      underlineInitial={false}
-      colorHover="#fff"
-    />
-  );
-}
+export default MobileNavigation;

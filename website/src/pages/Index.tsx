@@ -7,6 +7,7 @@ import Schedule from "@/components/Schedule";
 import Speakers from "@/components/Speakers";
 import FAQ from "@/components/FAQ";
 import { useEffect, useRef, useState } from "react";
+import ApplicationsClosedDialog from "@/components/ApplicationsClosedDialog";
 
 const Index = () => {
   const parallaxRef = useRef<HTMLDivElement>(null);
@@ -15,12 +16,7 @@ const Index = () => {
   const midLayerRef = useRef<HTMLDivElement>(null);
   const fgLayerRef = useRef<HTMLDivElement>(null);
   const [isWideAspectRatio, setIsWideAspectRatio] = useState(false);
-  const [countdown, setCountdown] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   useEffect(() => {
     const checkAspectRatio = () => {
@@ -34,36 +30,6 @@ const Index = () => {
     // Check on resize
     window.addEventListener("resize", checkAspectRatio);
     return () => window.removeEventListener("resize", checkAspectRatio);
-  }, []);
-
-  useEffect(() => {
-    const calculateCountdown = () => {
-      const deadline = new Date("May 2, 2025 23:59:59 GMT+0200"); // German time (CEST)
-      const now = new Date();
-      const timeLeft = deadline.getTime() - now.getTime();
-
-      if (timeLeft <= 0) {
-        // Past the deadline
-        setCountdown({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        return;
-      }
-
-      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-      setCountdown({ days, hours, minutes, seconds });
-    };
-
-    // Calculate immediately
-    calculateCountdown();
-
-    // Then update every second
-    const timer = setInterval(calculateCountdown, 1000);
-    return () => clearInterval(timer);
   }, []);
 
   useEffect(() => {
@@ -186,7 +152,7 @@ const Index = () => {
         />
 
         {/* Hero content */}
-        <div className="container mx-auto px-4 pt-[10vh] relative z-10 text-center flex flex-col items-center justify-center h-full">
+        <div className="container mx-auto px-4 pt-[12vh] relative z-10 text-center flex flex-col items-center justify-center h-full">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-springBlue mb-4 animate-fade-in">
             CDTM HACKS 2025
           </h1>
@@ -233,44 +199,6 @@ const Index = () => {
             </a>
           </a>
 
-          {/* Application Countdown */}
-          <div
-            className="bg-white/95 backdrop-blur-sm rounded-lg shadow-md px-2 py-3 mb-6 animate-fade-in flex flex-col items-center max-w-[300px] w-full mx-auto"
-            style={{
-              animationDelay: "0.25s",
-            }}
-          >
-            <p className="text-springBlue font-medium text-sm mb-1">
-              Application deadline:
-            </p>
-            <div className="flex justify-center gap-4 sm:gap-6 text-springText w-full">
-              <div className="flex flex-col items-center">
-                <span className="font-bold text-xl sm:text-2xl">
-                  {countdown.days}
-                </span>
-                <span className="text-xs">days</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <span className="font-bold text-xl sm:text-2xl">
-                  {countdown.hours}
-                </span>
-                <span className="text-xs">hours</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <span className="font-bold text-xl sm:text-2xl">
-                  {countdown.minutes}
-                </span>
-                <span className="text-xs">mins</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <span className="font-bold text-xl sm:text-2xl">
-                  {countdown.seconds}
-                </span>
-                <span className="text-xs">secs</span>
-              </div>
-            </div>
-          </div>
-
           {/* Mobile buttons - only show on small screens */}
           <div
             className="flex flex-col gap-4 animate-fade-in md:hidden"
@@ -278,14 +206,12 @@ const Index = () => {
               animationDelay: "0.3s",
             }}
           >
-            <a
-              href="https://app.formbricks.com/s/cm87i0iq40000ji039uyra9hq"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => setIsDialogOpen(true)}
               className="btn-hover-effect bg-springBlue text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all"
             >
               Apply
-            </a>
+            </button>
           </div>
         </div>
         {/* Curved transition and wooden sign - hide on mobile */}
@@ -322,12 +248,7 @@ const Index = () => {
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "translate(-50%) rotateZ(0deg)";
             }}
-            onClick={() => {
-              window.open(
-                "https://app.formbricks.com/s/cm87i0iq40000ji039uyra9hq",
-                "_blank"
-              );
-            }}
+            onClick={() => setIsDialogOpen(true)}
           >
             {/* Shadow */}
             <ellipse cx="50" cy="95" rx="10" ry="2" fill="rgba(0,0,0,0.05)" />
@@ -364,6 +285,9 @@ const Index = () => {
           </svg>
         </div>
       </div>
+
+      {/* Applications Closed Dialog */}
+      <ApplicationsClosedDialog isOpen={isDialogOpen} onOpenChange={setIsDialogOpen} />
 
       {/* Content sections */}
       <About />

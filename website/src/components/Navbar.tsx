@@ -1,6 +1,8 @@
 import { ExternalLink, Menu as MenuIcon, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import MobileNavigation from "./MobileNavigation";
+import ApplicationsClosedDialog from "./ApplicationsClosedDialog";
+
 interface SubMenuItem {
   id: string;
   label: string;
@@ -20,6 +22,7 @@ interface Menu {
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   // Handle scroll event to change navbar appearance
   useEffect(() => {
@@ -117,14 +120,12 @@ const Navbar = () => {
           >
             GitHub
           </a>
-          <a
-            href="https://app.formbricks.com/s/cm87i0iq40000ji039uyra9hq"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => setIsDialogOpen(true)}
             className="btn-hover-effect bg-springBlue text-white font-medium py-2 px-4 rounded-lg"
           >
             Apply
-          </a>
+          </button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -147,6 +148,9 @@ const Navbar = () => {
         onItemClick={handleLinkClick}
         isOpen={isMenuOpen}
       />
+
+      {/* Applications Closed Dialog */}
+      <ApplicationsClosedDialog isOpen={isDialogOpen} onOpenChange={setIsDialogOpen} />
     </header>
   );
 };
