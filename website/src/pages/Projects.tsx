@@ -34,7 +34,14 @@ export default function Projects() {
             }
             if (a.placement) return -1;
             if (b.placement) return 1;
-            // Then sort alphabetically by name
+
+            // Then sort challenge winners
+            const aHasChallenges = a.challenges && a.challenges.length > 0;
+            const bHasChallenges = b.challenges && b.challenges.length > 0;
+            if (aHasChallenges && !bHasChallenges) return -1;
+            if (!aHasChallenges && bHasChallenges) return 1;
+
+            // Finally sort alphabetically by name
             return a.name.localeCompare(b.name);
         });
     });
@@ -144,11 +151,39 @@ export default function Projects() {
                         Teams develop innovative solutions within that context, competing for prizes
                         and recognition in their chosen category.
                     </p>
-                    <div className="space-y-12 mb-16">
+                    {/* Mobile view - List layout */}
+                    <div className="space-y-12 mb-16 md:hidden">
                         {sortedCases.map((caseKey) => (
                             <section key={caseKey}>
                                 <h2 className="text-xl font-semibold mb-6">{caseNames[caseKey as keyof typeof caseNames]}</h2>
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                <div className="grid grid-cols-1 gap-6">
+                                    {projectsByCase[caseKey].map((project) => (
+                                        <Card
+                                            key={project.id}
+                                            className="cursor-pointer hover:shadow-lg transition-shadow relative"
+                                            onClick={() => handleProjectSelect(project)}
+                                        >
+                                            {getPlacementBadge(project.placement, caseNames[caseKey as keyof typeof caseNames])}
+                                            {getChallengeIndicator(project.challenges)}
+                                            <CardHeader>
+                                                <CardTitle>{project.name}</CardTitle>
+                                            </CardHeader>
+                                            <CardContent>
+                                                <CardDescription>{project.pitch}</CardDescription>
+                                            </CardContent>
+                                        </Card>
+                                    ))}
+                                </div>
+                            </section>
+                        ))}
+                    </div>
+
+                    {/* Desktop view - Column layout */}
+                    <div className="hidden md:grid md:grid-cols-3 gap-8 mb-16">
+                        {sortedCases.map((caseKey) => (
+                            <section key={caseKey}>
+                                <h2 className="text-xl font-semibold mb-6">{caseNames[caseKey as keyof typeof caseNames]}</h2>
+                                <div className="space-y-8">
                                     {projectsByCase[caseKey].map((project) => (
                                         <Card
                                             key={project.id}
