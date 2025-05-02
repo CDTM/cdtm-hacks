@@ -186,7 +186,7 @@ const Index = () => {
         />
 
         {/* Hero content */}
-        <div className="container mx-auto px-4 pt-[15vh] relative z-10 text-center flex flex-col items-center justify-center h-full">
+        <div className="container mx-auto px-4 pt-[10vh] relative z-10 text-center flex flex-col items-center justify-center h-full">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-springBlue mb-4 animate-fade-in">
             CDTM HACKS 2025
           </h1>
@@ -205,14 +205,33 @@ const Index = () => {
             <br />
             Join us for 36 hours of building in the heart of Europe.
           </p>
-          <p
-            className="text-lg md:text-xl mb-8 font-bold animate-fade-in text-springText"
+          <a
+            className="text-lg md:text-xl mb-8 font-bold animate-fade-in text-springText flex items-center justify-center gap-1"
             style={{
               animationDelay: "0.2s",
             }}
           >
-            09. - 11. May 2025, Munich
-          </p>
+            09. - 11. May 2025 at
+            <a
+              href="https://maps.app.goo.gl/db8BYVF8pj7DVLcCA"
+              target="_blank"
+              className="underline flex items-center justify-center gap-1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 mb-1 hidden md:block"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              Celonis, Munich
+            </a>
+          </a>
 
           {/* Application Countdown */}
           <div

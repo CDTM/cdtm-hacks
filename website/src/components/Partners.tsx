@@ -4,6 +4,7 @@ import {
   FOOD_SPONSORS,
   MAIN_SPONSOR,
   TECH_SPONSORS,
+  VENUE_SPONSORS,
 } from "@/constants/partners";
 import { Lock } from "lucide-react";
 
@@ -77,6 +78,14 @@ const Partners = () => {
               ) : (
                 <SponsorPlaceholder index={0} />
               )}
+              {MAIN_SPONSOR.link && (
+                  <a
+                    href={MAIN_SPONSOR.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity"
+                  />
+                )}
             </div>
           </div>
         </div>
@@ -176,6 +185,35 @@ const Partners = () => {
                 )}
               </div>
             ))}
+          </div>
+        </div>
+
+
+        {/* Venue Sponsor */}
+        <div className="mb-16">
+          <h3 className="text-center text-xl text-springText/80 mb-8">
+            Venue Sponsor
+          </h3>
+          <div className="flex justify-center">
+            <div className="flex items-center justify-center p-6 rounded-lg bg-white border border-springBlue/10 shadow-md w-full max-w-[200px] h-[120px] transition-all hover:shadow-lg relative overflow-hidden">
+              {VENUE_SPONSORS.image ? (
+                <img
+                  src={VENUE_SPONSORS.image}
+                  alt={VENUE_SPONSORS.name}
+                  className="object-contain w-full h-full"
+                />
+              ) : (
+                <SponsorPlaceholder index={0} />
+              )}
+              {VENUE_SPONSORS.link && (
+                  <a
+                    href={VENUE_SPONSORS.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity"
+                  />
+                )}
+            </div>
           </div>
         </div>
 
