@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { projects, caseNames, challenges, Project } from "@/constants/projects";
+import { projects, cases, challenges, Project } from "@/constants/projects";
 import { ProjectDialog } from "@/components/ProjectDialog";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useParams, useNavigate } from "react-router-dom";
@@ -143,27 +143,33 @@ export default function Projects() {
                         </p>
                     </header>
 
-                    {/* Cases Section */}
-                    <h2 className="text-2xl font-semibold">Cases</h2>
-                    <p className="text-gray-600 mt-2 mb-8">
-                        A case represents a specific problem that teams worked on during the hackathon.
+                    <h2 className="text-2xl font-semibold mb-2">Cases</h2>
+                    <p className="text-gray-600 mb-8">
                         Each case is sponsored by a company and focuses on a particular domain or technology area.
-                        Teams develop innovative solutions within that context, competing for prizes
-                        and recognition in their chosen category.
                     </p>
-                    {/* Mobile view - List layout */}
-                    <div className="space-y-12 mb-16 md:hidden">
+
+                    {/* Cases Section */}
+                    <div className="space-y-16 mb-16 md:hidden">
                         {sortedCases.map((caseKey) => (
                             <section key={caseKey}>
-                                <h2 className="text-xl font-semibold mb-6">{caseNames[caseKey as keyof typeof caseNames]}</h2>
-                                <div className="grid grid-cols-1 gap-6">
+                                <div className="flex items-center gap-3 mb-4">
+                                    <a href={cases[caseKey as keyof typeof cases].sponsorUrl} target="_blank" rel="noopener noreferrer">
+                                        <img
+                                            src={cases[caseKey as keyof typeof cases].logo}
+                                            alt={`${cases[caseKey as keyof typeof cases].name} logo`}
+                                            className={cases[caseKey as keyof typeof cases].logoClass}
+                                        />
+                                    </a>
+                                </div>
+                                <p className="text-gray-600 mb-4">{cases[caseKey as keyof typeof cases].description}</p>
+                                <div className="grid grid-cols-1 gap-8">
                                     {projectsByCase[caseKey].map((project) => (
                                         <Card
                                             key={project.id}
                                             className="cursor-pointer hover:shadow-lg transition-shadow relative"
                                             onClick={() => handleProjectSelect(project)}
                                         >
-                                            {getPlacementBadge(project.placement, caseNames[caseKey as keyof typeof caseNames])}
+                                            {getPlacementBadge(project.placement, cases[caseKey as keyof typeof cases].name)}
                                             {getChallengeIndicator(project.challenges)}
                                             <CardHeader>
                                                 <CardTitle>{project.name}</CardTitle>
@@ -182,7 +188,16 @@ export default function Projects() {
                     <div className="hidden md:grid md:grid-cols-3 gap-8 mb-16">
                         {sortedCases.map((caseKey) => (
                             <section key={caseKey}>
-                                <h2 className="text-xl font-semibold mb-6">{caseNames[caseKey as keyof typeof caseNames]}</h2>
+                                <div className="flex items-center gap-3 mb-4">
+                                    <a href={cases[caseKey as keyof typeof cases].sponsorUrl} target="_blank" rel="noopener noreferrer">
+                                        <img
+                                            src={cases[caseKey as keyof typeof cases].logo}
+                                            alt={`${cases[caseKey as keyof typeof cases].name} logo`}
+                                            className={cases[caseKey as keyof typeof cases].logoClass}
+                                        />
+                                    </a>
+                                </div>
+                                <p className="text-gray-600 mb-6">{cases[caseKey as keyof typeof cases].description}</p>
                                 <div className="space-y-8">
                                     {projectsByCase[caseKey].map((project) => (
                                         <Card
@@ -190,7 +205,7 @@ export default function Projects() {
                                             className="cursor-pointer hover:shadow-lg transition-shadow relative"
                                             onClick={() => handleProjectSelect(project)}
                                         >
-                                            {getPlacementBadge(project.placement, caseNames[caseKey as keyof typeof caseNames])}
+                                            {getPlacementBadge(project.placement, cases[caseKey as keyof typeof cases].name)}
                                             {getChallengeIndicator(project.challenges)}
                                             <CardHeader>
                                                 <CardTitle>{project.name}</CardTitle>

@@ -15,10 +15,36 @@ export type Challenge = {
   name: string;
 };
 
-export const caseNames = {
-  "trade-republic": "Trade Republic",
-  avi: "avi",
-  beam: "Beam",
+export interface Case {
+  name: string;
+  description: string;
+  sponsorUrl: string;
+  logo: string;
+  logoClass: string;
+}
+
+export const cases: Record<"trade-republic" | "avi" | "beam", Case> = {
+  "trade-republic": {
+    name: "Trade Republic",
+    description: "Build a solution to help retail investors make better investment decisions",
+    sponsorUrl: "https://traderepublic.com",
+    logo: "/images/partners/trade_republic.png",
+    logoClass: "max-h-[20px] max-w-[200px]",
+  },
+  avi: {
+    name: "avi",
+    description: "Create an autonomous vehicle solution that improves urban mobility",
+    sponsorUrl: "https://www.avimedical.com/",
+    logo: "/images/partners/avi_logo.png",
+    logoClass: "max-h-[20px] max-w-[200px]",
+  },
+  beam: {
+    name: "Beam",
+    description: "Develop a privacy-preserving application using Beam's blockchain technology",
+    sponsorUrl: "https://beam.ai/",
+    logo: "/images/partners/beam.png",
+    logoClass: "max-h-[20px] max-w-[200px]",
+  },
 } as const;
 
 export const challenges: Record<string, Challenge> = {
