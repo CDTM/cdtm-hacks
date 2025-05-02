@@ -10,9 +10,17 @@ export interface Project {
   challenges?: Array<Challenge>;
 }
 
-export type Challenge = {
-  company: string;
+export type Company = {
   name: string;
+  url?: string;
+  logoPath: string;
+  logoClass: string;
+};
+
+export type Challenge = {
+  name: string;
+  sponsoredBy: string;
+  companies: Company[];
 };
 
 export interface Case {
@@ -26,21 +34,27 @@ export interface Case {
 export const cases: Record<"trade-republic" | "avi" | "beam", Case> = {
   "trade-republic": {
     name: "Trade Republic",
-    description: "Build a solution to help retail investors make better investment decisions",
+    // TODO: Use real case description
+    description:
+      "Build a solution to help retail investors make better investment decisions",
     sponsorUrl: "https://traderepublic.com",
     logo: "/images/partners/trade_republic.png",
     logoClass: "max-h-[20px] max-w-[200px]",
   },
   avi: {
     name: "avi",
-    description: "Create an autonomous vehicle solution that improves urban mobility",
+    // TODO: Use real case description
+    description:
+      "Create an autonomous vehicle solution that improves urban mobility",
     sponsorUrl: "https://www.avimedical.com/",
     logo: "/images/partners/avi_logo.png",
     logoClass: "max-h-[20px] max-w-[200px]",
   },
   beam: {
     name: "Beam",
-    description: "Develop a privacy-preserving application using Beam's blockchain technology",
+    // TODO: Use real case description
+    description:
+      "Develop a privacy-preserving application using Beam's blockchain technology",
     sponsorUrl: "https://beam.ai/",
     logo: "/images/partners/beam.png",
     logoClass: "max-h-[20px] max-w-[200px]",
@@ -49,17 +63,65 @@ export const cases: Record<"trade-republic" | "avi" | "beam", Case> = {
 
 export const challenges: Record<string, Challenge> = {
   tanso: {
-    company: "Tanso",
     name: "SMEs would love this",
+    sponsoredBy: "Tanso",
+    companies: [
+      {
+        name: "Tanso",
+        url: "https://www.tanso.de/en",
+        logoPath: "/images/partners/tanso_fixed.svg",
+        logoClass: "max-h-[20px] max-w-[200px]",
+      },
+    ],
   },
-  visionariesClub: {
-    company: "Visionaries Club",
+  visionaries: {
     name: "Most potential to earn real money",
+    sponsoredBy: "Visionaries Club, Everyday Intelligence and paid.ai",
+    companies: [
+      {
+        name: "Visionaries Club",
+        url: "https://visionariesclub.com/",
+        logoPath: "/images/partners/visionaries_club.svg",
+        logoClass: "max-h-[20px] max-w-[200px]",
+      },
+      {
+        name: "Everyday Intelligence",
+        url: "https://everydayintelligence.com/",
+        logoPath: "/images/partners/everyday_intelligence_logo.svg",
+        logoClass: "max-h-[20px] max-w-[200px]",
+      },
+      {
+        name: "paid.ai",
+        url: "https://paid.ai/",
+        logoPath: "/images/partners/paid_ai.svg",
+        logoClass: "max-h-[20px] max-w-[200px]",
+      },
+    ],
   },
-  mistralAI: {
-    company: "Mistral AI",
+  mistral: {
     name: "Best use of MistralAI API",
+    sponsoredBy: "Mistral AI",
+    companies: [
+      {
+        name: "Mistral AI",
+        url: "https://mistral.ai/",
+        logoPath: "/images/partners/mistral-ai-2025.svg",
+        logoClass: "max-h-[20px] max-w-[200px]",
+      },
+    ],
   },
+  'beyond-presence': {
+    name: "Best use of Beyond Presence API",
+    sponsoredBy: "Beyond Presence",
+    companies: [
+      {
+        name: "Beyond Presence",
+        url: "https://www.beyondpresence.ai/",
+        logoPath: "/images/partners/beyond_presence.svg",
+        logoClass: "max-h-[20px] max-w-[200px]",
+      },
+    ]
+  }
 } as const;
 
 export const projects: Project[] = [
@@ -74,7 +136,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/demo/wealthwave",
     videoUrl: "https://youtube.com/watch?v=demo1",
     placement: 1,
-    challenges: [challenges.visionariesClub],
+    challenges: [challenges.visionaries],
   },
   {
     id: "project-tr-2",
@@ -146,6 +208,7 @@ export const projects: Project[] = [
     pitch: "Invest your spare change effortlessly.",
     githubUrl: "https://github.com/demo/microinvest",
     videoUrl: "https://youtube.com/watch?v=demo8",
+    challenges: [challenges['beyond-presence']],
   },
   {
     id: "project-tr-9",
@@ -208,6 +271,7 @@ export const projects: Project[] = [
     pitch: "Smarter routes for autonomous navigation.",
     githubUrl: "https://github.com/demo/pathwise",
     videoUrl: "https://youtube.com/watch?v=demo14",
+    challenges: [challenges.visionaries],
   },
   {
     id: "project-avi-5",
@@ -260,6 +324,7 @@ export const projects: Project[] = [
     pitch: "Better shared rides through smarter matching.",
     githubUrl: "https://github.com/demo/ridematch-ai",
     videoUrl: "https://youtube.com/watch?v=demo19",
+    challenges: [challenges.visionaries],
   },
   {
     id: "project-avi-10",
@@ -292,7 +357,7 @@ export const projects: Project[] = [
     pitch: "One-click crypto payments, powered by Beam.",
     githubUrl: "https://github.com/demo/paybeam",
     videoUrl: "https://youtube.com/watch?v=demo22",
-    challenges: [challenges.mistralAI],
+    challenges: [challenges.mistral],
   },
   {
     id: "project-beam-3",

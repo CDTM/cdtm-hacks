@@ -57,7 +57,7 @@ export function ProjectDialog({ project, open, onOpenChange }: ProjectDialogProp
                     <div key={index} className="flex items-center gap-2">
                       <Award className="w-5 h-5 text-blue-500" />
                       <Badge variant="secondary" className="bg-blue-200/60 hover:bg-blue-200/60 text-blue-800">
-                        "{challenge.name}" Challenge by {challenge.company}
+                        "{challenge.name}" Challenge by {challenge.sponsoredBy}
                       </Badge>
                     </div>
                   ))}

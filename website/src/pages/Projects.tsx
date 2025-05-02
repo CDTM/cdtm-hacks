@@ -11,6 +11,9 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 // Define the order of cases
 const caseOrder = ['trade-republic', 'avi', 'beam'] as const;
 
+// Define the order of challenges
+const challengeOrder = ['mistral', 'tanso', 'beyond-presence', 'visionaries'] as const;
+
 export default function Projects() {
     const { projectId } = useParams();
     const navigate = useNavigate();
@@ -52,10 +55,10 @@ export default function Projects() {
     // Group projects by challenge
     const projectsByChallenge = projects.reduce((acc, project) => {
         project.challenges?.forEach(challenge => {
-            if (!acc[challenge.name]) {
-                acc[challenge.name] = [];
+            if (!acc[challenge.sponsoredBy]) {
+                acc[challenge.sponsoredBy] = [];
             }
-            acc[challenge.name].push(project);
+            acc[challenge.sponsoredBy].push(project);
         });
         return acc;
     }, {} as Record<string, Project[]>);
@@ -221,34 +224,62 @@ export default function Projects() {
                     </div>
 
                     {/* Challenges Section */}
+                    <h2 className="text-2xl font-semibold mb-2 flex items-center gap-3">
+                        Challenge Winners
+                        <div className="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center">
+                            <Award className="w-5 h-5 text-white" />
+                        </div>
+                    </h2>
+                    <div className="mb-8">
+                        <p className="text-gray-600">
+                            In addition to the cases, teams had the opportunity to compete for special prizes
+                            sponsored by our partners.
+                        </p>
+                    </div>
                     <div className="space-y-12">
-                        <h2 className="text-2xl font-semibold mb-6">Challenge Winners</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {Object.entries(challenges).map(([key, challenge]) => (
-                                <Card key={key} className="relative">
-                                    <CardHeader>
-                                        <div className="flex items-center gap-2">
-                                            <Award className="w-5 h-5 text-purple-500" />
-                                            <CardTitle>{challenge.company}</CardTitle>
-                                        </div>
-                                        <CardDescription>{challenge.name}</CardDescription>
-                                    </CardHeader>
-                                    <CardContent>
-                                        <div className="space-y-2 bg-gray-50 rounded-lg">
-                                            {projectsByChallenge[challenge.company]?.map(project => (
-                                                <div
-                                                    key={project.id}
-                                                    className="cursor-pointer hover:bg-gray-100 p-4 rounded-md transition-colors"
-                                                    onClick={() => handleProjectSelect(project)}
-                                                >
-                                                    <div className="font-medium">{project.name}</div>
-                                                    <div className="text-sm text-gray-500">{project.pitch}</div>
+                            {challengeOrder.map((challengeKey) => {
+                                const challenge = challenges[challengeKey];
+                                if (!challenge) return null;
+                                return (
+                                    <Card key={challengeKey} className="relative">
+                                        <CardHeader>
+                                            <div className="flex items-center gap-3 min-h-[32px]">
+                                                <Award className="w-5 h-5 text-purple-500 flex-shrink-0 mb-4" />
+                                                <div className="flex gap-8">
+                                                    {challenge.companies.map((company, index) => (
+                                                        <div key={index} className="relative flex-shrink-0 h-8">
+                                                            <img
+                                                                src={company.logoPath}
+                                                                alt={`${company.name} logo`}
+                                                                className={`${company.logoClass} h-full w-auto object-contain`}
+                                                                style={{ display: 'block' }}
+                                                            />
+                                                            {company.url && <a href={company.url} target="_blank" rel="noopener noreferrer" className="absolute top-0 left-0 w-full h-full">
+                                                            </a>}
+                                                        </div>
+                                                    ))}
                                                 </div>
-                                            ))}
-                                        </div>
-                                    </CardContent>
-                                </Card>
-                            ))}
+                                            </div>
+                                            <CardDescription>{challenge.name}</CardDescription>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <div className="space-y-2 rounded-lg">
+                                                {projectsByChallenge[challenge.sponsoredBy]?.map(project => (
+                                                    <div
+                                                        key={project.id}
+                                                        className="cursor-pointer bg-gray-50 hover:bg-gray-100 p-4 rounded-md transition-colors"
+                                                        onClick={() => handleProjectSelect(project)}
+                                                    >
+                                                        <div className="font-medium">{project.name}</div>
+                                                        <div className="text-sm text-gray-500">{project.pitch}</div>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </CardContent>
+                                    </Card>
+                                );
+                            })}
                         </div>
                     </div>
 
