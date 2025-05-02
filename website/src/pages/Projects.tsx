@@ -79,14 +79,13 @@ export default function Projects() {
 
     const getPlacementBadge = (placement?: 1 | 2, caseName?: string) => {
         if (!placement) return null;
-        
+
         return (
             <TooltipProvider>
                 <Tooltip delayDuration={100}>
                     <TooltipTrigger asChild>
-                        <div className={`absolute -top-3 -right-3 w-12 h-12 rounded-full flex items-center justify-center ${
-                            placement === 1 ? 'bg-yellow-400' : 'bg-gray-300'
-                        } shadow-lg transform rotate-12`}>
+                        <div className={`absolute -top-3 -right-3 w-12 h-12 rounded-full flex items-center justify-center ${placement === 1 ? 'bg-yellow-400' : 'bg-gray-300'
+                            } shadow-lg transform rotate-12`}>
                             <Trophy className={`w-6 h-6 ${placement === 1 ? 'text-yellow-900' : 'text-gray-700'}`} />
                             <span className="absolute text-sm font-bold">
                                 {placement}
@@ -103,12 +102,12 @@ export default function Projects() {
 
     const getChallengeIndicator = (challenges?: Project['challenges']) => {
         if (!challenges?.length) return null;
-        
+
         const challengeNames = challenges.map(c => c.name);
-        const tooltipText = challengeNames.length === 1 
+        const tooltipText = challengeNames.length === 1
             ? `Winner of the "${challengeNames[0]}" Challenge`
             : `Winner of the ${challengeNames.map(name => `"${name}"`).join(' and ')} Challenges`;
-        
+
         return (
             <TooltipProvider>
                 <Tooltip delayDuration={100}>
@@ -138,13 +137,20 @@ export default function Projects() {
                     </header>
 
                     {/* Cases Section */}
+                    <h2 className="text-2xl font-semibold">Cases</h2>
+                    <p className="text-gray-600 mt-2 mb-8">
+                        A case represents a specific problem that teams worked on during the hackathon.
+                        Each case is sponsored by a company and focuses on a particular domain or technology area.
+                        Teams develop innovative solutions within that context, competing for prizes
+                        and recognition in their chosen category.
+                    </p>
                     <div className="space-y-12 mb-16">
                         {sortedCases.map((caseKey) => (
                             <section key={caseKey}>
-                                <h2 className="text-2xl font-semibold mb-6">{caseNames[caseKey as keyof typeof caseNames]}</h2>
+                                <h2 className="text-xl font-semibold mb-6">{caseNames[caseKey as keyof typeof caseNames]}</h2>
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                     {projectsByCase[caseKey].map((project) => (
-                                        <Card 
+                                        <Card
                                             key={project.id}
                                             className="cursor-pointer hover:shadow-lg transition-shadow relative"
                                             onClick={() => handleProjectSelect(project)}
@@ -180,7 +186,7 @@ export default function Projects() {
                                     <CardContent>
                                         <div className="space-y-2 bg-gray-50 rounded-lg">
                                             {projectsByChallenge[challenge.company]?.map(project => (
-                                                <div 
+                                                <div
                                                     key={project.id}
                                                     className="cursor-pointer hover:bg-gray-100 p-4 rounded-md transition-colors"
                                                     onClick={() => handleProjectSelect(project)}
