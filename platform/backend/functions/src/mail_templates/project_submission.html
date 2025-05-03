@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Project Submission Confirmation - CDTM Hacks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .content {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+        }
+        .project-info {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Project Submission Confirmation</h1>
+    </div>
+    
+    <div class="content">
+        <p>Dear team,</p>
+        
+        <p>Thank you for submitting your project for CDTM Hacks! We've received your submission and are excited to review it.</p>
+        
+        <div class="project-info">
+            <h2>Project Details</h2>
+            <ul>
+                <li><strong>Project Name:</strong> {{projectName}}</li>
+                <li><strong>GitHub Repository:</strong> <a href="{{githubRepo}}">{{githubRepo}}</a></li>
+                <li><strong>Project Description:</strong></li>
+            </ul>
+            <p>{{projectDescription}}</p>
+        </div>
+
+        <p>Our judges will review your submission. Make sure your pitch video & GitHub repository are accessible and contain all the necessary documentation.</p>
+
+        <p>If you need to make any changes to your submission, just make a new submission.</p>
+
+        <p>Best regards,<br>The CDTM Hacks Team</p>
+    </div>
+
+    <div class="footer">
+        <div class="imprint">
+            <p>Center for Digital Technology and Management</p>
+            
+            <p>Find us here:<br>
+            Marsstr. 20-22<br>
+            80335 Munich, Germany</p>
+            
+            <p>Postal address:<br>
+            Center for Digital Technology and Management<br>
+            Arcisstraße 21<br>
+            80333 Munich, Germany</p>
+        </div>
+    </div>
+</body>
+</html> 
