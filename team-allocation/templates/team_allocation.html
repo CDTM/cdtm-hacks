@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Assignment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .content {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .team-info {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #e9f7fe;
+            border-left: 4px solid #0077cc;
+            border-radius: 3px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Your Case Assignment</h1>
+    </div>
+    
+    <div class="content">
+        <p>Hello Team {{teamId}},</p>
+        
+        <p>We are excited to inform you about your case assignment for the hackathon!</p>
+        
+        <div class="team-info">
+            <p><strong>Team ID:</strong> {{teamId}}</p>
+            <p><strong>Assigned Case:</strong> {{case}}</p>
+            <p><strong>Team Members:</strong></p>
+            <div>{{membersList}}</div>
+        </div>
+
+        <p>Please join the discord channel of your case with this link: <a href="{{discordLink}}">Click to join discord channel!</a></p>
+                
+        <p>We wish you the best of luck and look forward to seeing your innovative solutions!</p>
+        
+        <p>Best regards,<br>The Hackathon Team</p>
+    </div>
+    
+    <div class="footer">
+        <div class="imprint">
+            <p>Center for Digital Technology and Management</p>
+            
+            <p>Find us here:<br>
+            Marsstr. 20-22<br>
+            80335 Munich, Germany</p>
+            
+            <p>Postal address:<br>
+            Center for Digital Technology and Management<br>
+            Arcisstraße 21<br>
+            80333 Munich, Germany</p>
+        </div>
+    </div>
+</body>
+</html> 
