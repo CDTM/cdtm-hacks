@@ -50,8 +50,8 @@ export const FAQS: FAQItem[] = [
       "We will have 3 prizes for the 3 cases. There will also be an overall main prize across cases. And psst - maybe there is a super secret surprise prize - who knows?",
   },
   {
-    question: "When will applications close?",
+    question: "Can I stay overnight?",
     answer:
-      "Applications will be closed on May 2nd, 2025 and accepted on a rolling basis.",
+      "Yes, but please bring your own sleeping mat. There are also showers if you need to freshen up in the morning :)",
   },
 ];
