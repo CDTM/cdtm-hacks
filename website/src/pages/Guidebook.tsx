@@ -1,11 +1,20 @@
 import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
 import { GUIDEBOOK_DATA, IconName, iconMap } from "@/constants/guidebook";
 import * as Accordion from "@radix-ui/react-accordion";
 import * as ScrollArea from "@radix-ui/react-scroll-area";
 import { motion } from "framer-motion";
-import { Edit, Search } from "lucide-react";
+import { ArrowLeft, Edit, Search } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+
+const Logo = () => (
+  <a href="/" className="inline-flex items-center group">
+    <img
+      src="/images/CDTM_Hacks_Logo.svg"
+      alt="CDTM Hacks"
+      className="h-10 w-auto"
+    />
+  </a>
+);
 
 // Helper function to render an icon by name
 const renderIcon = (name: IconName, size: number) => {
@@ -76,10 +85,15 @@ const Guidebook = () => {
 
   return (
     <div className="min-h-[80vh] overflow-x-hidden bg-gray-50">
-      <Navbar />
+      {/* Header with logo */}
+      <div className="bg-white border-b border-gray-200 ">
+        <div className="container px-4 py-4">
+          <Logo />
+        </div>
+      </div>
 
       {/* Hero section */}
-      <div className="relative bg-white text-white py-16 md:pt-24 md:pb-6">
+      <div className="relative bg-white py-16 md:pt-8 md:pb-6">
         <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Hackathon Guidebook
@@ -219,7 +233,12 @@ const Guidebook = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.2 }}
                           >
-                            <div className="whitespace-pre-line" dangerouslySetInnerHTML={{ __html: subsection.content }} />
+                            <div
+                              className="whitespace-pre-line"
+                              dangerouslySetInnerHTML={{
+                                __html: subsection.content,
+                              }}
+                            />
                           </motion.div>
                         </Accordion.Content>
                       </Accordion.Item>
