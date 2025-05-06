@@ -87,7 +87,27 @@ export const GUIDEBOOK_DATA: GuidebookSection[] = [
         id: "checklist",
         title: "Participant Checklist",
         icon: "checkSquare",
-        content: "Detailed checklist for CDTM Hacks participants goes here.",
+        content: `<h3 class="text-xl font-bold mb-1">🤝 Must Haves:</h3>
+• Valid ID
+• Laptop
+• Charger
+• Other Devices you may need
+• Water bottle
+• Comfortable clothes
+• Good Vibes :)
+
+<h3 class="text-xl font-bold mb-1">😴 If you plan to stay overnight:</h3>
+• Air mattress
+• Sleeping bag
+• Small Pillow
+• Sleeping mask
+• Ear plugs
+• ...
+
+<h3 class="text-xl font-bold mb-1">🔑 Essentials:</h3>
+• Basic toiletries: Toothpaste, Toothbrush, Shampoo, Deodorant, Medications, etc.
+• Towel (You will get free access to shower at the venue (ground floor))
+• ...`,
       },
       {
         id: "transport",
@@ -99,7 +119,13 @@ export const GUIDEBOOK_DATA: GuidebookSection[] = [
         id: "accreditation",
         title: "Accreditation Process",
         icon: "award",
-        content: "How to get your participant badge and complete registration.",
+        content: `<h3 class="text-xl font-bold mb-1">How to get your participant badge and complete registration:</h3>
+1. Go to the registration desk at the entrance of the Celonis Office
+2. Show your ID 
+3. After the verification, you will get your hacker badge
+4. You will also get a goodie bag and hacker t-shirt 
+5. And done. Enjoy CDTM Hacks 2025 🎉
+`,
       },
       {
         id: "firstaid",
@@ -137,7 +163,8 @@ export const GUIDEBOOK_DATA: GuidebookSection[] = [
         id: "tools",
         title: "Available Tools & Resources",
         icon: "wrench",
-        content: "List of tools and resources available for participants.",
+        content: `<h3 class="text-xl font-bold mb-1">List of tools and resources available:</h3>
+Add link to tech fachsheet`,
       },
       {
         id: "submission",

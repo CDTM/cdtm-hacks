@@ -219,7 +219,7 @@ const Guidebook = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.2 }}
                           >
-                            <p>{subsection.content}</p>
+                            <div className="whitespace-pre-line" dangerouslySetInnerHTML={{ __html: subsection.content }} />
                           </motion.div>
                         </Accordion.Content>
                       </Accordion.Item>
