@@ -110,12 +110,6 @@ export const GUIDEBOOK_DATA: GuidebookSection[] = [
 • ...`,
       },
       {
-        id: "transport",
-        title: "Transportation Options",
-        icon: "truck",
-        content: "Information about transportation to and from the event.",
-      },
-      {
         id: "accreditation",
         title: "Accreditation Process",
         icon: "award",
@@ -129,15 +123,62 @@ export const GUIDEBOOK_DATA: GuidebookSection[] = [
       },
       {
         id: "firstaid",
-        title: "First Aid & Security",
+        title: "First Aid & Safety",
         icon: "pill",
-        content: "Information about safety procedures and first aid locations.",
+        content: `
+Our Team (everybody who is wearing Team Merch) is there for you and will help you in every situation. If you need (medical) help, reach out to them or call the emergency number 112. In case of an emergency, please follow their instructions!
+
+<b class="text-xl font-bold mb-0">What to do when you call 112?</b>
+
+Make the call yourself if you can
+→ Call from a safe place
+→ Explain what happened
+→ Tell your exact address and municipality: Celonis, Theresienstraße 6, 80333 München
+→ Answer all the ERC operator's questions
+→ Follow the instructions given
+→ Don't end the call until permitted 
+
+<b class="text-xl font-bold mb-0">Safety & wellbeing</b>
+
+If you have face any situation that makes you feel not safe & uncomfortable in the environment of the hackathon please reach out to the team. There is always someone there from the team at the venue. We will help you to get out of the situation & handle it with care. You can also reach out individually to the team on Discord or approach us in person.
+
+`,
       },
       {
         id: "schedule-overview",
         title: "Schedule Overview",
         icon: "calendar",
-        content: "A brief overview of the event schedule.",
+        content: `We will keep the schedule on our website and update it as we go. You can find the schedule <a class="underline text-springBlue" href='https://hacks.cdtm.com/schedule'>here</a>. 
+        
+        You should also add the event calendar <a class="underline text-springBlue" href='https://cdtm-hacks.com/calendar'>here</a> to your calendar to stay updated even when you're totaly locked-in.`,
+      },
+      {
+        id: "channels",
+        title: "Communication Channels",
+        icon: "messageSquare",
+        content: `We have several communication channels for you to stay update:
+        
+        <b class="text-xl font-bold mb-0">Discord</b>
+        We will use Discord as our main communication channel to communicate with you during the event. You can join the server <a class="underline text-springBlue" href='https://discord.gg/UPG8h74VAU'>https://discord.gg/UPG8h74VAU</a>. Next to all the organisational & informational things there is also a lot of space to post your photos, memes, ideas & shit talk about that one team that you totally crushed in the last 24 hours.
+
+        <b class="text-xl font-bold mb-0">Social Media</b>
+        We will use Instagram & X to post updates about the event to the public. 
+        You can follow us on Instagram under <a class="underline text-springBlue" href='https://www.instagram.com/centerlings/'>centerlings</a> & on Twitter/X under <a class="underline text-springBlue" href='https://x.com/cdtm_munich'>@cdtm_munich</a>.
+
+        Feel free to post about the event on your own social media. Tag us & use the hashtag <b class="text-springBlue">#cdtmhacks</b> to get some engagement from the crew.
+
+        <b class="text-xl font-bold mb-0">Website</b>
+        We will try our best to keep the website & especially the Guidebook updated with the latest information about the event. If you are here you probably found the website. Good job 🍪.
+
+        `,
+      },
+      {
+        id: "feedback",
+        title: "Feedback",
+        icon: "messageCircle",
+        content: `We are always looking for ways to improve the event. If you have any immediate feedback during the event, please just talk to us or reach out to us on Discord. We will try to help you as soon as possible.
+          
+          After the event, we will also ask you to fill out a feedback form to help us improve the event.`,
       },
     ],
   },
@@ -211,37 +252,6 @@ Add link to tech fachsheet`,
         icon: "star",
         content:
           "Special activities and areas to explore during the hackathon.",
-      },
-    ],
-  },
-  {
-    id: "communication",
-    title: "Communication",
-    icon: "messageSquare",
-    subsections: [
-      {
-        id: "channels",
-        title: "Communication Channels",
-        icon: "messageSquare",
-        content: "How to stay informed during the event.",
-      },
-      {
-        id: "contacts",
-        title: "Organizer Contacts",
-        icon: "phone",
-        content: "Contact information for organizers and staff.",
-      },
-      {
-        id: "feedback",
-        title: "Feedback System",
-        icon: "messageCircle",
-        content: "How to provide feedback during and after the event.",
-      },
-      {
-        id: "announcements",
-        title: "Announcements",
-        icon: "info",
-        content: "Important announcements and updates.",
       },
     ],
   },
