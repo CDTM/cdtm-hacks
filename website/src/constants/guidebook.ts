@@ -122,6 +122,30 @@ export const GUIDEBOOK_DATA: GuidebookSection[] = [
 `,
       },
       {
+        id: "venue",
+        title: "Venue Details and Map",
+        icon: "map",
+        content: `
+<h3 class="text-xl font-bold mb-1">Event Venue - Celonis Office: </h3>
+Theresienstraße 4, 80333 München<br />Germany<br /><br />
+<iframe src="https://www.google.com/maps?q=Theresienstraße+4,+80333+München,+Germany&output=embed" width="100%" height="300" style="border:0; border-radius: 8px; margin-top: 12px; margin-bottom: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+• The doors open on Friday, 9th May, 16:00 (4:00 PM).
+• Please make sure to arrive no later than 18:30 (6:30 PM) so we can kick things off smoothly together.
+• Make sure to check for the CDTM Hacks signposts on main door and the hallway to get to the registration desks.
+
+<h3 class="text-xl font-bold mb-1">Here's a small guide to walk you through the venue: </h3>
+
+Enter the Celonis Office from the main entrance on Theresienstraße 4.
+
+<img src="/images/celonis_entry.jpg" alt="Celonis Office Entrance" style="max-height: 300px; width: auto; border-radius: 8px; margin-top: 12px; margin-bottom: 12px;" />
+
+
+<iframe src="https://drive.google.com/file/d/1ukLKsenh5lchg58t1USyrF4sqWo7vgSG/preview" width="auto%" height="450" style="border:0; border-radius: 8px; margin-top: 12px; margin-bottom: 12px;" allowfullscreen></iframe>
+
+-
+`,
+      },
+      {
         id: "firstaid",
         title: "First Aid & Safety",
         icon: "pill",
@@ -198,7 +222,7 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
         id: "teams",
         title: "Team Formation Guidelines",
         icon: "users",
-        content: "How teams are formed and guidelines for participation.",
+        content: `Some of you might already have signed up with a team, others might be looking for a team. We will have a team formation session on Friday after the opening ceremony. Additionally there is the <b>🤝-looking-for-a-team</b> Discord channel for you to find a team or find people to join your team.`,
       },
       {
         id: "tools",
@@ -211,7 +235,8 @@ Add link to tech fachsheet`,
         id: "submission",
         title: "Submission Process",
         icon: "upload",
-        content: "How to submit your project and what to include.",
+        content:
+          "We are working on the submission process. More information on Friday. Please stay tuned.",
       },
       {
         id: "partners",
@@ -219,49 +244,6 @@ Add link to tech fachsheet`,
         icon: "phone",
         content:
           "Information about our partners and their roles in the challenges.",
-      },
-    ],
-  },
-  {
-    id: "location",
-    title: "Location & Event Overview",
-    icon: "mapPin",
-    subsections: [
-      {
-        id: "venue",
-        title: "Venue Details and Map",
-        icon: "map",
-        content:
-          `
-<h3 class="text-xl font-bold mb-1">Event Venue - Celonis Office: </h3>
-Theresienstraße 4, 80333 München<br />Germany<br /><br />
-<iframe src="https://www.google.com/maps?q=Theresienstraße+4,+80333+München,+Germany&output=embed" width="100%" height="300" style="border:0; border-radius: 8px; margin-top: 12px; margin-bottom: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-• The doors open on Friday, 9th May, 16:00 (4:00 PM).
-• Please make sure to arrive no later than 18:30 (6:30 PM) so we can kick things off smoothly together.
-• Make sure to check for the CDTM Hacks signposts on main door and the hallway to get to the registration desks.
-
-<h3 class="text-xl font-bold mb-1">Here's a small video explnation: </h3>
--
-`,
-      },
-      {
-        id: "daily",
-        title: "Daily Schedule",
-        icon: "calendar",
-        content: "Detailed schedule for each day of the event.",
-      },
-      {
-        id: "locations",
-        title: "Important Locations",
-        icon: "mapPin",
-        content: "Key locations you need to know about during the event.",
-      },
-      {
-        id: "activities",
-        title: "Activities & Experience Areas",
-        icon: "star",
-        content:
-          "Special activities and areas to explore during the hackathon.",
       },
     ],
   },
@@ -274,8 +256,7 @@ Theresienstraße 4, 80333 München<br />Germany<br /><br />
         id: "about",
         title: "About CDTM",
         icon: "building",
-        content:
-          `The Center of Digital Technology and Management, Munich is a joint entrepreneurship-focused program by Technical University of Munich and Ludwig-Maximilan-University, with a community of 1,000+ students and alumni who have founded 20% of German unicorns, raised 11% of Germany’s VC funding ($1.2B in 2022), and lead research at MIT, Google DeepMind, and Stanford. To Learn more about CDTM, visit our <a class="underline text-springBlue" href='https://www.cdtm.com/'> website</a>.
+        content: `The Center of Digital Technology and Management, Munich is a joint entrepreneurship-focused program by Technical University of Munich and Ludwig-Maximilan-University, with a community of 1,000+ students and alumni who have founded 20% of German unicorns, raised 11% of Germany's VC funding ($1.2B in 2022), and lead research at MIT, Google DeepMind, and Stanford. To Learn more about CDTM, visit our <a class="underline text-springBlue" href='https://www.cdtm.com/'> website</a>.
 
 Join our community in Munich as part of the Fall 2025 Class. Apply <a class="underline text-springBlue" href='https://application.cdtm.com/login'>here</a>. The deadline is 30th May 2025. `,
       },
