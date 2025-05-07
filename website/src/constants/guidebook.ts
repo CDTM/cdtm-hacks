@@ -88,10 +88,9 @@ export const GUIDEBOOK_DATA: GuidebookSection[] = [
         title: "Participant Checklist",
         icon: "checkSquare",
         content: `<h3 class="text-xl font-bold mb-1">🤝 Must Haves:</h3>
-• Valid ID
+• Valid ID / Passport
 • Laptop
 • Charger
-• Other Devices you may need
 • Water bottle
 • Comfortable clothes
 • Good Vibes :)
@@ -102,9 +101,6 @@ export const GUIDEBOOK_DATA: GuidebookSection[] = [
 • Small Pillow
 • Sleeping mask
 • Ear plugs
-• ...
-
-<h3 class="text-xl font-bold mb-1">🔑 Essentials:</h3>
 • Basic toiletries: Toothpaste, Toothbrush, Shampoo, Deodorant, Medications, etc.
 • Towel (You will get free access to shower at the venue (ground floor))
 • ...`,
@@ -117,7 +113,7 @@ export const GUIDEBOOK_DATA: GuidebookSection[] = [
 1. Go to the registration desk at the entrance of the Celonis Office
 2. Show your ID 
 3. After the verification, you will get your hacker badge
-4. You will also get a goodie bag and hacker t-shirt 
+4. You will also get a goodie bag 
 5. And done. Enjoy CDTM Hacks 2025 🎉
 `,
       },
@@ -154,6 +150,8 @@ Enter the Celonis Office from the main entrance on Theresienstraße 4.
         content: `
 Our Team (everybody who is wearing Team Merch) is there for you and will help you in every situation. If you need (medical) help, reach out to them or call the emergency number 112. In case of an emergency, please follow their instructions!
 
+/* Nils Telefon Nummer */
+
 <b class="text-xl font-bold mb-0">What to do when you call 112?</b>
 
 Make the call yourself if you can
@@ -171,12 +169,20 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
 `,
       },
       {
+        id: "wifi",
+        title: "Internet Access",
+        icon: "award",
+        content: `To join our WiFi network, please connect to "Celonis Visitors" and follow the instructions. As a company you can enter "CDTM HACKS".`,
+      },
+      {
         id: "schedule-overview",
         title: "Schedule Overview",
         icon: "calendar",
-        content: `We will keep the schedule on our website and update it as we go. You can find the schedule <a class="underline text-springBlue" href='https://hacks.cdtm.com/schedule'>here</a>. 
+        content: `
         
-        You should also add the event calendar <a class="underline text-springBlue" href='https://cdtm-hacks.com/calendar'>here</a> to your calendar to stay updated even when you're totaly locked-in.`,
+        TODO: Add schedule
+        
+        You should also add the event calendar <a class="underline text-springBlue" href='https://hacks.cdtm.com/calendar'>here</a> to your calendar to stay updated even when you're totaly locked-in.`,
       },
       {
         id: "channels",
@@ -185,7 +191,10 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
         content: `We have several communication channels for you to stay update:
         
         <b class="text-xl font-bold mb-0">Discord</b>
-        We will use Discord as our main communication channel to communicate with you during the event. You can join the server <a class="underline text-springBlue" href='https://discord.gg/UPG8h74VAU'>https://discord.gg/UPG8h74VAU</a>. Next to all the organisational & informational things there is also a lot of space to post your photos, memes, ideas & shit talk about that one team that you totally crushed in the last 24 hours.
+        We will use Discord as our main communication channel to communicate with you during the event. You can join the server <a class="underline text-springBlue" href='https://hacks.cdtm.com/discord'>hacks.cdtm.com/discord</a>. Next to all the organisational & informational things there is also a lot of space to post your photos, memes, ideas & shit talk about that one team that you totally crushed in the last 24 hours.
+
+        <b class="text-xl font-bold mb-0">Images</b>
+        If you take any photos during the event, please share them with us on Discord. We will also have a photo booth setup at the event.
 
         <b class="text-xl font-bold mb-0">Social Media</b>
         We will use Instagram & X to post updates about the event to the public. 
@@ -197,6 +206,14 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
         We will try our best to keep the website & especially the Guidebook updated with the latest information about the event. If you are here you probably found the website. Good job 🍪.
 
         `,
+      },
+      {
+        id: "food",
+        title: "Food & Drinks",
+        icon: "utensils",
+        content: `
+          TODO: Add food & drinks
+          `,
       },
       {
         id: "feedback",
@@ -214,6 +231,61 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
     icon: "star",
     subsections: [
       {
+        id: "pref-submission",
+        title: "Case Preference",
+        icon: "star",
+        content: `All teams will need to submit their case preferences on <b>Friday, 9th May until 22:00</b>. You can choose one of the 3 cases to work on with your team. We will do our best to accommodate all preferences. 
+        
+        For the challenges you don't need to submit a preference in the beginning. You can choose the challenges in the final submission form.`,
+      },
+      {
+        id: "cases-vs-challenges",
+        title: "Cases vs. Challenges",
+        icon: "star",
+        content: `
+        There are 3 <b>Cases</b>, which define a problem space you can work on. You can work on exactly one case & need to submit your preference on Friday, 9th May until 22:00.
+
+        At the same time you can compete in several <b>Challenges</b> at a time. Challenges are open to all teams of all cases. You will only need to pick the challenges you want to work on in the final submission form.
+        `,
+      },
+      {
+        id: "how-you-can-win",
+        title: "How you can win..",
+        icon: "star",
+        content: `
+        <b>Cases:</b>
+        - Submit your preference on Friday, 9th May until 22:00
+        - Work on the case you get confirmed from the crew
+        - Hackhackhackhack...
+        - Create a video pitch for your final submission
+        - Submit your solution on Sunday, 11th May until 10:00
+        - Winners will be announced on Sunday, 11th May at the closing ceremony
+
+        <b>Challenges:</b>
+        - Look at the challenges list & integrate those you find interesting into your project work
+        - More hackhackhack...
+        - In the final submission form pick the challenges you worked on & submit your solution by Sunday, 11th May until 10:00
+        - Winners will be announced on Sunday, 11th May at the closing ceremony
+
+        <b>Main Prizes:</b>
+        - Work on your case & challenges
+        - Complete the final submission for your case
+        - The jury will select the best solutions across all cases & challenges
+        - Winners will be announced on Sunday, 11th May at the closing ceremony
+
+        <b>San Francisco Trip:</b>
+        - We will keep you updated on the information on the San Francisco trip
+        `,
+      },
+      {
+        id: "main-prices",
+        title: "Main Prizes",
+        icon: "star",
+        content: `
+        We will have 3 main prizes for everybody competing in one of the 3 cases. The exact prizes will be announced on Friday, 9th May at the opening ceremony.
+        `,
+      },
+      {
         id: "descriptions",
         title: "Case Descriptions",
         icon: "star",
@@ -226,25 +298,29 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
         content: `The challenges will be presented on Friday, 9th May at the opening ceremony. You will find more information afterwards on the website.`,
       },
       {
+        id: "san-francisco",
+        title: "San Francisco Trip",
+        icon: "star",
+        content: `We will update on the information on the San Francisco trip soon.`,
+      },
+      {
         id: "teams",
-        title: "Team Formation Guidelines",
+        title: "Team Formation",
         icon: "users",
         content: `If you'd like to start looking for a team before the event (which we strongly recommend), we have a team-building channel on <a class="underline text-springBlue" href='https://discord.gg/ht3AHskN'>Discord</a>. Here's how it works:
 
 <h3 class="text-xl font-bold mb-1">After you are in the Discord server: </h3>
-• In the #looking-for-team channel, post a message introducing yourself and your team-building preferences:
-• 🧑‍💻 What you do (e.g., dev, design, biz)
-• 🌱 Which case are you're into
-• 👀 Who are you looking for
-• If you find one that looks like a great match reach out to them and see if you would be a good team! (You can also react to their message and see if they reach out to you if they don't accept any direct messages)
-• If you don't find a team, don't worry! You will have time after the case deep dive sessions on Friday.
+In the #looking-for-team channel, post a message introducing yourself and your team-building preferences:
 
-<p class="mt-4 mb-4">❗Please note that the maximum team size is 4 people.</p>
+🧑‍💻 What you do (e.g., dev, design, biz)
+🌱 Your skills you bring to the table
+👀 Who you are looking for
 
+If you don't find a team, don't worry! You will have time after the case deep dive sessions on Friday.
+
+<p class="my-1">❗Please note that the maximum team size is 4 people.</p>
 <h3 class="text-xl font-bold mb-1">How to register your team: </h3>
-• Attend the opening ceremony and the case deep dive sessions on Friday, 9th May. (Calendar for exact information on sessions <a class="underline text-springBlue" href='https://calendar.google.com/calendar/u/0?cid=Y19jNGYyYWFjOTQzMWUwNTNmODBiZmQxNzgwZTE4NWQ0MTliMGVlOTk5YjVjNjZlOTg3MDAyYzQ1YzlhYjhhMWIwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20'>here</a>)
-• After the case deep dive sessions, the team registration and the case preference from will be open. The form can be found <a class="underline text-springBlue" href='https://hacks.cdtm.com/register'>here</a>.
-• And you're all set for hacking!`,
+Register your team after the opening ceremony using the provided form. You will have time until <b>22:00</b> to register your team.`,
       },
       {
         id: "tools",
@@ -289,8 +365,7 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
     </tr>
   </tbody>
 </table>
-
-<p class="mt-4">We will update the factsheet with more details as we go.</p>`,
+<p class="mt-2">We will update the factsheet with more details as we go.</p>`,
       },
       {
         id: "submission",
@@ -328,27 +403,6 @@ Join our community in Munich as part of the Fall 2025 Class. Apply <a class="und
         From Central Station: U2 (direction Feldmoching) → 3 stops to Theresienstraße
         Bus: Take Bus 100 or Bus 150 to Pinakotheken stop → Walk approximately 5 minutes west along Theresienstraße
         `,
-      },
-      {
-        id: "food",
-        title: "Food & Drinks",
-        icon: "utensils",
-        content: `If you have more time in Munich on Friday or Sunday, here are some recommendations for food and drinks around the venue:
-          
-          <h3 class="text-lg font-bold">Food:</h3>
-          • Nostimo Greek Deli (Salats, Good Veggie Options)
-          • Taco Company (Tacos, Good Veggie Options)
-          • many more options in the area
-          
-          <h3 class="text-lg font-bold">Cafés:</h3>
-          • Lost Weekend (Cafe, Bar)
-          • Gartensalon (Cafe, Cakes, Vegan Options)
-          • Das METTA (Cafe)
-          • PLEX Coffee (Cafe to Go)
-          • Cafe moinsplatz (Cafe, Vintage-Bikes)
-          • Billy's Coffee (Cafe)
-          
-          `,
       },
     ],
   },
