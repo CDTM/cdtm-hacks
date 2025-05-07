@@ -232,7 +232,17 @@ Add link to tech fachsheet`,
         title: "Venue Details and Map",
         icon: "map",
         content:
-          "Information about the venue and a map of important locations.",
+          `
+<h3 class="text-xl font-bold mb-1">Event Venue - Celonis Office: </h3>
+Theresienstraße 4, 80333 München<br />Germany<br /><br />
+<iframe src="https://www.google.com/maps?q=Theresienstraße+4,+80333+München,+Germany&output=embed" width="100%" height="300" style="border:0; border-radius: 8px; margin-top: 12px; margin-bottom: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+• The doors open on Friday, 9th May, 16:00 (4:00 PM).
+• Please make sure to arrive no later than 18:30 (6:30 PM) so we can kick things off smoothly together.
+• Make sure to check for the CDTM Hacks signposts on main door and the hallway to get to the registration desks.
+
+<h3 class="text-xl font-bold mb-1">Here's a small video explnation: </h3>
+-
+`,
       },
       {
         id: "daily",
