@@ -215,28 +215,29 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
         id: "descriptions",
         title: "Case Descriptions",
         icon: "star",
-        content:`Case descriptions will be updated after the cases are presented.`,
+        content: `The cases will be presented on Friday, 9th May at the opening ceremony. You will find more information afterwards on the website.`,
       },
       {
         id: "challenge-descriptions",
         title: "Challenge Descriptions",
         icon: "star",
-        content: `Challenge descriptions will be updated after the challenges are presented.`,
+        content: `The challenges will be presented on Friday, 9th May at the opening ceremony. You will find more information afterwards on the website.`,
       },
       {
         id: "teams",
         title: "Team Formation Guidelines",
         icon: "users",
-        content: `If you’d like to start looking for a team before the event (which we strongly recommend), we have a team-building channel on <a class="underline text-springBlue" href='https://discord.gg/UPG8h74VAU'>Discord</a>. Here's how it works:
+        content: `If you'd like to start looking for a team before the event (which we strongly recommend), we have a team-building channel on <a class="underline text-springBlue" href='https://discord.gg/UPG8h74VAU'>Discord</a>. Here's how it works:
 
 <h3 class="text-xl font-bold mb-1">After you are in the Discord server: </h3>
-• In the #looking-for-team channel, post a message introducing yourself and your team-building preferences: 
-        - 🧑‍💻 What you do (e.g., dev, design, biz)
-        - 🌱 Which case are you're into
-        - 👀 Who are you looking for
-•  If you find one that looks like a great match reach out to them and see if you would be a good team! (You can also react to their message and see if they reach out to you if they don’t accept any direct messages)
-•  If you don’t find a team, don’t worry! You will have time after the case deep dive sessions on Friday.
-❗Please note that the maximum team size is 4 people.
+• In the #looking-for-team channel, post a message introducing yourself and your team-building preferences:
+• 🧑‍💻 What you do (e.g., dev, design, biz)
+• 🌱 Which case are you're into
+• 👀 Who are you looking for
+• If you find one that looks like a great match reach out to them and see if you would be a good team! (You can also react to their message and see if they reach out to you if they don't accept any direct messages)
+• If you don't find a team, don't worry! You will have time after the case deep dive sessions on Friday.
+
+<p class="mt-4 mb-4">❗Please note that the maximum team size is 4 people.</p>
 
 <h3 class="text-xl font-bold mb-1">How to register your team: </h3>
 • Attend the opening ceremony and the case deep dive sessions on Friday, 9th May. (Calendar for exact information on sessions <a class="underline text-springBlue" href='https://calendar.google.com/calendar/u/0?cid=Y19jNGYyYWFjOTQzMWUwNTNmODBiZmQxNzgwZTE4NWQ0MTliMGVlOTk5YjVjNjZlOTg3MDAyYzQ1YzlhYjhhMWIwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20'>here</a>)
@@ -247,8 +248,47 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
         id: "tools",
         title: "Available Tools & Resources",
         icon: "wrench",
-        content: `<h3 class="text-xl font-bold mb-1">List of tools and resources available:</h3>
-Add link to tech fachsheet`,
+        content: `<h3 class="text-xl font-bold ">Tech Sponsors</h3>
+<table class="min-w-full text-left border border-gray-200">
+  <thead>
+    <tr>
+      <th class="px-4 py-2 border-b">Partner</th>
+      <th class="px-4 py-2 border-b">Contribution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="px-4 py-2 border-b">OpenAI</td>
+      <td class="px-4 py-2 border-b">300€ worth of credits per team</td>
+    </tr>
+    <tr>
+      <td class="px-4 py-2 border-b">MistralAI</td>
+      <td class="px-4 py-2 border-b">10€ worth of credits per participant</td>
+    </tr>
+    <tr>
+      <td class="px-4 py-2 border-b">Cognition</td>
+      <td class="px-4 py-2 border-b">50€ worth of credits per participant</td>
+    </tr>
+    <tr>
+      <td class="px-4 py-2 border-b">Make.com</td>
+      <td class="px-4 py-2 border-b">Student Membership</td>
+    </tr>
+    <tr>
+      <td class="px-4 py-2 border-b">Lovable</td>
+      <td class="px-4 py-2 border-b">TBD</td>
+    </tr>
+    <tr>
+      <td class="px-4 py-2 border-b">Langfuse</td>
+      <td class="px-4 py-2 border-b">3 months access to Langfuse Core/Pro</td>
+    </tr>
+    <tr>
+      <td class="px-4 py-2 border-b">CedarDB</td>
+      <td class="px-4 py-2 border-b">Access to CedarDB Alpha</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="mt-4">For more details, see the tech factsheet (link coming soon).</p>`,
       },
       {
         id: "submission",
@@ -283,19 +323,37 @@ Join our community in Munich as part of the Fall 2025 Class. Apply <a class="und
         id: "local",
         title: "Local Transportation",
         icon: "truck",
-        content: "How to get around Munich during your stay.",
+        content: `
+        The Celonis headquarters at Theresienstraße 6 is located in the Maxvorstadt district near the Technical University of Munich. Here are the best ways to reach this location:
+
+        Just use Google Maps to find the best way to get to the venue: <iframe src="https://www.google.com/maps?q=Theresienstraße+4,+80333+München,+Germany&output=embed" width="100%" height="300" style="border:0; border-radius: 8px; margin-top: 12px; margin-bottom: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h3 class="text-lg font-bold">MVV System:</h3>
+        U-Bahn: U2 to Theresienstraße station → 2-3 min walk east
+        Tram: Line 27 or 28 to Pinakotheken → 5 min walk west
+        From Central Station: U2 (direction Feldmoching) → 3 stops to Theresienstraße
+        Bus: Take Bus 100 or Bus 150 to Pinakotheken stop → Walk approximately 5 minutes west along Theresienstraße
+        `,
       },
       {
         id: "food",
-        title: "Food & Accommodations",
+        title: "Food & Drinks",
         icon: "utensils",
-        content: "Recommended places to eat and stay near the venue.",
-      },
-      {
-        id: "highlights",
-        title: "Munich Highlights",
-        icon: "mapPin",
-        content: "Points of interest to visit while you're in Munich.",
+        content: `If you have more time in Munich on Friday or Sunday, here are some recommendations for food and drinks around the venue:
+          
+          <h3 class="text-lg font-bold">Food:</h3>
+          • Nostimo Greek Deli (Salats, Good Veggie Options)
+          • Taco Company (Tacos, Good Veggie Options)
+          • many more options in the area
+          
+          <h3 class="text-lg font-bold">Cafés:</h3>
+          • Lost Weekend (Cafe, Bar)
+          • Gartensalon (Cafe, Cakes, Vegan Options)
+          • Das METTA (Cafe)
+          • PLEX Coffee (Cafe to Go)
+          • Cafe moinsplatz (Cafe, Vintage-Bikes)
+          • Billy's Coffee (Cafe)
+          
+          `,
       },
     ],
   },
