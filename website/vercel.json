@@ -25,6 +25,21 @@
       "source": "/calendar",
       "destination": "https://calendar.google.com/calendar/u/0?cid=Y19jNGYyYWFjOTQzMWUwNTNmODBiZmQxNzgwZTE4NWQ0MTliMGVlOTk5YjVjNjZlOTg3MDAyYzQ1YzlhYjhhMWIwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20",
       "permanent": true
+    },
+    {
+      "source": "/team-registration",
+      "destination": "https://app.formbricks.com/s/cm9r4v91o16lxv901w8j1aixw",
+      "permanent": true
+    },
+    {
+      "source": "/submission",
+      "destination": "https://app.formbricks.com/s/cm9v6d41o0014rr01x483l5fb",
+      "permanent": true
+    },
+    {
+      "source": "/sf-trip",
+      "destination": "https://app.formbricks.com/s/cmaecfl0c1i5myi0142ge5jia",
+      "permanent": true
     }
   ]
 }
