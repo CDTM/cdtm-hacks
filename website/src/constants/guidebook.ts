@@ -275,7 +275,9 @@ Theresienstraße 4, 80333 München<br />Germany<br /><br />
         title: "About CDTM",
         icon: "building",
         content:
-          "Information about the Center for Digital Technology and Management.",
+          `The Center of Digital Technology and Management, Munich is a joint entrepreneurship-focused program by Technical University of Munich and Ludwig-Maximilan-University, with a community of 1,000+ students and alumni who have founded 20% of German unicorns, raised 11% of Germany’s VC funding ($1.2B in 2022), and lead research at MIT, Google DeepMind, and Stanford. To Learn more about CDTM, visit our <a class="underline text-springBlue" href='https://www.cdtm.com/'> website</a>.
+
+Join our community in Munich as part of the Fall 2025 Class. Apply <a class="underline text-springBlue" href='https://application.cdtm.com/login'>here</a>. The deadline is 30th May 2025. `,
       },
       {
         id: "local",
