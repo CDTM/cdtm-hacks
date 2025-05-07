@@ -65,6 +65,11 @@ export const CHALLENGE_SPONSORS: Sponsor[] = [
     class: "max-h-[30px]",
     link: "https://paid.ai/",
   },
+  {
+    name: "Celonis",
+    image: "/images/partners/celonis_logo.svg",
+    link: "https://celonis.com",
+  },
 ];
 
 export const TECH_SPONSORS: Sponsor[] = [
@@ -97,6 +102,11 @@ export const TECH_SPONSORS: Sponsor[] = [
     name: "Cognition AI",
     image: "/images/partners/cognition.png",
     link: "https://cognition.ai/",
+  },
+  {
+    name: "CedarDB",
+    image: "/images/partners/cedardb_black.svg",
+    link: "https://cedardb.com/",
   },
 ];
 
@@ -140,6 +150,11 @@ export const FOOD_SPONSORS: Sponsor[] = [
     name: "Fruiton",
     image: "/images/partners/fruiton.jpeg",
     link: "https://www.fruiton.de/",
+  },
+  {
+    name: "Innocent",
+    image: "/images/partners/innocent_logo.svg",
+    link: "https://www.innocentdrinks.co.uk/home",
   },
   {
     name: "To be announced",
