@@ -133,6 +133,8 @@ Theresienstraße 4, 80333 München<br />Germany<br /><br />
 • Please make sure to arrive no later than 18:30 (6:30 PM) so we can kick things off smoothly together.
 • Make sure to check for the CDTM Hacks signposts on main door and the hallway to get to the registration desks.
 
+<p class="mt-4 mb-4">❗Please note that the entrance at Theresienstraße 6 is closed. Please only use the entrance at Theresienstraße 4.</p>
+
 <h3 class="text-xl font-bold mb-1">Here's a small guide to walk you through the venue: </h3>
 
 Enter the Celonis Office from the main entrance on Theresienstraße 4.
