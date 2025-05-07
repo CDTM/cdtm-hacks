@@ -227,7 +227,7 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
         id: "teams",
         title: "Team Formation Guidelines",
         icon: "users",
-        content: `If you'd like to start looking for a team before the event (which we strongly recommend), we have a team-building channel on <a class="underline text-springBlue" href='https://discord.gg/UPG8h74VAU'>Discord</a>. Here's how it works:
+        content: `If you'd like to start looking for a team before the event (which we strongly recommend), we have a team-building channel on <a class="underline text-springBlue" href='https://discord.gg/ht3AHskN'>Discord</a>. Here's how it works:
 
 <h3 class="text-xl font-bold mb-1">After you are in the Discord server: </h3>
 • In the #looking-for-team channel, post a message introducing yourself and your team-building preferences:
@@ -328,7 +328,7 @@ Join our community in Munich as part of the Fall 2025 Class. Apply <a class="und
 
         Just use Google Maps to find the best way to get to the venue: <iframe src="https://www.google.com/maps?q=Theresienstraße+4,+80333+München,+Germany&output=embed" width="100%" height="300" style="border:0; border-radius: 8px; margin-top: 12px; margin-bottom: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <h3 class="text-lg font-bold">MVV System:</h3>
-        U-Bahn: U2 to Theresienstraße station → 2-3 min walk east
+        U-Bahn: U2 to Theresienstraße station → 2-3 min walk east, U3 to Universität station → 2-3 min walk north
         Tram: Line 27 or 28 to Pinakotheken → 5 min walk west
         From Central Station: U2 (direction Feldmoching) → 3 stops to Theresienstraße
         Bus: Take Bus 100 or Bus 150 to Pinakotheken stop → Walk approximately 5 minutes west along Theresienstraße
