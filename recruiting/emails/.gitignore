@@ -1,0 +1,8 @@
+.env
+node_modules
+recipients_followup.csv
+recipients_slot.csv
+recipients_wave1.csv
+recipients_wave2.csv
+recipients_location.csv
+recipients_update.csv

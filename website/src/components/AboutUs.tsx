@@ -42,18 +42,6 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
-
-          {/* Apply Now */}
-          <div className="flex justify-center">
-            <a
-              href="https://app.formbricks.com/s/cm87i0iq40000ji039uyra9hq"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-springBlue text-white font-semibold py-3 px-8 rounded-lg hover:bg-springBlue/90 transition-colors text-lg"
-            >
-              Apply for the Hackathon
-            </a>
-          </div>
         </div>
       </div>
     </section>

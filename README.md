@@ -28,7 +28,7 @@ Meet inspiring founders, investors, and tech leaders from the CDTM ecosystem and
 ## Repository Structure
 
 - `website/` — Source code for the event website
-- `website/public/images/hero.png` — Hero banner used on the website and in this README
+- `platform/` — Source code for running the platform used during the hackathon
 - `team-name-checker/` — Source code for the team name checker tool
 - `recruiting/` — Some scripts we used during the application process & recruiting of participants
 
