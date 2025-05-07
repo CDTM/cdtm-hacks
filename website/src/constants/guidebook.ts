@@ -290,7 +290,7 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
   </tbody>
 </table>
 
-<p class="mt-4">For more details, see the tech factsheet (link coming soon).</p>`,
+<p class="mt-4">We will update the factsheet with more details as we go.</p>`,
       },
       {
         id: "submission",
@@ -298,13 +298,6 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
         icon: "upload",
         content:
           "We are working on the submission process. More information on Friday. Please stay tuned.",
-      },
-      {
-        id: "partners",
-        title: "Partner Information",
-        icon: "phone",
-        content:
-          "Information about our partners and their roles in the challenges.",
       },
     ],
   },
@@ -319,7 +312,7 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
         icon: "building",
         content: `The Center of Digital Technology and Management, Munich is a joint entrepreneurship-focused program by Technical University of Munich and Ludwig-Maximilan-University, with a community of 1,000+ students and alumni who have founded 20% of German unicorns, raised 11% of Germany's VC funding ($1.2B in 2022), and lead research at MIT, Google DeepMind, and Stanford. To Learn more about CDTM, visit our <a class="underline text-springBlue" href='https://www.cdtm.com/'> website</a>.
 
-Join our community in Munich as part of the Fall 2025 Class. Apply <a class="underline text-springBlue" href='https://application.cdtm.com/login'>here</a>. The deadline is 30th May 2025. `,
+Join our community in Munich as part of the Fall 2025 Class. Apply <a class="underline text-springBlue" href='https://application.cdtm.com/login'>here</a>. The deadline is 30th May 2025.There are a lot of Centerlings running around the hackathon. Feel free to say hi and ask them about CDTM. `,
       },
       {
         id: "local",

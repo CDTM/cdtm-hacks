@@ -54,6 +54,7 @@ const Navbar = () => {
           { id: "speakers", label: "Speakers", url: "#speakers" },
           { id: "schedule", label: "Schedule", url: "#schedule" },
           { id: "about-us", label: "Organisers", url: "#about-us" },
+          { id: "guidebook", label: "Guidebook", url: "/guidebook" },
           {
             id: "github",
             label: "GitHub",
@@ -113,6 +114,12 @@ const Navbar = () => {
             Organisers
           </a>
           <a
+            href="/guidebook"
+            className="text-springText/80 hover:text-springBlue transition-colors flex items-center gap-2"
+          >
+            Guidebook
+          </a>
+          <a
             href="https://github.com/CDTM/cdtm-hacks"
             target="_blank"
             rel="noopener noreferrer"
@@ -150,7 +157,10 @@ const Navbar = () => {
       />
 
       {/* Applications Closed Dialog */}
-      <ApplicationsClosedDialog isOpen={isDialogOpen} onOpenChange={setIsDialogOpen} />
+      <ApplicationsClosedDialog
+        isOpen={isDialogOpen}
+        onOpenChange={setIsDialogOpen}
+      />
     </header>
   );
 };

@@ -3,7 +3,7 @@ import { GUIDEBOOK_DATA, IconName, iconMap } from "@/constants/guidebook";
 import * as Accordion from "@radix-ui/react-accordion";
 import * as ScrollArea from "@radix-ui/react-scroll-area";
 import { motion } from "framer-motion";
-import { ArrowLeft, Edit, Search } from "lucide-react";
+import { ArrowLeft, CornerDownLeft, Edit, Search } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const Logo = () => (
@@ -85,7 +85,6 @@ const Guidebook = () => {
 
   return (
     <div className="min-h-[80vh] overflow-x-hidden bg-gray-50">
-      {/* Header with logo */}
       <div className="bg-white border-b border-gray-200 ">
         <div className="container px-4 py-4">
           <Logo />
