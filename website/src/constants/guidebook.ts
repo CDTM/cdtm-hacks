@@ -213,16 +213,35 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
     subsections: [
       {
         id: "descriptions",
+        title: "Case Descriptions",
+        icon: "star",
+        content:`Case descriptions will be updated after the cases are presented.`,
+      },
+      {
+        id: "challenge-descriptions",
         title: "Challenge Descriptions",
         icon: "star",
-        content:
-          "Detailed information about each challenge and its objectives.",
+        content: `Challenge descriptions will be updated after the challenges are presented.`,
       },
       {
         id: "teams",
         title: "Team Formation Guidelines",
         icon: "users",
-        content: `Some of you might already have signed up with a team, others might be looking for a team. We will have a team formation session on Friday after the opening ceremony. Additionally there is the <b>🤝-looking-for-a-team</b> Discord channel for you to find a team or find people to join your team.`,
+        content: `If you’d like to start looking for a team before the event (which we strongly recommend), we have a team-building channel on <a class="underline text-springBlue" href='https://discord.gg/UPG8h74VAU'>Discord</a>. Here's how it works:
+
+<h3 class="text-xl font-bold mb-1">After you are in the Discord server: </h3>
+• In the #looking-for-team channel, post a message introducing yourself and your team-building preferences: 
+        - 🧑‍💻 What you do (e.g., dev, design, biz)
+        - 🌱 Which case are you're into
+        - 👀 Who are you looking for
+•  If you find one that looks like a great match reach out to them and see if you would be a good team! (You can also react to their message and see if they reach out to you if they don’t accept any direct messages)
+•  If you don’t find a team, don’t worry! You will have time after the case deep dive sessions on Friday.
+❗Please note that the maximum team size is 4 people.
+
+<h3 class="text-xl font-bold mb-1">How to register your team: </h3>
+• Attend the opening ceremony and the case deep dive sessions on Friday, 9th May. (Calendar for exact information on sessions <a class="underline text-springBlue" href='https://calendar.google.com/calendar/u/0?cid=Y19jNGYyYWFjOTQzMWUwNTNmODBiZmQxNzgwZTE4NWQ0MTliMGVlOTk5YjVjNjZlOTg3MDAyYzQ1YzlhYjhhMWIwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20'>here</a>)
+• After the case deep dive sessions, the team registration and the case preference from will be open. The form can be found <a class="underline text-springBlue" href='https://hacks.cdtm.com/register'>here</a>.
+• And you're all set for hacking!`,
       },
       {
         id: "tools",
