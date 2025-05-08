@@ -159,8 +159,6 @@ Our Team (everybody who is wearing "Crew" Merch) is there for you and will help 
 
 If you need (medical) help, reach out to them or call the emergency number 112. In case of an emergency, please follow their instructions!
 
-/* Nils Telefon Nummer */
-
 <b class="text-xl font-bold mb-0">What to do when you call 112?</b>
 
 Make the call yourself if you can
@@ -267,14 +265,20 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
         id: "cases-vs-challenges",
         title: "Cases vs. Challenges",
         icon: "star",
-        content: `There are <strong>three separate cases</strong> (Trade Republic, avi, Beam) to choose from. <strong>Pick exactly one case</strong> and submit your choice <strong>by Friday, 9 May, 22:00</strong>. Any team, in any case, may enter <strong>as many challenges as they like</strong>. Just select the challenges you'll tackle in the final submission form.
+        content: `There are <strong>three separate cases</strong> (Trade Republic, avi, Beam) to choose from. Every team will only be asigned <strong>exactly one case!</strong> You can decide on a ranking of the cases and submit your choice <strong>by Friday, 9 May, 22:00</strong>. Any team, in any case, may enter <strong>as many challenges as they like</strong>. Just select the challenges you'll tackle in the final submission form.
         `,
+      },
+      {
+        id: "pref-team",
+        title: "Team Formation",
+        icon: "users",
+        content: `You submit your team <strong>together with your case preference</strong> by <strong>Friday, 9 May, 22:00</strong> in the same form. If you don't have a team <strong>you can also sign up as a single participant</strong> and get matched with a team with similar case preferences.`,
       },
       {
         id: "pref-submission",
         title: "Case Preference",
         icon: "checkSquare",
-        content: `The preference selection is due to <strong>Fri, May 9 by 22:00.</strong>.
+        content: `The preference selection is due by <strong>Friday, May 9 at 22:00</strong>.
         Rank your three preferences. Get one case assigned to work on with your team (no open tracks!). For challenges: no preference submission in the beginning. This is to be done in the final submission.`,
       },
       {
@@ -286,17 +290,23 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
 <strong>Submissions should include:</strong>
 
 • A short pitch video (max. 3 minutes)
-• A written project description including:
-  <div class="ml-8">
-      - One sentence pitch
-      - What is your project?
-      - How we built it
-      - Challenges we ran into
-      - What we learned
-      - What's next for your project?
-  </div>
-• A link to the source code repository (recommended)
 • A link to the demo / MVP (recommended)
+• A link to the source code repository (recommended)
+• A written project description including:
+      &nbsp;&nbsp;&nbsp;&nbsp;■ One sentence pitch
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Summarize your project in a single, compelling sentence.
+      &nbsp;&nbsp;&nbsp;&nbsp;■ What is your project?
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Describe your project in a few clear, informative sentences (max. 800 characters). Focus on what it does, who it's for, and what makes it unique.
+      &nbsp;&nbsp;&nbsp;&nbsp;■ How you built it
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Briefly describe your tech stack and the key technologies used to build your project. Highlight tools, frameworks, APIs, or models that played a major role.
+      &nbsp;&nbsp;&nbsp;&nbsp;■ Difficulties you faced
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Briefly describe the main technical or non-technical challenges you encountered during the project. What was hard, unexpected, or required creative problem-solving?
+      &nbsp;&nbsp;&nbsp;&nbsp;■ What you learned
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Briefly summarize the key learnings and takeaways from the project.
+      &nbsp;&nbsp;&nbsp;&nbsp;■ What's next for your project?
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Outline the upcoming features and improvements you plan to implement.Type your answer here...
+• The challenges you want to compete for
+• A brief desctription why you deserve to win the challenge you are competing for (for each challenge)
 
 Be prepared to be selected for the final pitches & have your 2-3 minute final pitch/demo ready in case you are selected.
 
@@ -406,7 +416,7 @@ Register your team after the opening ceremony using the provided form. You will 
     </tr>
     <tr>
       <td class="px-4 py-2 border-b">Lovable</td>
-      <td class="px-4 py-2 border-b">TBD</td>
+      <td class="px-4 py-2 border-b">You get a Teams 1 plan or an upgrade to a higher plan for free</td>
     </tr>
     <tr>
       <td class="px-4 py-2 border-b">Langfuse</td>
