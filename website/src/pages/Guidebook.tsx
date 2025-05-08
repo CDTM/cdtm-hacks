@@ -3,7 +3,7 @@ import { GUIDEBOOK_DATA, IconName, iconMap } from "@/constants/guidebook";
 import * as Accordion from "@radix-ui/react-accordion";
 import * as ScrollArea from "@radix-ui/react-scroll-area";
 import { motion } from "framer-motion";
-import { ArrowLeft, CornerDownLeft, Edit, Search } from "lucide-react";
+import { Edit, Search } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const Logo = () => (
@@ -17,9 +17,9 @@ const Logo = () => (
 );
 
 // Helper function to render an icon by name
-const renderIcon = (name: IconName, size: number) => {
+const renderIcon = (name: IconName, size: number, color?: string) => {
   const IconComponent = iconMap[name];
-  return <IconComponent size={size} />;
+  return <IconComponent size={size} color={color} />;
 };
 const githubEditUrl = `https://github.com/cdtm/cdtm-hacks/edit/main/website/src/constants/guidebook.ts`;
 
@@ -30,6 +30,11 @@ const Guidebook = () => {
     Array<{ section: string; subsection: string; title: string }>
   >([]);
   const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
+
+  // Helper to get all subsection IDs for expanded accordions
+  const allSubsectionIds = GUIDEBOOK_DATA.flatMap((section) =>
+    section.subsections.map((sub) => sub.id)
+  );
 
   // Handle search functionality
   useEffect(() => {
@@ -65,20 +70,26 @@ const Guidebook = () => {
     }
   };
 
-  // Scroll to subsection from search results
+  // Scroll to subsection from search results or navigation
   const scrollToSubsection = (sectionId: string, subsectionId: string) => {
     setActiveSection(sectionId);
-    const sectionElement = sectionRefs.current[sectionId];
-    if (sectionElement) {
-      sectionElement.scrollIntoView({ behavior: "smooth", block: "start" });
-
-      // Find and expand the accordion item for this subsection
-      const accordionTrigger = document.getElementById(
-        `accordion-trigger-${subsectionId}`
-      );
-      if (accordionTrigger) {
-        accordionTrigger.click();
-      }
+    const anchorId = `${sectionId}-${subsectionId}`;
+    // Update the URL hash
+    window.location.hash = `#${anchorId}`;
+    // Scroll to the anchor
+    const anchorElement = document.getElementById(anchorId);
+    if (anchorElement) {
+      anchorElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    // Expand the accordion if not already open
+    const accordionTrigger = document.getElementById(
+      `accordion-trigger-${subsectionId}`
+    );
+    if (
+      accordionTrigger &&
+      accordionTrigger.getAttribute("aria-expanded") !== "true"
+    ) {
+      accordionTrigger.click();
     }
     setSearchQuery("");
   };
@@ -155,18 +166,35 @@ const Guidebook = () => {
           <div className="sticky top-24 bg-white rounded-lg shadow-md p-4">
             <nav className="space-y-1">
               {GUIDEBOOK_DATA.map((section) => (
-                <button
-                  key={section.id}
-                  onClick={() => scrollToSection(section.id)}
-                  className={`flex items-center px-3 py-2 text-sm font-medium rounded-md w-full text-left transition-colors ${
-                    activeSection === section.id
-                      ? "bg-springBlue text-white"
-                      : "text-gray-600 hover:text-springBlue hover:bg-gray-100"
-                  }`}
-                >
-                  <span className="mr-3">{renderIcon(section.icon, 24)}</span>
-                  {section.title}
-                </button>
+                <div key={section.id}>
+                  <button
+                    onClick={() => scrollToSection(section.id)}
+                    className={`flex items-center px-3 py-2 text-sm font-medium rounded-md w-full text-left transition-colors ${
+                      activeSection === section.id
+                        ? "bg-springBlue text-white"
+                        : "text-gray-600 hover:text-springBlue hover:bg-gray-100"
+                    }`}
+                  >
+                    <span className="mr-3 w-5 h-5  flex items-center justify-center">
+                      {renderIcon(section.icon, 16)}
+                    </span>
+                    {section.title}
+                  </button>
+                  {/* Subsection navigation */}
+                  <div className="ml-7 mt-1 space-y-1">
+                    {section.subsections.map((subsection) => (
+                      <button
+                        key={subsection.id}
+                        onClick={() => {
+                          scrollToSubsection(section.id, subsection.id);
+                        }}
+                        className="block text-left text-xs text-gray-500 hover:text-springBlue w-full px-2 py-1 rounded transition-colors"
+                      >
+                        {subsection.title}
+                      </button>
+                    ))}
+                  </div>
+                </div>
               ))}
             </nav>
           </div>
@@ -184,63 +212,75 @@ const Guidebook = () => {
                   className="mb-12"
                 >
                   <div className="flex items-center mb-6">
-                    <div className="bg-springBlue p-3 rounded-full text-white mr-4">
-                      {renderIcon(section.icon, 24)}
+                    <div className="w-8 h-8 rounded-lg bg-springBlue flex items-center justify-center mr-4">
+                      {renderIcon(section.icon, 20, "white")}
                     </div>
-                    <h2 className="text-3xl font-bold text-gray-800">
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
                       {section.title}
                     </h2>
                   </div>
 
-                  <Accordion.Root type="multiple" className="space-y-4">
+                  <Accordion.Root
+                    type="multiple"
+                    defaultValue={allSubsectionIds}
+                    className="space-y-4"
+                  >
                     {section.subsections.map((subsection) => (
-                      <Accordion.Item
-                        key={subsection.id}
-                        value={subsection.id}
-                        className="bg-white rounded-lg shadow-sm overflow-hidden"
-                      >
-                        <Accordion.Trigger
-                          id={`accordion-trigger-${subsection.id}`}
-                          className="flex items-center justify-between w-full px-5 py-4 text-left focus:outline-none focus:ring-2 focus:ring-springBlue"
+                      <>
+                        {/* Unique anchor for direct linking */}
+                        <a id={`${section.id}-${subsection.id}`}></a>
+                        <Accordion.Item
+                          key={subsection.id}
+                          value={subsection.id}
+                          id={subsection.id}
+                          className="bg-white rounded-lg shadow border border-gray-100 overflow-hidden group"
                         >
-                          <div className="flex items-center">
-                            <span className="text-springBlue mr-3">
-                              {renderIcon(subsection.icon, 20)}
-                            </span>
-                            <span className="font-medium text-gray-700">
-                              {subsection.title}
-                            </span>
+                          <div className="relative">
+                            <Accordion.Trigger
+                              id={`accordion-trigger-${subsection.id}`}
+                              className="flex items-center justify-between w-full px-4 py-3 text-left focus:outline-none focus:ring-2 focus:ring-springBlue group"
+                            >
+                              <div className="flex items-center gap-2">
+                                <span className="w-7 h-7 rounded-md bg-springBlue/10 flex items-center justify-center text-springBlue">
+                                  {renderIcon(subsection.icon, 16)}
+                                </span>
+                                <span className="text-base font-medium text-gray-700">
+                                  {subsection.title}
+                                </span>
+                              </div>
+
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="w-4 h-4 text-gray-400 transform transition-transform duration-300 group-radix-state-open:rotate-180"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M19 9l-7 7-7-7"
+                                />
+                              </svg>
+                            </Accordion.Trigger>
                           </div>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5 text-gray-400 transform transition-transform duration-300 group-radix-state-open:rotate-180"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M19 9l-7 7-7-7"
-                            />
-                          </svg>
-                        </Accordion.Trigger>
-                        <Accordion.Content className="px-5 py-4 bg-gray-50 text-gray-700">
-                          <motion.div
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.2 }}
-                          >
-                            <div
-                              className="whitespace-pre-line"
-                              dangerouslySetInnerHTML={{
-                                __html: subsection.content,
-                              }}
-                            />
-                          </motion.div>
-                        </Accordion.Content>
-                      </Accordion.Item>
+                          <Accordion.Content className="px-4 py-3 bg-gray-50 text-gray-700">
+                            <motion.div
+                              initial={{ opacity: 0, y: -10 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.2 }}
+                            >
+                              <div
+                                className="whitespace-pre-line"
+                                dangerouslySetInnerHTML={{
+                                  __html: subsection.content,
+                                }}
+                              />
+                            </motion.div>
+                          </Accordion.Content>
+                        </Accordion.Item>
+                      </>
                     ))}
                   </Accordion.Root>
                 </section>

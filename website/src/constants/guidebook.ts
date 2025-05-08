@@ -18,6 +18,8 @@ import {
   Utensils,
   Building,
   LucideIcon,
+  Wifi,
+  Plane,
 } from "lucide-react";
 
 // Define icon names as strings instead of JSX elements
@@ -39,7 +41,9 @@ export type IconName =
   | "phone"
   | "messageCircle"
   | "utensils"
-  | "building";
+  | "building"
+  | "wifi"
+  | "plane";
 
 // Map of icon names to their components
 export const iconMap: Record<IconName, LucideIcon> = {
@@ -61,6 +65,8 @@ export const iconMap: Record<IconName, LucideIcon> = {
   messageCircle: MessageCircle,
   utensils: Utensils,
   building: Building,
+  wifi: Wifi,
+  plane: Plane,
 };
 
 export interface GuidebookSubsection {
@@ -120,7 +126,7 @@ export const GUIDEBOOK_DATA: GuidebookSection[] = [
       {
         id: "venue",
         title: "Venue Details and Map",
-        icon: "map",
+        icon: "mapPin",
         content: `
 <h3 class="text-xl font-bold mb-1">Event Venue - Celonis Office: </h3>
 Theresienstraße 4, 80333 München<br />Germany<br /><br />
@@ -171,7 +177,7 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
       {
         id: "wifi",
         title: "Internet Access",
-        icon: "award",
+        icon: "wifi",
         content: `To join our WiFi network, please connect to "Celonis Visitors" and follow the instructions. As a company you can enter "CDTM HACKS".`,
       },
       {
@@ -257,7 +263,7 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
       {
         id: "pref-submission",
         title: "Case Preference",
-        icon: "star",
+        icon: "checkSquare",
         content: `The preference selection is due to <strong>Fri, May 9 by 22:00.</strong>.
         Rank your three preferences. Get one case assigned to work on with your team (no open tracks!). For challenges: no preference submission in the beginning. This is to be done in the final submission.`,
       },
@@ -271,7 +277,7 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
       {
         id: "final-submission",
         title: "Final Submission",
-        icon: "calendar",
+        icon: "upload",
         content: `<strong>Deadline:</strong> Sunday, May 11th, 10:00 AM
 
 <strong>Submissions should include:</strong>
@@ -296,7 +302,7 @@ Be prepared to be selected for the final pithces & have your 2-3 minute final pi
       {
         id: "how-you-can-win",
         title: "How you can win..",
-        icon: "star",
+        icon: "award",
         content: `Here is the process of how you can compete for the different prizes:
 <strong>Cases:</strong>
 &bull; Submit your preference on Friday, 9th May until 22:00
@@ -324,7 +330,7 @@ Remember that there are a lot of smart people here. Now it's time to hack & deli
       {
         id: "main-prices",
         title: "Main Prizes",
-        icon: "star",
+        icon: "award",
         content: `
         We will have 3 main prizes for everybody competing in one of the 3 cases. The exact prizes will be announced on Friday, 9th May at the opening ceremony.
         `,
@@ -332,19 +338,19 @@ Remember that there are a lot of smart people here. Now it's time to hack & deli
       {
         id: "descriptions",
         title: "Case Descriptions",
-        icon: "star",
+        icon: "info",
         content: `The cases will be presented on Friday, 9th May at the opening ceremony. You will find more information afterwards on the website.`,
       },
       {
         id: "challenge-descriptions",
         title: "Challenge Descriptions",
-        icon: "star",
+        icon: "info",
         content: `The challenges will be presented on Friday, 9th May at the opening ceremony. You will find more information afterwards on the website.`,
       },
       {
         id: "san-francisco",
         title: "San Francisco Trip",
-        icon: "star",
+        icon: "plane",
         content: `We will update on the information on the San Francisco trip soon.`,
       },
       {
@@ -416,7 +422,7 @@ Register your team after the opening ceremony using the provided form. You will 
   {
     id: "cdtm",
     title: "CDTM & Munich",
-    icon: "menu",
+    icon: "building",
     subsections: [
       {
         id: "about",
