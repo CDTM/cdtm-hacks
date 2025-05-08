@@ -156,7 +156,7 @@ Enter the Celonis Office from the main entrance on Theresienstraße 4.
         content: `
 Our Team (everybody who is wearing Team Merch) is there for you and will help you in every situation. If you need (medical) help, reach out to them or call the emergency number 112. In case of an emergency, please follow their instructions!
 
-/* Nils Telefon Nummer */
+In case you need to call someone from the team, you can use the following numbers: +49 1522 9504121
 
 <b class="text-xl font-bold mb-0">What to do when you call 112?</b>
 
