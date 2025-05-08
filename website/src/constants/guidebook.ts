@@ -298,13 +298,13 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
 • A link to the source code repository (recommended)
 • A link to the demo / MVP (recommended)
 
-Be prepared to be selected for the final pithces & have your 2-3 minute final pitch ready in case you are selected.
+Be prepared to be selected for the final pitches & have your 2-3 minute final pitch/demo ready in case you are selected.
 
 <p>Follow the instructions on <a href="https://hacks.cdtm.com/submission" class="underline text-springBlue">hacks.cdtm.com/submission</a></p>`,
       },
       {
         id: "how-you-can-win",
-        title: "How you can win..",
+        title: "How you can win",
         icon: "award",
         content: `Here is the process of how you can compete for the different prizes:
 <strong>Cases:</strong>
