@@ -320,7 +320,7 @@ Be prepared to be selected for the final pithces & have your 2-3 minute final pi
 &bull; Prize: each Challenge Winner will be awarded a prize by the challenge partner
 
 <strong>Main Prizes:</strong>
-&bull; The 6 best teams (1st &amp; 2nd place of each case) will pitch live on the main jury
+&bull; The 6 best teams (1st &amp; 2nd place of each case) will pitch live to the main jury
 &bull; One pitch = 3-min demo + 2 min Q&amp;A
 &bull; The jury will award a 3rd, 2nd, and 1st winner
 
