@@ -186,7 +186,7 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
         icon: "calendar",
         content: `
         
-        TODO: Add schedule
+        <iframe src="https://calendar.google.com/calendar/embed?src=c_c4f2aac9431e053f80bfd1780e185d419b0ee999b5c66e987002c45c9ab8a1b0%40group.calendar.google.com&ctz=Europe%2FBerlin&mode=AGENDA" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
         
         You should also add the event calendar <a class="underline text-springBlue" href='https://hacks.cdtm.com/calendar'>here</a> to your calendar to stay updated even when you're totaly locked-in.`,
       },
