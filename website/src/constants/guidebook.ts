@@ -211,8 +211,32 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
         id: "food",
         title: "Food & Drinks",
         icon: "utensils",
-        content: `
-          TODO: Add food & drinks
+        content: ` There will be plenty of food & drinks during the event for you. Here a quick overview - for more details check the schedule & just look for them at the venue. You will find plenty.
+
+        <strong>Food:</strong>
+
+        <i>Friday:</i>
+        • Dinner: Pizzamobil by Gustavo Gusto
+        • Midnight Snacks
+
+        <i>Saturday:</i>
+        • Breakfast
+        • Lunch
+        • Dinner 
+        • Midnight Snacks
+
+        <i>Sunday:</i>
+        • Breakfast Snack
+        • Lunch
+
+        The main food catering is provided by <a class="underline text-springBlue" href='https://www.instagram.com/momento_ita/'>Momento</a>.
+
+        For Snacks there are several healthy options provided by Celonis, fruiton & VollCorner Bio. We will also make sure that there are some snacks your dentist would not recommend you to eat.
+
+        <strong>Drinks:</strong>
+
+        Celonis will support us with the Drinks for the event. Feel free to grab what you need from the fridges. Additionally we are happy to get support by Innocent, CIAO Coffee & Reimann Ventures for drinks. You will find those drinks directly at the venue. Also a reminder that water from time to time helps to stay hydriated. Just refill your bottles at the taps.
+
           `,
       },
       {
@@ -234,47 +258,67 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
         id: "pref-submission",
         title: "Case Preference",
         icon: "star",
-        content: `All teams will need to submit their case preferences on <b>Friday, 9th May until 22:00</b>. You can choose one of the 3 cases to work on with your team. We will do our best to accommodate all preferences. 
-        
-        For the challenges you don't need to submit a preference in the beginning. You can choose the challenges in the final submission form.`,
+        content: `The preference selection is due to <strong>Fri, May 9 by 22:00.</strong>.
+        Rank your three preferences. Get one case assigned to work on with your team (no open tracks!). For challenges: no preference submission in the beginning. This is to be done in the final submission.`,
       },
       {
         id: "cases-vs-challenges",
         title: "Cases vs. Challenges",
         icon: "star",
-        content: `
-        There are 3 <b>Cases</b>, which define a problem space you can work on. You can work on exactly one case & need to submit your preference on Friday, 9th May until 22:00.
-
-        At the same time you can compete in several <b>Challenges</b> at a time. Challenges are open to all teams of all cases. You will only need to pick the challenges you want to work on in the final submission form.
+        content: `There are <strong>three separate cases</strong> (Trade Republic, avi, Beam) to choose from. <strong>Pick exactly one case</strong> and submit your choice <strong>by Friday, 9 May, 22:00</strong>. Any team, in any case, may enter <strong>as many challenges as they like</strong>. Just select the challenges you'll tackle in the final submission form.
         `,
+      },
+      {
+        id: "final-submission",
+        title: "Final Submission",
+        icon: "calendar",
+        content: `<strong>Deadline:</strong> Sunday, May 11th, 10:00 AM
+
+<strong>Submissions should include:</strong>
+
+• A short pitch video (max. 3 minutes)
+• A written project description including:
+  <div class="ml-8">
+      - One sentence pitch
+      - What is your project?
+      - How we built it
+      - Challenges we ran into
+      - What we learned
+      - What's next for your project?
+  </div>
+• A link to the source code repository (recommended)
+• A link to the demo / MVP (recommended)
+
+Be prepared to be selected for the final pithces & have your 2-3 minute final pitch ready in case you are selected.
+
+<p>Follow the instructions on <a href="https://hacks.cdtm.com/submission" class="underline text-springBlue">hacks.cdtm.com/submission</a></p>`,
       },
       {
         id: "how-you-can-win",
         title: "How you can win..",
         icon: "star",
-        content: `
-        <b>Cases:</b>
-        - Submit your preference on Friday, 9th May until 22:00
-        - Work on the case you get confirmed from the crew
-        - Hackhackhackhack...
-        - Create a video pitch for your final submission
-        - Submit your solution on Sunday, 11th May until 10:00
-        - Winners will be announced on Sunday, 11th May at the closing ceremony
+        content: `Here is the process of how you can compete for the different prizes:
+<strong>Cases:</strong>
+&bull; Submit your preference on Friday, 9th May until 22:00
+&bull; Work on the case and submit till Sunday, 11th May until 10:00
+&bull; Case Partners will judge submissions - no live pitching
+&bull; Prize: 1st and 2nd place from each case are picked by the case partners &rarr; move on to main jury judging (1st place of case receives a prize)
 
-        <b>Challenges:</b>
-        - Look at the challenges list & integrate those you find interesting into your project work
-        - More hackhackhack...
-        - In the final submission form pick the challenges you worked on & submit your solution by Sunday, 11th May until 10:00
-        - Winners will be announced on Sunday, 11th May at the closing ceremony
+<strong>Challenges:</strong>
+&bull; Look at the challenges list &amp; integrate those you find interesting into your project work
+&bull; In the final submission form pick the challenges you worked on &amp; submit your solution by Sunday, 11th May until 10:00
+&bull; Challenge Partners will judge submissions - no live pitching
+&bull; Prize: each Challenge Winner will be awarded a prize by the challenge partner
 
-        <b>Main Prizes:</b>
-        - Work on your case & challenges
-        - Complete the final submission for your case
-        - The jury will select the best solutions across all cases & challenges
-        - Winners will be announced on Sunday, 11th May at the closing ceremony
+<strong>Main Prizes:</strong>
+&bull; The 6 best teams (1st &amp; 2nd place of each case) will pitch live on the main jury
+&bull; One pitch = 3-min demo + 2 min Q&amp;A
+&bull; The jury will award a 3rd, 2nd, and 1st winner
 
-        <b>San Francisco Trip:</b>
-        - We will keep you updated on the information on the San Francisco trip
+<strong>San Francisco Trip:</strong>
+&bull; One person will be awarded a fully paid startup trip to SF (incl. flights) by Lightspeed
+
+Remember that there are a lot of smart people here. Now it's time to hack & deliver. All winners will be announced on Sunday, 11th May at the closing ceremony
         `,
       },
       {
@@ -366,13 +410,6 @@ Register your team after the opening ceremony using the provided form. You will 
   </tbody>
 </table>
 <p class="mt-2">We will update the factsheet with more details as we go.</p>`,
-      },
-      {
-        id: "submission",
-        title: "Submission Process",
-        icon: "upload",
-        content:
-          "We are working on the submission process. More information on Friday. Please stay tuned.",
       },
     ],
   },
