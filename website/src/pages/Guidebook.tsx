@@ -3,7 +3,7 @@ import { GUIDEBOOK_DATA, IconName, iconMap } from "@/constants/guidebook";
 import * as Accordion from "@radix-ui/react-accordion";
 import * as ScrollArea from "@radix-ui/react-scroll-area";
 import { motion } from "framer-motion";
-import { Edit, Search } from "lucide-react";
+import { ChevronDown, Edit, Search } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const Logo = () => (
@@ -220,11 +220,7 @@ const Guidebook = () => {
                     </h2>
                   </div>
 
-                  <Accordion.Root
-                    type="multiple"
-                    defaultValue={allSubsectionIds}
-                    className="space-y-4"
-                  >
+                  <Accordion.Root type="multiple" className="space-y-4">
                     {section.subsections.map((subsection) => (
                       <>
                         {/* Unique anchor for direct linking */}
@@ -249,20 +245,7 @@ const Guidebook = () => {
                                 </span>
                               </div>
 
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="w-4 h-4 text-gray-400 transform transition-transform duration-300 group-radix-state-open:rotate-180"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M19 9l-7 7-7-7"
-                                />
-                              </svg>
+                              <ChevronDown className="w-4 h-4 text-gray-400 transform transition-transform duration-300" />
                             </Accordion.Trigger>
                           </div>
                           <Accordion.Content className="px-4 py-3 bg-gray-50 text-gray-700">
