@@ -154,9 +154,12 @@ Enter the Celonis Office from the main entrance on Theresienstraße 4.
         title: "First Aid & Safety",
         icon: "pill",
         content: `
-Our Team (everybody who is wearing Team Merch) is there for you and will help you in every situation. If you need (medical) help, reach out to them or call the emergency number 112. In case of an emergency, please follow their instructions!
+Our Team (everybody who is wearing "Crew" Merch) is there for you and will help you in every situation. For any questions or any non-critical emergency feel free to <a href="tel:+4915229504121" class="text-springBlue hover:underline">call our Crew member Nils: +4915229504121</a>.
 
-In case you need to call someone from the team, you can use the following numbers: +49 1522 9504121
+
+If you need (medical) help, reach out to them or call the emergency number 112. In case of an emergency, please follow their instructions!
+
+/* Nils Telefon Nummer */
 
 <b class="text-xl font-bold mb-0">What to do when you call 112?</b>
 
@@ -261,18 +264,18 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
     icon: "star",
     subsections: [
       {
-        id: "pref-submission",
-        title: "Case Preference",
-        icon: "checkSquare",
-        content: `The preference selection is due to <strong>Fri, May 9 by 22:00.</strong>.
-        Rank your three preferences. Get one case assigned to work on with your team (no open tracks!). For challenges: no preference submission in the beginning. This is to be done in the final submission.`,
-      },
-      {
         id: "cases-vs-challenges",
         title: "Cases vs. Challenges",
         icon: "star",
         content: `There are <strong>three separate cases</strong> (Trade Republic, avi, Beam) to choose from. <strong>Pick exactly one case</strong> and submit your choice <strong>by Friday, 9 May, 22:00</strong>. Any team, in any case, may enter <strong>as many challenges as they like</strong>. Just select the challenges you'll tackle in the final submission form.
         `,
+      },
+      {
+        id: "pref-submission",
+        title: "Case Preference",
+        icon: "checkSquare",
+        content: `The preference selection is due to <strong>Fri, May 9 by 22:00.</strong>.
+        Rank your three preferences. Get one case assigned to work on with your team (no open tracks!). For challenges: no preference submission in the beginning. This is to be done in the final submission.`,
       },
       {
         id: "final-submission",
