@@ -28,10 +28,18 @@ export class WebhookService {
   async handleTeamRegistration(data: FormbricksResponse): Promise<void> {
     try {
       const formData = data.data.data;
-      const emails = (formData["team-email-addresses"] as string)
-        .split(",")
-        .map((email) => email.trim())
-        .filter((email) => email !== "");
+
+      const hasTeam = (formData["do-you-have-a-team"] as string).includes("Yes");
+
+      let emails: string[] = [];
+      if (hasTeam) {
+        emails = (formData["team-email-addresses"] as string)
+          .split(",")
+          .map((email) => email.trim())
+          .filter((email) => email !== "");
+      } else {
+        emails = [formData["solo-email-address"] as string];
+      }
 
       // Send confirmation email to all team members
       await Promise.all(
