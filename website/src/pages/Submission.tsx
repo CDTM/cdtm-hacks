@@ -9,7 +9,7 @@ const Submission = () => {
           <p className="text-lg">
             Check the following the{" "}
             <Link
-              to="https://hacks.cdtm.com/guidebook"
+              to="https://hacks.cdtm.com/guidebook#challenges-final-submission"
               className="text-blue-600 hover:text-blue-800 underline"
               target="_blank"
               rel="noopener noreferrer"
