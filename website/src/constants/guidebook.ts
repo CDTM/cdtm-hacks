@@ -104,7 +104,7 @@ export const GUIDEBOOK_DATA: GuidebookSection[] = [
 <h3 class="text-xl font-bold mb-1">😴 If you plan to stay overnight:</h3>
 • Air mattress
 • Sleeping bag
-• Small Pillow
+• Small pillow
 • Sleeping mask
 • Ear plugs
 • Basic toiletries: Toothpaste, Toothbrush, Shampoo, Deodorant, Medications, etc.
@@ -133,7 +133,7 @@ Theresienstraße 4, 80333 München<br />Germany<br /><br />
 <iframe src="https://www.google.com/maps?q=Theresienstraße+4,+80333+München,+Germany&output=embed" width="100%" height="300" style="border:0; border-radius: 8px; margin-top: 12px; margin-bottom: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 • The doors open on Friday, 9th May, 16:00 (4:00 PM).
 • Please make sure to arrive no later than 18:30 (6:30 PM) so we can kick things off smoothly together.
-• Make sure to check for the CDTM Hacks signposts on main door and the hallway to get to the registration desks.
+• Make sure to check for the CDTM Hacks sign posts on the main door and the hallway to get to the registration desks.
 
 <p class="mt-4 mb-4">❗Please note that the entrance at Theresienstraße 6 is closed. Please only use the entrance at Theresienstraße 4.</p>
 
@@ -156,8 +156,7 @@ Enter the Celonis Office from the main entrance on Theresienstraße 4.
         content: `
 Our Team (everybody who is wearing "Crew" Merch) is there for you and will help you in every situation. For any questions or any non-critical emergency feel free to <a href="tel:+4915229504121" class="text-springBlue hover:underline">call our Crew member Nils: +4915229504121</a>.
 
-
-If you need (medical) help, reach out to them or call the emergency number 112. In case of an emergency, please follow their instructions!
+If you need (medical) help, reach out to our team or call the emergency number 112. In case of an emergency, please follow their instructions!
 
 <b class="text-xl font-bold mb-0">What to do when you call 112?</b>
 
@@ -195,7 +194,7 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
         id: "channels",
         title: "Communication Channels",
         icon: "messageSquare",
-        content: `We have several communication channels for you to stay update:
+        content: `We have several communication channels for you to stay up-to-date:
         
         <b class="text-xl font-bold mb-0">Discord</b>
         We will use Discord as our main communication channel to communicate with you during the event. You can join the server <a class="underline text-springBlue" href='https://hacks.cdtm.com/discord'>hacks.cdtm.com/discord</a>. Next to all the organisational & informational things there is also a lot of space to post your photos, memes, ideas & shit talk about that one team that you totally crushed in the last 24 hours.
@@ -285,38 +284,31 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
         id: "final-submission",
         title: "Final Submission",
         icon: "upload",
-        content: `<strong>Deadline:</strong> Sunday, May 11th, 10:00 AM
+        content: `<strong>Deadline:</strong> Sunday, 11 May, 10:00 AM
 
-<strong>Submissions should include:</strong>
+<strong>Your submission should include:</strong>
 
-• A short pitch video (max. 3 minutes)
-• A link to the demo / MVP (recommended)
-• A link to the source code repository (recommended)
-• A written project description including:
-      &nbsp;&nbsp;&nbsp;&nbsp;■ One sentence pitch
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Summarize your project in a single, compelling sentence.
-      &nbsp;&nbsp;&nbsp;&nbsp;■ What is your project?
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Describe your project in a few clear, informative sentences (max. 800 characters). Focus on what it does, who it's for, and what makes it unique.
-      &nbsp;&nbsp;&nbsp;&nbsp;■ How you built it
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Briefly describe your tech stack and the key technologies used to build your project. Highlight tools, frameworks, APIs, or models that played a major role.
-      &nbsp;&nbsp;&nbsp;&nbsp;■ Difficulties you faced
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Briefly describe the main technical or non-technical challenges you encountered during the project. What was hard, unexpected, or required creative problem-solving?
-      &nbsp;&nbsp;&nbsp;&nbsp;■ What you learned
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Briefly summarize the key learnings and takeaways from the project.
-      &nbsp;&nbsp;&nbsp;&nbsp;■ What's next for your project?
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Outline the upcoming features and improvements you plan to implement.Type your answer here...
-• The challenges you want to compete for
-• A brief desctription why you deserve to win the challenge you are competing for (for each challenge)
+• Pitch video (max. 3 minutes)
+• Written project description covering:
+  • One‑sentence pitch
+  • What the project does
+  • How you built it
+  • Key challenges encountered
+  • What you learned
+  • Next steps for the project
+• Source‑code repository link (recommended)
+• Demo / MVP link (recommended)
 
-Be prepared to be selected for the final pitches & have your 2-3 minute final pitch/demo ready in case you are selected.
+Be ready to be selected for the final pitches—have a polished 2–3 minute deck on standby.
 
 <p>Follow the instructions on <a href="https://hacks.cdtm.com/submission" class="underline text-springBlue">hacks.cdtm.com/submission</a></p>`,
       },
       {
         id: "how-you-can-win",
-        title: "How you can win",
+        title: "How you can win...",
         icon: "award",
         content: `Here is the process of how you can compete for the different prizes:
+
 <strong>Cases:</strong>
 &bull; Submit your preference on Friday, 9th May until 22:00
 &bull; Work on the case and submit till Sunday, 11th May until 10:00
@@ -367,7 +359,7 @@ Remember that there are a lot of smart people here. Now it's time to hack & deli
         id: "san-francisco",
         title: "San Francisco Trip",
         icon: "plane",
-        content: `We will update on the information on the San Francisco trip soon.`,
+        content: `We’ll share more details on the San Francisco trip soon.`,
       },
       {
         id: "teams",
@@ -375,11 +367,11 @@ Remember that there are a lot of smart people here. Now it's time to hack & deli
         icon: "users",
         content: `If you'd like to start looking for a team before the event (which we strongly recommend), we have a team-building channel on <a class="underline text-springBlue" href='https://discord.gg/ht3AHskN'>Discord</a>. Here's how it works:
 
-<h3 class="text-xl font-bold mb-1">After you are in the Discord server: </h3>
+<h3 class="text-xl font-bold mb-1">Once you’re in the Discord server: </h3>
 In the #looking-for-team channel, post a message introducing yourself and your team-building preferences:
 
 🧑‍💻 What you do (e.g., dev, design, biz)
-🌱 Your skills you bring to the table
+🌱 Skills you bring to the table
 👀 Who you are looking for
 
 If you don't find a team, don't worry! You will have time after the case deep dive sessions on Friday.
@@ -419,7 +411,7 @@ Register your team after the opening ceremony using the provided form. You will 
     </tr>
     <tr>
       <td class="px-4 py-2 border-b">Lovable</td>
-      <td class="px-4 py-2 border-b">You get a Teams 1 plan or an upgrade to a higher plan for free</td>
+      <td class="px-4 py-2 border-b">Free Teams plan or an upgrade with additional capacity for the event</td>
     </tr>
     <tr>
       <td class="px-4 py-2 border-b">Langfuse</td>
@@ -444,7 +436,7 @@ Register your team after the opening ceremony using the provided form. You will 
         id: "about",
         title: "About CDTM",
         icon: "building",
-        content: `The Center of Digital Technology and Management, Munich is a joint entrepreneurship-focused program by Technical University of Munich and Ludwig-Maximilan-University, with a community of 1,000+ students and alumni who have founded 20% of German unicorns, raised 11% of Germany's VC funding ($1.2B in 2022), and lead research at MIT, Google DeepMind, and Stanford. To Learn more about CDTM, visit our <a class="underline text-springBlue" href='https://www.cdtm.com/'> website</a>.
+        content: `The Center for Digital Technology and Management in Munich is a joint entrepreneurship-focused program by Technical University of Munich and Ludwig-Maximilan-University, with a community of 1,000+ students and alumni who have founded 20% of German unicorns, raised 11% of Germany's VC funding ($1.2B in 2022), and lead research at MIT, Google DeepMind, and Stanford. To Learn more about CDTM, visit our <a class="underline text-springBlue" href='https://www.cdtm.com/'> website</a>.
 
 Join our community in Munich as part of the Fall 2025 Class. Apply <a class="underline text-springBlue" href='https://application.cdtm.com/login'>here</a>. The deadline is 30th May 2025.There are a lot of Centerlings running around the hackathon. Feel free to say hi and ask them about CDTM. `,
       },
