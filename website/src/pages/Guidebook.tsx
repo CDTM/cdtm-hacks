@@ -94,6 +94,32 @@ const Guidebook = () => {
     setSearchQuery("");
   };
 
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const ids = hash.substring(1).split("-");
+      if (ids.length >= 2) {
+        // Check if there are at least two parts (section and subsection)
+        const sectionId = ids[0];
+        const subsectionId = ids.slice(1).join("-"); // Join the rest for subsectionId in case it contains hyphens
+        // Check if the section and subsection exist in GUIDEBOOK_DATA
+        const sectionExists = GUIDEBOOK_DATA.some((s) => s.id === sectionId);
+        const subsectionExists = GUIDEBOOK_DATA.some(
+          (s) =>
+            s.id === sectionId &&
+            s.subsections.some((sub) => sub.id === subsectionId)
+        );
+
+        if (sectionExists && subsectionExists) {
+          // Delay slightly to ensure the page has rendered
+          setTimeout(() => {
+            scrollToSubsection(sectionId, subsectionId);
+          }, 100);
+        }
+      }
+    }
+  }, []); // Empty dependency array ensures this runs only once on mount
+
   return (
     <div className="min-h-[80vh] overflow-x-hidden bg-gray-50">
       <div className="bg-white border-b border-gray-200 ">
