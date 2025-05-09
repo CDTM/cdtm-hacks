@@ -327,19 +327,117 @@ Remember that there are a lot of smart people here. Now it's time to hack & deli
         id: "descriptions",
         title: "Case Descriptions",
         icon: "info",
-        content: `The cases will be presented on Friday, 9th May, at the opening ceremony. You will find more information afterwards on the website.`,
+        content: `Here are the 3 Cases - checkout the links for up-to-date information: 
+
+<strong>Trade Republic</strong>
+
+<i>Introduction:</i> For years, we've interacted with our finances in one particular way: one balance, with a list of transactions below. Trade Republic is on a mission to democratise wealth and make finance accessible to anyone. Now, we want you to go back to the drawing board and create interfaces how users will – or should – interact with their finance in the future. Let your creativity run free – there are no boundaries and we want you to make use of any technology you deem suitable.
+
+<i>Link:</i> <a class="underline text-springBlue" href='https://github.com/CDTM/TradeRepublic_CDTMHacks2025'>https://github.com/CDTM/TradeRepublic_CDTMHacks2025</a>
+<i>Prizes:</i> €200 Stock Gift + free Mirror Card for each member of the winning team.
+
+<strong>Beam</strong>
+
+<i>Introduction:</i> AI-driven automation is reshaping how enterprises operate — unlocking opportunities at the intersection of innovation and efficiency.
+
+Your mission: Use Beam's no-code AI Agent platform to create a transformative solution for PedalWorks, a fictional bicycle manufacturing company.
+
+🛠 What You Can Do:
+Target a workflow or department at PedalWorks where intelligent agents could drive massive value.
+Design and prototype AI agents that automate, streamline, or reinvent real business processes.
+Explore new modalities — integrate voice for natural interaction or use Beam's APIs to build custom interfaces with tools like Loveable.
+We'll provide platform access and starter examples — you bring the ideas.
+
+Think you've got what it takes? Show us your vision at the hackathon. 🧠⚡
+
+<i>Link:</i> <a class="underline text-springBlue" href='https://github.com/CDTM/beam_CDTMHacks2025'>https://github.com/CDTM/beam_CDTMHacks2025</a>
+<i>Prizes:</i> JBL Charge 5 Bluetooth Speaker &1:1 Mentorship Session with Beam Leadership
+
+<strong>avi</strong>
+
+<i>Introduction:</i> Receiving a patient for the first time in a clinic requires significant time and effort from medical staff and can often be a scattered, chaotic, and overwhelming experience for patients. As a result, critical patient information is often collected incompletely or inconsistently.
+
+For clinicians to treat patients holistically, they need a structured, accessible, and comprehensive view of the patient's medical background — including insurance information, basic measurements (e.g., height, weight), lifestyle, family history, chronic conditions, prior lab results, wearable health data, medication plans, vaccination certificates, and more.
+
+Your goal is to, on the one hand, transform the patient intake experience: make it fast, simple and all-encompassing. On the other hand, empower medical staff with a clear, compact, actionable and 'full picture' to treat them better and faster.
+
+<i>Link:</i> <a class="underline text-springBlue" href='https://github.com/CDTM/avi_CDTMHacks2025'>https://github.com/CDTM/avi_CDTMHacks2025</a>
+<i>Prizes:</i> FC Bayern VIP Tickets.
+        `,
       },
       {
         id: "challenge-descriptions",
         title: "Challenge Descriptions",
         icon: "info",
-        content: `The challenges will be presented on Friday, 9th May, at the opening ceremony. You will find more information afterwards on the website.`,
+        content: `<h3 class="text-xl font-bold mb-2">Challenge Sponsors & Prizes</h3>\
+<table class="min-w-full text-left border border-gray-200">\
+  <thead>\
+    <tr>\
+      <th class="px-4 py-2 border-b">Partner</th>\
+      <th class="px-4 py-2 border-b">Short Description</th>\
+      <th class="px-4 py-2 border-b">Prize</th>\
+    </tr>\
+  </thead>\
+  <tbody>\
+    <tr>\
+      <td class="px-4 py-2 border-b">Tanso</td>\
+      <td class="px-4 py-2 border-b">Why Not? Biggest Creative Risk</td>\
+      <td class="px-4 py-2 border-b">Air Pods Pro 2 or Sony WH-1000XM4 per Team Member</td>\
+    </tr>\
+    <tr>\
+      <td class="px-4 py-2 border-b">Visionaries Club, Everyday Intelligence, and Paid</td>\
+      <td class="px-4 py-2 border-b">Most potential to earn real money</td>\
+      <td class="px-4 py-2 border-b">Visionaries Club & Everyday Intelligence: Tech Trip London + Mentoring <br /> Paid: Flipper Zero (1x per team member)</td>\
+    </tr>\
+    <tr>\
+      <td class="px-4 py-2 border-b">Beyond Presence</td>\
+      <td class="px-4 py-2 border-b">Best Use of Real-Time Interactive Avatars</td>\
+      <td class="px-4 py-2 border-b">1k credits</td>\
+    </tr>\
+    <tr>\
+      <td class="px-4 py-2 border-b">Mistral AI</td>\
+      <td class="px-4 py-2 border-b">Best Use of La Plateforme/ Mistral models</td>\
+      <td class="px-4 py-2 border-b">1000€ credits coupon + swag/ goodies</td>\
+    </tr>\
+    <tr>\
+      <td class="px-4 py-2 border-b">Celonis</td>\
+      <td class="px-4 py-2 border-b">Best use of AI to improve processes</td>\
+      <td class="px-4 py-2 border-b">* Celonis Labs Swag <br /> * In-Person Innovation day @Celonis Labs Munich <br /> * Logitech MX Master 3s for each team member</td>\
+    </tr>\
+  </tbody>\
+</table>`,
       },
       {
         id: "san-francisco",
         title: "San Francisco Trip",
         icon: "plane",
-        content: `We'll share more details on the San Francisco trip soon.`,
+        content: `<strong class="text-xl font-bold mb-2">🌉 Win a Fully Sponsored Trip to San Francisco with Lightspeed!</strong>
+
+<p class="mb-2">📅 <strong>Dates:</strong> Monday, July 21 – Thursday, July 24</p>\
+<p class="mb-2">✈️ <strong>What's included:</strong> Everything — flights, accommodation, and activities — fully covered.</p>\
+<p class="mb-2">Experience the future of tech and entrepreneurship alongside 14 other CDTM students on an insightful three-day trip. The San Francisco Startup Trip, sponsored by Lightspeed, is your chance to:</p>\
+<ul class="list-disc list-inside mb-2 ml-4">\
+  <li>Meet visionary founders and pioneering tech leaders</li>\
+  <li>Dive into high-impact sessions with top experts</li>\
+  <li>Build deep connections through curated networking opportunities</li>\
+  <li>Supercharge your personal and professional growth</li>\
+</ul>\
+<p class="mb-2">This trip is more than just a visit — it's your front-row seat to the people and ideas shaping the future of technology and entrepreneurship.</p>\
+<hr class="my-4" />\
+<h3 class="text-xl font-bold mb-2">🎉 How to Win the SF Experience</h3>\
+<p class="mb-2">We're selecting the winner by lottery — but yes, you can boost your odds.</p>\
+<p class="mb-2">✅ <strong>To enter the lottery:</strong></p>\
+<ol class="list-decimal list-inside mb-2 ml-4">\
+  <li>Opt in here → <a href="#" class="text-springBlue hover:underline">Google Forms</a> (Please update this link)</li>\
+  <li>Attend at least one input session</li>\
+</ol>\
+<p class="mb-2">🎯 <strong>Boost your chances with extra entries:</strong></p>\
+<ul class="list-disc list-inside ml-4">\
+  <li>Win one of the three cases</li>\
+  <li>Win one of the five challenges</li>\
+  <li>Post your memes in the #memes channel</li>\
+  <li>Share photos in the #pictures channel</li>\
+</ul>`,
       },
       {
         id: "teams",
@@ -365,6 +463,9 @@ Register your team after the opening ceremony using the provided form. You will 
         title: "Available Tools & Resources",
         icon: "wrench",
         content: `<h3 class="text-xl font-bold ">Tech Sponsors</h3>
+For the full up-to-date list of tools & how to access them checkout <a class="underline text-springBlue" href='https://cdtm.notion.site/tech-sponsoring'>https://cdtm.notion.site/tech-sponsoring</a>
+
+For a quick overview: 
 <table class="min-w-full text-left border border-gray-200">
   <thead>
     <tr>
@@ -375,15 +476,15 @@ Register your team after the opening ceremony using the provided form. You will 
   <tbody>
     <tr>
       <td class="px-4 py-2 border-b">OpenAI</td>
-      <td class="px-4 py-2 border-b">300€ worth of credits per team</td>
+      <td class="px-4 py-2 border-b">300€ credits/ team</td>
     </tr>
     <tr>
       <td class="px-4 py-2 border-b">MistralAI</td>
-      <td class="px-4 py-2 border-b">10€ worth of credits per participant</td>
+      <td class="px-4 py-2 border-b">10€ credits/participant</td>
     </tr>
     <tr>
       <td class="px-4 py-2 border-b">Cognition</td>
-      <td class="px-4 py-2 border-b">50€ worth of credits per participant</td>
+      <td class="px-4 py-2 border-b">$50 credits/participant</td>
     </tr>
     <tr>
       <td class="px-4 py-2 border-b">Make.com</td>
@@ -391,7 +492,7 @@ Register your team after the opening ceremony using the provided form. You will 
     </tr>
     <tr>
       <td class="px-4 py-2 border-b">Lovable</td>
-      <td class="px-4 py-2 border-b">Free Teams plan or an upgrade with additional capacity for the event</td>
+      <td class="px-4 py-2 border-b">Free (upgrade to) <a class="underline text-springBlue" href='https://docs.lovable.dev/user-guides/teams'>Teams 1 Plan</a></td>
     </tr>
     <tr>
       <td class="px-4 py-2 border-b">Langfuse</td>
