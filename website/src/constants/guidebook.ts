@@ -281,7 +281,46 @@ If you face any situation that makes you feel unsafe or uncomfortable in the hac
         id: "final-submission",
         title: "Final Submission",
         icon: "upload",
-        content: `You can find everything you need to know for the submission in our <a class="underline text-springBlue" href="https://docs.google.com/document/d/1wcnyXPC3vN1z_HiCf-R0MxJSGQSIWYDNAtP1WEZXrm4/edit?tab=t.0" target="_blank">docs</a>.`,
+        content: `The deadline is on Sunday 10:00 a.m. - hard cut-off - no exceptions.
+
+<h3 class="text-xl font-bold">Your submission should include:</h3>
+• <strong>Your Team ID</strong> (we email you this after the case assignment)
+• <strong>Your Team Name:</strong> What should we call your team? This name will be used in announcements and on our showcase page.
+• <strong>Your Project Name:</strong> What should we call your project? This name will be used in announcements and on our showcase page.
+• <strong>Pitch video:</strong> Upload a pitch video (maximum 3 minutes) to YouTube and share the public or unlisted link here. Make sure the video is accessible without login so judges can view it easily.
+• <strong>Link to Your Demo or MVP (optional, but recommended):</strong> If available, please provide a URL where judges can view or test your solution. While optional, including a demo significantly improves the evaluation experience and increases your chances of standing out.
+• <strong>Link to GitHub Repository (optional, but recommended):</strong> Please provide the URL to your public GitHub repository. Providing a GitHub repository is optional, but highly recommended. If you don't have one, just click Next to continue.
+
+<h3 class="text-xl font-bold">Written project description covering:</h3>
+• <strong>One-Sentence pitch:</strong> Summarize your project in a single, compelling sentence.
+• <strong>What Is Your Project? (max 800 characters):</strong> Describe your project in a few clear, informative sentences (max. 800 characters). Focus on what it does, who it's for, and what makes it unique.
+• <strong>How Did You Build It? (max 800 characters):</strong> Briefly describe your tech stack and the key technologies used to build your project. Highlight tools, frameworks, APIs, or models that played a major role.
+• <strong>Difficulties You Faced (max 500 characters):</strong> Briefly describe the main technical or non-technical difficulties you encountered during the project. What was hard, unexpected, or required creative problem-solving?
+• <strong>What You Learned (max 500 characters):</strong> Briefly summarize the key learnings and takeaways from the project.
+• <strong>What's Next For Your Project? (max 500 characters):</strong> Outline the upcoming features and improvements you plan to implement.
+
+<h3 class="text-xl font-bold">What challenges do you want to compete in?</h3>
+<p class="mb-1">In the form, you can click a checkbox for each challenge you want to enter. We have the following challenges:</p>
+• <strong>"Best Use of La Plateforme/ Mistral models"</strong> by Mistral AI
+• <strong>"Most potential to earn real money"</strong> by Visionaries Club, Everyday Intelligence & Paid
+• <strong>"Best Use of Real-Time Interactive Avatars"</strong> by Beyond Presence
+• <strong>"There is no AI without PI"</strong> by Celonis
+• <strong>"Why Not? Biggest Creative Risk"</strong> by Tanso
+
+<h3 class="text-xl font-bold">For every challenge you compete in:</h3>
+<p class="mb-4">You have to answer the following question: <strong>Why Your Project Deserves to Win "NAME OF THE CHALLENGE" by COMPANY.</strong> Briefly explain to the challenge judges why your project stands out and deserves to win the challenge.</p>
+
+<h3 class="text-xl font-bold">Additional information:</h3>
+• You can submit as many times as you want. We will use your latest submission.
+• You will receive a confirmation email with your submission.
+
+<h3 class="text-xl font-bold">Just a reminder: Prepare for Your Final Presentation!</h3>
+<p class="mb-2">Please note that on Sunday after 10:00 AM, the case partners will review and select the 1st and 2nd place winners for their case. If your project places 1st or 2nd, you will get the chance to deliver a live pitch in front of the independent jury and the audience. The independent jury for the main prize will not review your written submission and will evaluate your performance solely based on your live pitch.</p>
+<p class="mb-4">You don't need to submit anything in advance for the final presentation; it will be based entirely on your live pitch. The live pitch should include a demo.</p>
+
+<h3 class="text-xl font-bold">Submit your project here:</h3>
+<p>(Link will be inserted once the submission is open)</p>
+`,
       },
       {
         id: "how-you-can-win",
