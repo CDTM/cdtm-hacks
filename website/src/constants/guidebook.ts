@@ -281,24 +281,7 @@ If you face any situation that makes you feel unsafe or uncomfortable in the hac
         id: "final-submission",
         title: "Final Submission",
         icon: "upload",
-        content: `<strong>Deadline:</strong> Sunday, 11 May, 10:00 AM
-
-<strong>Your submission should include:</strong>
-
-• Pitch video (max. 3 minutes)
-• Written project description covering:
-  • One-sentence pitch
-  • What the project does.
-  • How you built it.
-  • Key challenges encountered.
-  • What you learned.
-  • Next steps for the project.
-• Source-code repository link (recommended)
-• Demo / MVP link (recommended)
-
-Be ready to be selected for the final pitches—have a polished 2-3 minute deck on standby.
-
-<p>Follow the instructions on <a href="https://hacks.cdtm.com/submission" class="underline text-springBlue">hacks.cdtm.com/submission</a></p>`,
+        content: `You can find everything you need to know for the submission in our <a class="underline text-springBlue" href="https://docs.google.com/document/d/1wcnyXPC3vN1z_HiCf-R0MxJSGQSIWYDNAtP1WEZXrm4/edit?tab=t.0" target="_blank">docs</a>.`,
       },
       {
         id: "how-you-can-win",
