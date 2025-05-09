@@ -108,7 +108,7 @@ export const GUIDEBOOK_DATA: GuidebookSection[] = [
 • Sleeping mask
 • Ear plugs
 • Basic toiletries: Toothpaste, Toothbrush, Shampoo, Deodorant, Medications, etc.
-• Towel (You will get free access to shower at the venue (ground floor))
+• Towel (You will get free access to showers at the venue (ground floor))
 • ...`,
       },
       {
@@ -116,11 +116,11 @@ export const GUIDEBOOK_DATA: GuidebookSection[] = [
         title: "Accreditation Process",
         icon: "award",
         content: `<h3 class="text-xl font-bold mb-1">How to get your participant badge and complete registration:</h3>
-1. Go to the registration desk at the entrance of the Celonis Office
-2. Show your ID 
-3. After the verification, you will get your hacker badge
-4. You will also get a goodie bag 
-5. And done. Enjoy CDTM Hacks 2025 🎉
+1. Go to the registration desk at the entrance of the Celonis Office.
+2. Show your ID.
+3. After the verification, you will get your hacker badge.
+4. You will also get a goodie bag.
+5. And you're done. Enjoy CDTM Hacks 2025 🎉
 `,
       },
       {
@@ -128,16 +128,16 @@ export const GUIDEBOOK_DATA: GuidebookSection[] = [
         title: "Venue Details and Map",
         icon: "mapPin",
         content: `
-<h3 class="text-xl font-bold mb-1">Event Venue - Celonis Office: </h3>
+<h3 class="text-xl font-bold mb-1">Event Venue - Celonis Office:</h3>
 Theresienstraße 4, 80333 München<br />Germany<br /><br />
 <iframe src="https://www.google.com/maps?q=Theresienstraße+4,+80333+München,+Germany&output=embed" width="100%" height="300" style="border:0; border-radius: 8px; margin-top: 12px; margin-bottom: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 • The doors open on Friday, 9th May, 16:00 (4:00 PM).
 • Please make sure to arrive no later than 18:30 (6:30 PM) so we can kick things off smoothly together.
-• Make sure to check for the CDTM Hacks sign posts on the main door and the hallway to get to the registration desks.
+• Make sure to check for the CDTM Hacks signposts on the main door and in the hallway to get to the registration desks.
 
 <p class="mt-4 mb-4">❗Please note that the entrance at Theresienstraße 6 is closed. Please only use the entrance at Theresienstraße 4.</p>
 
-<h3 class="text-xl font-bold mb-1">Here's a small guide to walk you through the venue: </h3>
+<h3 class="text-xl font-bold mb-1">Here's a small guide to walk you through the venue:</h3>
 
 Enter the Celonis Office from the main entrance on Theresienstraße 4.
 
@@ -145,8 +145,6 @@ Enter the Celonis Office from the main entrance on Theresienstraße 4.
 
 
 <iframe src="https://drive.google.com/file/d/1ukLKsenh5lchg58t1USyrF4sqWo7vgSG/preview" width="auto%" height="450" style="border:0; border-radius: 8px; margin-top: 12px; margin-bottom: 12px;" allowfullscreen></iframe>
-
--
 `,
       },
       {
@@ -154,7 +152,7 @@ Enter the Celonis Office from the main entrance on Theresienstraße 4.
         title: "First Aid & Safety",
         icon: "pill",
         content: `
-Our Team (everybody who is wearing "Crew" Merch) is there for you and will help you in every situation. For any questions or any non-critical emergency feel free to <a href="tel:+4915229504121" class="text-springBlue hover:underline">call our Crew member Nils: +4915229504121</a>.
+Our team (everyone wearing "Crew" merch) is there for you and will help you in every situation. For any questions or any non-critical emergency, feel free to <a href="tel:+4915229504121" class="text-springBlue hover:underline">call our crew member Nils: +4915229504121</a>.
 
 If you need (medical) help, reach out to our team or call the emergency number 112. In case of an emergency, please follow their instructions!
 
@@ -163,22 +161,21 @@ If you need (medical) help, reach out to our team or call the emergency number 1
 Make the call yourself if you can
 → Call from a safe place
 → Explain what happened
-→ Tell your exact address and municipality: Celonis, Theresienstraße 6, 80333 München
+→ Tell them your exact address and municipality: Celonis, Theresienstraße 6, 80333 München
 → Answer all the ERC operator's questions
 → Follow the instructions given
-→ Don't end the call until permitted 
+→ Don't end the call until permitted.
 
 <b class="text-xl font-bold mb-0">Safety & wellbeing</b>
 
-If you have face any situation that makes you feel not safe & uncomfortable in the environment of the hackathon please reach out to the team. There is always someone there from the team at the venue. We will help you to get out of the situation & handle it with care. You can also reach out individually to the team on Discord or approach us in person.
-
+If you face any situation that makes you feel unsafe or uncomfortable in the hackathon environment, please reach out to the team. There is always someone from the team at the venue. We will help you get out of the situation and handle it with care. You can also reach out individually to the team on Discord or approach us in person.
 `,
       },
       {
         id: "wifi",
         title: "Internet Access",
         icon: "wifi",
-        content: `To join our WiFi network, please connect to "Celonis Visitors" and follow the instructions. As a company you can enter "CDTM HACKS".`,
+        content: `To join our WiFi network, please connect to "Celonis Visitors" and follow the instructions. As a company, you can enter "CDTM HACKS".`,
       },
       {
         id: "schedule-overview",
@@ -188,7 +185,7 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
         
         <iframe src="https://calendar.google.com/calendar/embed?src=c_c4f2aac9431e053f80bfd1780e185d419b0ee999b5c66e987002c45c9ab8a1b0%40group.calendar.google.com&ctz=Europe%2FBerlin&mode=AGENDA" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
         
-        You should also add the event calendar <a class="underline text-springBlue" href='https://hacks.cdtm.com/calendar'>here</a> to your calendar to stay updated even when you're totaly locked-in.`,
+        You should also add the event calendar <a class="underline text-springBlue" href='https://hacks.cdtm.com/calendar'>here</a> to your calendar to stay updated even when you're totally locked-in.`,
       },
       {
         id: "channels",
@@ -197,10 +194,10 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
         content: `We have several communication channels for you to stay up-to-date:
         
         <b class="text-xl font-bold mb-0">Discord</b>
-        We will use Discord as our main communication channel to communicate with you during the event. You can join the server <a class="underline text-springBlue" href='https://hacks.cdtm.com/discord'>hacks.cdtm.com/discord</a>. Next to all the organisational & informational things there is also a lot of space to post your photos, memes, ideas & shit talk about that one team that you totally crushed in the last 24 hours.
+        We will use Discord as our main communication channel to communicate with you during the event. You can join the server at <a class="underline text-springBlue" href='https://hacks.cdtm.com/discord'>hacks.cdtm.com/discord</a>. Next to all the organizational & informational things, there is also a lot of space to post your photos, memes, ideas & shit-talk about that one team that you totally crushed in the last 24 hours.
 
         <b class="text-xl font-bold mb-0">Images</b>
-        If you take any photos during the event, please share them with us on Discord. We will also have a photo booth setup at the event.
+        If you take any photos during the event, please share them with us on Discord. We will also have a photo booth set up at the event.
 
         <b class="text-xl font-bold mb-0">Social Media</b>
         We will use Instagram & X to post updates about the event to the public. 
@@ -209,7 +206,7 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
         Feel free to post about the event on your own social media. Tag us & use the hashtag <b class="text-springBlue">#cdtmhacks</b> to get some engagement from the crew.
 
         <b class="text-xl font-bold mb-0">Website</b>
-        We will try our best to keep the website & especially the Guidebook updated with the latest information about the event. If you are here you probably found the website. Good job 🍪.
+        We will do our best to keep the website, and especially the Guidebook, updated with the latest information about the event. If you are here, you probably found the website. Good job 🍪.
 
         `,
       },
@@ -217,7 +214,7 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
         id: "food",
         title: "Food & Drinks",
         icon: "utensils",
-        content: ` There will be plenty of food & drinks during the event for you. Here a quick overview - for more details check the schedule & just look for them at the venue. You will find plenty.
+        content: ` There will be plenty of food & drinks for you during the event. Here's a quick overview - for more details, check the schedule & just look for them at the venue. You will find plenty.
 
         <strong>Food:</strong>
 
@@ -237,11 +234,11 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
 
         The main food catering is provided by <a class="underline text-springBlue" href='https://www.instagram.com/momento_ita/'>Momento</a>.
 
-        For Snacks there are several healthy options provided by Celonis, fruiton & VollCorner Bio. We will also make sure that there are some snacks your dentist would not recommend you to eat.
+        For snacks, there are several healthy options provided by Celonis, fruiton & VollCorner Bio. We will also make sure that there are some snacks your dentist would not recommend you to eat.
 
         <strong>Drinks:</strong>
 
-        Celonis will support us with the Drinks for the event. Feel free to grab what you need from the fridges. Additionally we are happy to get support by Innocent, CIAO Coffee & Reimann Ventures for drinks. You will find those drinks directly at the venue. Also a reminder that water from time to time helps to stay hydriated. Just refill your bottles at the taps.
+        Celonis will support us with drinks for the event. Feel free to grab what you need from the fridges. Additionally, we are happy to get support from Innocent, CIAO Coffee & Reimann Ventures for drinks. You will find those drinks directly at the venue. Also, a reminder that water from time to time helps to stay hydrated. Just refill your bottles at the taps.
 
           `,
       },
@@ -264,7 +261,7 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
         id: "cases-vs-challenges",
         title: "Cases vs. Challenges",
         icon: "star",
-        content: `There are <strong>three separate cases</strong> (Trade Republic, avi, Beam) to choose from. Every team will only be asigned <strong>exactly one case!</strong> You can decide on a ranking of the cases and submit your choice <strong>by Friday, 9 May, 22:00</strong>. Any team, in any case, may enter <strong>as many challenges as they like</strong>. Just select the challenges you'll tackle in the final submission form.
+        content: `There are <strong>three separate cases</strong> (Trade Republic, avi, Beam) to choose from. Every team will only be assigned <strong>exactly one case!</strong> You can decide on a ranking of the cases and submit your choice <strong>by Friday, 9 May, 22:00</strong>. Any team, in any case, may enter <strong>as many challenges as they like</strong>. Just select the challenges you'll tackle in the final submission form.
         `,
       },
       {
@@ -290,16 +287,16 @@ If you have face any situation that makes you feel not safe & uncomfortable in t
 
 • Pitch video (max. 3 minutes)
 • Written project description covering:
-  • One‑sentence pitch
-  • What the project does
-  • How you built it
-  • Key challenges encountered
-  • What you learned
-  • Next steps for the project
-• Source‑code repository link (recommended)
+  • One-sentence pitch
+  • What the project does.
+  • How you built it.
+  • Key challenges encountered.
+  • What you learned.
+  • Next steps for the project.
+• Source-code repository link (recommended)
 • Demo / MVP link (recommended)
 
-Be ready to be selected for the final pitches—have a polished 2–3 minute deck on standby.
+Be ready to be selected for the final pitches—have a polished 2-3 minute deck on standby.
 
 <p>Follow the instructions on <a href="https://hacks.cdtm.com/submission" class="underline text-springBlue">hacks.cdtm.com/submission</a></p>`,
       },
@@ -307,29 +304,29 @@ Be ready to be selected for the final pitches—have a polished 2–3 minute dec
         id: "how-you-can-win",
         title: "How you can win...",
         icon: "award",
-        content: `Here is the process of how you can compete for the different prizes:
+        content: `Here is the process for how you can compete for the different prizes:
 
 <strong>Cases:</strong>
-&bull; Submit your preference on Friday, 9th May until 22:00
-&bull; Work on the case and submit till Sunday, 11th May until 10:00
-&bull; Case Partners will judge submissions - no live pitching
-&bull; Prize: 1st and 2nd place from each case are picked by the case partners &rarr; move on to main jury judging (1st place of case receives a prize)
+&bull; Submit your preference on Friday, 9th May, until 22:00.
+&bull; Work on the case and submit by Sunday, 11th May, until 10:00.
+&bull; Case Partners will judge submissions - no live pitching.
+&bull; Prize: 1st and 2nd place from each case are picked by the case partners &rarr; move on to main jury judging (1st place of each case receives a prize).
 
 <strong>Challenges:</strong>
-&bull; Look at the challenges list &amp; integrate those you find interesting into your project work
-&bull; In the final submission form pick the challenges you worked on &amp; submit your solution by Sunday, 11th May until 10:00
-&bull; Challenge Partners will judge submissions - no live pitching
-&bull; Prize: each Challenge Winner will be awarded a prize by the challenge partner
+&bull; Look at the challenges list &amp; integrate those you find interesting into your project work.
+&bull; In the final submission form, pick the challenges you worked on &amp; submit your solution by Sunday, 11th May, until 10:00.
+&bull; Challenge Partners will judge submissions - no live pitching.
+&bull; Prize: Each Challenge Winner will be awarded a prize by the challenge partner.
 
 <strong>Main Prizes:</strong>
-&bull; The 6 best teams (1st &amp; 2nd place of each case) will pitch live to the main jury
-&bull; One pitch = 3-min demo + 2 min Q&amp;A
-&bull; The jury will award a 3rd, 2nd, and 1st winner
+&bull; The 6 best teams (1st &amp; 2nd place of each case) will pitch live to the main jury.
+&bull; One pitch = 3-min demo + 2-min Q&amp;A.
+&bull; The jury will award a 3rd, 2nd, and 1st place.
 
 <strong>San Francisco Trip:</strong>
-&bull; One person will be awarded a fully paid startup trip to SF (incl. flights) by Lightspeed
+&bull; One person will be awarded a fully paid startup trip to SF (incl. flights) by Lightspeed.
 
-Remember that there are a lot of smart people here. Now it's time to hack & deliver. All winners will be announced on Sunday, 11th May at the closing ceremony
+Remember that there are a lot of smart people here. Now it's time to hack & deliver. All winners will be announced on Sunday, 11th May, at the closing ceremony.
         `,
       },
       {
@@ -337,29 +334,29 @@ Remember that there are a lot of smart people here. Now it's time to hack & deli
         title: "Main Prizes",
         icon: "award",
         content: `
-        The winner of the cases will each be awarded a prize by the case partners.
-        Furthermore the 6 best teams, so 1st and 2nd place from each case, will pitch live to the main jury.
-        The independent jury will then award an additional 1st, 2nd and 3rd place with cash prizes.
-        The exact prizes will be announced on Friday, 9th May at the opening ceremony.
+        The winners of the cases will each be awarded a prize by the case partners.
+        Furthermore, the 6 best teams (1st and 2nd place from each case) will pitch live to the main jury.
+        The independent jury will then award an additional 1st, 2nd, and 3rd place with cash prizes.
+        The exact prizes will be announced on Friday, 9th May, at the opening ceremony.
         `,
       },
       {
         id: "descriptions",
         title: "Case Descriptions",
         icon: "info",
-        content: `The cases will be presented on Friday, 9th May at the opening ceremony. You will find more information afterwards on the website.`,
+        content: `The cases will be presented on Friday, 9th May, at the opening ceremony. You will find more information afterwards on the website.`,
       },
       {
         id: "challenge-descriptions",
         title: "Challenge Descriptions",
         icon: "info",
-        content: `The challenges will be presented on Friday, 9th May at the opening ceremony. You will find more information afterwards on the website.`,
+        content: `The challenges will be presented on Friday, 9th May, at the opening ceremony. You will find more information afterwards on the website.`,
       },
       {
         id: "san-francisco",
         title: "San Francisco Trip",
         icon: "plane",
-        content: `We’ll share more details on the San Francisco trip soon.`,
+        content: `We'll share more details on the San Francisco trip soon.`,
       },
       {
         id: "teams",
@@ -367,7 +364,7 @@ Remember that there are a lot of smart people here. Now it's time to hack & deli
         icon: "users",
         content: `If you'd like to start looking for a team before the event (which we strongly recommend), we have a team-building channel on <a class="underline text-springBlue" href='https://discord.gg/ht3AHskN'>Discord</a>. Here's how it works:
 
-<h3 class="text-xl font-bold mb-1">Once you’re in the Discord server: </h3>
+<h3 class="text-xl font-bold mb-1">Once you're in the Discord server: </h3>
 In the #looking-for-team channel, post a message introducing yourself and your team-building preferences:
 
 🧑‍💻 What you do (e.g., dev, design, biz)
@@ -423,7 +420,7 @@ Register your team after the opening ceremony using the provided form. You will 
     </tr>
   </tbody>
 </table>
-<p class="mt-2">We will update the factsheet with more details as we go.</p>`,
+<p class="mt-2">We will update this factsheet with more details as we go.</p>`,
       },
     ],
   },
@@ -436,9 +433,9 @@ Register your team after the opening ceremony using the provided form. You will 
         id: "about",
         title: "About CDTM",
         icon: "building",
-        content: `The Center for Digital Technology and Management in Munich is a joint entrepreneurship-focused program by Technical University of Munich and Ludwig-Maximilan-University, with a community of 1,000+ students and alumni who have founded 20% of German unicorns, raised 11% of Germany's VC funding ($1.2B in 2022), and lead research at MIT, Google DeepMind, and Stanford. To Learn more about CDTM, visit our <a class="underline text-springBlue" href='https://www.cdtm.com/'> website</a>.
+        content: `The Center for Digital Technology and Management in Munich is a joint entrepreneurship-focused program by the Technical University of Munich and Ludwig-Maximilians-Universität, with a community of 1,000+ students and alumni who have founded 20% of German unicorns, raised 11% of Germany's VC funding ($1.2B in 2022), and lead research at MIT, Google DeepMind, and Stanford. To learn more about CDTM, visit our <a class="underline text-springBlue" href='https://www.cdtm.com/'>website</a>.
 
-Join our community in Munich as part of the Fall 2025 Class. Apply <a class="underline text-springBlue" href='https://application.cdtm.com/login'>here</a>. The deadline is 30th May 2025.There are a lot of Centerlings running around the hackathon. Feel free to say hi and ask them about CDTM. `,
+Join our community in Munich as part of the Fall 2025 Class. Apply <a class="underline text-springBlue" href='https://application.cdtm.com/login'>here</a>. The deadline is 30th May 2025. There are a lot of Centerlings running around the hackathon. Feel free to say hi and ask them about CDTM. `,
       },
       {
         id: "local",
@@ -449,10 +446,10 @@ Join our community in Munich as part of the Fall 2025 Class. Apply <a class="und
 
         Just use Google Maps to find the best way to get to the venue: <iframe src="https://www.google.com/maps?q=Theresienstraße+4,+80333+München,+Germany&output=embed" width="100%" height="300" style="border:0; border-radius: 8px; margin-top: 12px; margin-bottom: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <h3 class="text-lg font-bold">MVV System:</h3>
-        U-Bahn: U2 to Theresienstraße station → 2-3 min walk east, U3 to Universität station → 2-3 min walk north
-        Tram: Line 27 or 28 to Pinakotheken → 5 min walk west
-        From Central Station: U2 (direction Feldmoching) → 3 stops to Theresienstraße
-        Bus: Take Bus 100 or Bus 150 to Pinakotheken stop → Walk approximately 5 minutes west along Theresienstraße
+        U-Bahn: U2 to Theresienstraße station → 2-3 min walk east; U3 to Universität station → 2-3 min walk north.
+        Tram: Line 27 or 28 to Pinakotheken → 5 min walk west.
+        From Central Station: U2 (direction Feldmoching) → 3 stops to Theresienstraße.
+        Bus: Take Bus 100 or Bus 150 to the Pinakotheken stop → Walk approximately 5 minutes west along Theresienstraße.
         `,
       },
     ],
