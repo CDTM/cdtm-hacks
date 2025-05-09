@@ -345,7 +345,10 @@ Remember that there are a lot of smart people here. Now it's time to hack & deli
         title: "Main Prizes",
         icon: "award",
         content: `
-        We will have 3 main prizes for everybody competing in one of the 3 cases. The exact prizes will be announced on Friday, 9th May at the opening ceremony.
+        The winner of the cases will each be awarded a prize by the case partners.
+        Furthermore the 6 best teams, so 1st and 2nd place from each case, will pitch live to the main jury.
+        The independent jury will then award an additional 1st, 2nd and 3rd place with cash prizes.
+        The exact prizes will be announced on Friday, 9th May at the opening ceremony.
         `,
       },
       {
