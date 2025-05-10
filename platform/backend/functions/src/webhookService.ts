@@ -74,10 +74,8 @@ export class WebhookService {
       const projectDescription = formData["what-is-your-project"] as string;
       const pitchVideo = formData["pitch-video"] as string;
       const howWeBuiltIt = formData["how-we-built-it"] as string;
-      const whatYouLearned = formData["what-we-learned"] as string;
       const difficulties = formData["fug36spozqys4uaah0ncnq2e"] as string;
       const oneSentencePitch = formData["one-sentence-pitch"] as string;
-      const whatIsNext = formData["what-is-next-for-your-project"] as string;
       const challenges = formData["nfi6gji4lv321c7ompvk2wm8"] as string;
 
       const reasoningForVisonaries = formData["ixmth9vbjz6b9c1qotp9wlf2"] as string;
@@ -132,9 +130,7 @@ export class WebhookService {
               projectDescription,
               pitchVideo,
               howWeBuiltIt,
-              whatYouLearned,
               oneSentencePitch,
-              whatIsNext,
               challenges,
               reasoningForChallenges,
               demoLink,
