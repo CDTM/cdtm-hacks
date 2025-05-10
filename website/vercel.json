@@ -35,6 +35,11 @@
       "source": "/sf-trip",
       "destination": "https://app.formbricks.com/s/cmaecfl0c1i5myi0142ge5jia",
       "permanent": true
+    },
+    {
+      "source": "/submission",
+      "destination": "https://app.formbricks.com/s/cm9v6d41o0014rr01x483l5fb",
+      "permanent": true
     }
   ]
 }
