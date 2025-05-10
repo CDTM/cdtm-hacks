@@ -317,7 +317,7 @@ If you face any situation that makes you feel unsafe or uncomfortable in the hac
 <p class="mb-4">You don't need to submit anything in advance for the final presentation; it will be based entirely on your live pitch. The live pitch should include a demo.</p>
 
 <h3 class="text-xl font-bold">Submit your project here:</h3>
-<p>(Link will be inserted once the submission is open)</p>
+<p>➡️ <a class="underline text-springBlue" href='https://hacks.cdtm.com/submission' target="_blank" rel="noopener noreferrer">https://hacks.cdtm.com/submission</a></p>
 `,
       },
       {
