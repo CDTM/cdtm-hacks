@@ -15,7 +15,7 @@ admin.initializeApp();
 interface Project {
   id: string;
   name: string;
-  case: "trade-republic" | "avi" | "beam";
+  case: "Trade Republic" | "avi" | "beam";
   description: string;
   pitch: string;
   githubUrl: string;
@@ -36,7 +36,7 @@ interface Project {
 interface TeamData {
   name: string;
   emails: string[];
-  case: "trade-republic" | "avi" | "beam";
+  case: "Trade Republic" | "avi" | "beam";
 }
 
 async function convertSubmissions() {

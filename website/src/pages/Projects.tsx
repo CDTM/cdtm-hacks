@@ -10,7 +10,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { MAIN_SPONSOR, CASE_SPONSORS, CHALLENGE_SPONSORS, TECH_SPONSORS, FOOD_SPONSORS, VENUE_SPONSORS } from "@/constants/partners";
 
 // Define the order of cases
-const caseOrder = ['trade-republic', 'avi', 'beam'] as const;
+const caseOrder = ['Trade Republic', 'avi', 'beam'] as const;
 
 // Define the order of challenges
 const challengeOrder = ['mistral', 'tanso', 'beyond-presence', 'visionaries'] as const;

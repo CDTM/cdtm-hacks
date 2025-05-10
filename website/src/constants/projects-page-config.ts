@@ -1,7 +1,7 @@
 export interface Project {
   id: string;
   name: string;
-  case: "trade-republic" | "avi" | "beam";
+  case: "Trade Republic" | "avi" | "beam";
   description: string;
   pitch: string;
   githubUrl: string;
@@ -31,8 +31,8 @@ export interface Case {
   logoClass: string;
 }
 
-export const cases: Record<"trade-republic" | "avi" | "beam", Case> = {
-  "trade-republic": {
+export const cases: Record<"Trade Republic" | "avi" | "beam", Case> = {
+  "Trade Republic": {
     name: "Trade Republic",
     // TODO: Use real case description
     description:
@@ -141,7 +141,7 @@ export const projects: Project[] = [
   {
     id: "project-tr-1",
     name: "WealthWave",
-    case: "trade-republic",
+    case: "Trade Republic",
     description:
       "An AI-powered investment assistant that curates daily stock picks based on user-defined strategies and market trends.",
     pitch: "Personalized stock insights delivered daily using AI.",
@@ -153,7 +153,7 @@ export const projects: Project[] = [
   {
     id: "project-tr-2",
     name: "TradeTribe",
-    case: "trade-republic",
+    case: "Trade Republic",
     description:
       "A social platform for traders to share portfolios, strategies, and performance, fostering a learning community.",
     pitch: "The social network for savvy retail investors.",
@@ -164,7 +164,7 @@ export const projects: Project[] = [
   {
     id: "project-tr-3",
     name: "StockStory",
-    case: "trade-republic",
+    case: "Trade Republic",
     description:
       "Generates story-like visualizations of your stock performance over time, ideal for sharing and learning.",
     pitch: "Turn your portfolio into an engaging story.",
@@ -174,7 +174,7 @@ export const projects: Project[] = [
   {
     id: "project-tr-4",
     name: "InvestiQ",
-    case: "trade-republic",
+    case: "Trade Republic",
     description:
       "A gamified quiz app that tests users on investment knowledge and offers real-time market scenarios.",
     pitch: "Learn investing through challenges and rewards.",
@@ -184,7 +184,7 @@ export const projects: Project[] = [
   {
     id: "project-tr-5",
     name: "DividendRadar",
-    case: "trade-republic",
+    case: "Trade Republic",
     description:
       "Tracks dividend payments and suggests portfolio optimization to maximize passive income.",
     pitch: "Maximize your dividend gains with smart alerts.",
@@ -194,7 +194,7 @@ export const projects: Project[] = [
   {
     id: "project-tr-6",
     name: "GreenVest",
-    case: "trade-republic",
+    case: "Trade Republic",
     description:
       "Rates your investments based on ESG scores and suggests greener alternatives.",
     pitch: "Invest responsibly with sustainability scores.",
@@ -204,7 +204,7 @@ export const projects: Project[] = [
   {
     id: "project-tr-7",
     name: "RiskSense",
-    case: "trade-republic",
+    case: "Trade Republic",
     description:
       "Analyzes your portfolio risk and simulates potential outcomes based on historical crashes.",
     pitch: "Understand and manage your investment risk better.",
@@ -214,7 +214,7 @@ export const projects: Project[] = [
   {
     id: "project-tr-8",
     name: "MicroInvest",
-    case: "trade-republic",
+    case: "Trade Republic",
     description:
       "Rounding up everyday purchases to invest spare change into diversified ETFs.",
     pitch: "Invest your spare change effortlessly.",
@@ -225,7 +225,7 @@ export const projects: Project[] = [
   {
     id: "project-tr-9",
     name: "TradeBuddy",
-    case: "trade-republic",
+    case: "Trade Republic",
     description:
       "A conversational bot that explains financial news and your portfolio in plain English.",
     pitch: "Your friendly financial assistant in chat form.",
@@ -235,7 +235,7 @@ export const projects: Project[] = [
   {
     id: "project-tr-10",
     name: "AlphaPulse",
-    case: "trade-republic",
+    case: "Trade Republic",
     description:
       "Real-time sentiment analysis on stocks from Reddit, Twitter, and news to spot early trends.",
     pitch: "Beat the market with real-time sentiment data.",
