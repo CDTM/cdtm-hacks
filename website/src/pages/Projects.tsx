@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { projects, cases, challenges, Project } from "@/constants/projects-page-config";
+import { cases, challenges, Project } from "@/constants/projects-page-config";
 import { ProjectDialog } from "@/components/ProjectDialog";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useParams, useNavigate } from "react-router-dom";
@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { MAIN_SPONSOR, CASE_SPONSORS, CHALLENGE_SPONSORS, TECH_SPONSORS, FOOD_SPONSORS, VENUE_SPONSORS } from "@/constants/partners";
+import { projects } from "@/constants/projects";
 
 // Define the order of cases
 const caseOrder = ['Trade Republic', 'avi', 'beam'] as const;
@@ -200,7 +201,7 @@ export default function Projects() {
                                                 <CardTitle>{project.name}</CardTitle>
                                             </CardHeader>
                                             <CardContent>
-                                                <CardDescription>{project.pitch}</CardDescription>
+                                                <CardDescription>{project.whatIsProject}</CardDescription>
                                             </CardContent>
                                         </Card>
                                     ))}
@@ -236,7 +237,7 @@ export default function Projects() {
                                                 <CardTitle>{project.name}</CardTitle>
                                             </CardHeader>
                                             <CardContent>
-                                                <CardDescription>{project.pitch}</CardDescription>
+                                                <CardDescription>{project.whatIsProject}</CardDescription>
                                             </CardContent>
                                         </Card>
                                     ))}
@@ -292,7 +293,7 @@ export default function Projects() {
                                                         onClick={() => handleProjectSelect(project)}
                                                     >
                                                         <div className="font-medium">{project.name}</div>
-                                                        <div className="text-sm text-gray-500">{project.pitch}</div>
+                                                        <div className="text-sm text-gray-500">{project.whatIsProject}</div>
                                                     </div>
                                                 ))}
                                             </div>

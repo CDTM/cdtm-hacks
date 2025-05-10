@@ -16,8 +16,10 @@ interface Project {
   id: string;
   name: string;
   case: "Trade Republic" | "avi" | "beam";
-  description: string;
-  pitch: string;
+  whatIsProject: string;
+  howBuilt: string;
+  difficulties: string;
+  oneSentencePitch: string;
   githubUrl: string;
   videoUrl: string;
   placement?: 1 | 2;
@@ -43,7 +45,7 @@ async function convertSubmissions() {
   try {
     // Read CSV file
     const csvContent = fs.readFileSync(
-      path.join(__dirname, "../../../website/export-submission-2025-05-07-08-43-55.csv"),
+      path.join(__dirname, "../example_submissions.csv"),
       "utf-8"
     );
 
@@ -57,7 +59,7 @@ async function convertSubmissions() {
 
     // Process each record
     for (const record of records) {
-      const teamCode = record["1. What is your team code?"];
+      const teamCode = record["1. What is Your Team ID?"];
       
       // Fetch team data from Firestore
       const teamDoc = await admin.firestore()
@@ -65,40 +67,33 @@ async function convertSubmissions() {
         .doc(teamCode.toLowerCase())
         .get();
 
+      let teamData: TeamData;
       if (!teamDoc.exists) {
         console.warn(`Team with code ${teamCode} not found in Firestore`);
+
+        // dummy data
+        // teamData = {
+        //   name: "Team Name",
+        //   emails: ["team@example.com"],
+        //   case: ["Trade Republic", "avi", "beam"][Math.floor(Math.random() * 3)] as "Trade Republic" | "avi" | "beam",
+        // };
+        // console.log(`WARNING: Team with code ${teamCode} not found in Firestore. Using dummy data.`);
+
         continue;
+      } else {
+        teamData = teamDoc.data() as TeamData;
       }
-
-      const teamData = teamDoc.data() as TeamData;
-
-      // Parse challenges
-      const challenges = record["5. Challenges"]
-        ? record["5. Challenges"]
-            .split(";")
-            .map((challenge: string) => {
-              const match = challenge.match(/"([^"]+)" by ([^"]+)/);
-              if (match) {
-                return {
-                  name: match[1],
-                  sponsoredBy: match[2],
-                  companies: [], // You'll need to map these based on your challenges data
-                };
-              }
-              return null;
-            })
-            .filter(Boolean)
-        : [];
 
       const project: Project = {
         id: `project-${teamCode.toLowerCase()}`,
-        name: record["7. What is your project?"].split(".")[0], // Take first sentence as name
+        name: record["3. Give Your Project a Name"],
         case: teamData.case,
-        description: record["7. What is your project?"],
-        pitch: record["6. One sentence pitch"],
-        githubUrl: record["2. GitHub Repository"],
+        whatIsProject: record["8. What Is Your Project?"],
+        howBuilt: record["9. How You Built It"],
+        difficulties: record["10. Difficulties You Faced"],
+        oneSentencePitch: record["7. One-Sentence Pitch"],
+        githubUrl: record["6. GitHub Repository"] || "",
         videoUrl: record["4. Pitch video"],
-        challenges: challenges.length > 0 ? challenges : undefined,
       };
 
       projects.push(project);

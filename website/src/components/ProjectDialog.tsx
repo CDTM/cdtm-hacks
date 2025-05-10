@@ -33,12 +33,22 @@ export function ProjectDialog({ project, open, onOpenChange }: ProjectDialogProp
           <div className="space-y-4">
             <div>
               <h3 className="text-lg font-semibold mb-2">One Sentence Pitch</h3>
-              <p className="text-gray-600">{project.pitch}</p>
+              <p className="text-gray-600">{project.oneSentencePitch}</p>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-2">Project Description</h3>
-              <p className="text-gray-600">{project.description}</p>
+              <h3 className="text-lg font-semibold mb-2">What Is Your Project?</h3>
+              <p className="text-gray-600">{project.whatIsProject}</p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-2">How You Built It</h3>
+              <p className="text-gray-600">{project.howBuilt}</p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Difficulties You Faced</h3>
+              <p className="text-gray-600">{project.difficulties}</p>
             </div>
 
             {(project.placement || project.challenges?.length) && (
