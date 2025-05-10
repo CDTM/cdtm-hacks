@@ -296,8 +296,6 @@ If you face any situation that makes you feel unsafe or uncomfortable in the hac
 • <strong>What Is Your Project? (max 800 characters):</strong> Describe your project in a few clear, informative sentences (max. 800 characters). Focus on what it does, who it's for, and what makes it unique.
 • <strong>How Did You Build It? (max 800 characters):</strong> Briefly describe your tech stack and the key technologies used to build your project. Highlight tools, frameworks, APIs, or models that played a major role.
 • <strong>Difficulties You Faced (max 500 characters):</strong> Briefly describe the main technical or non-technical difficulties you encountered during the project. What was hard, unexpected, or required creative problem-solving?
-• <strong>What You Learned (max 500 characters):</strong> Briefly summarize the key learnings and takeaways from the project.
-• <strong>What's Next For Your Project? (max 500 characters):</strong> Outline the upcoming features and improvements you plan to implement.
 
 <h3 class="text-xl font-bold">What challenges do you want to compete in?</h3>
 <p class="mb-1">In the form, you can click a checkbox for each challenge you want to enter. We have the following challenges:</p>
