@@ -94,7 +94,7 @@ const Partners = () => {
           <h3 className="text-center text-xl text-springText/80 mb-8">
             Challenge Sponsors
           </h3>
-          <div className="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
             {CHALLENGE_SPONSORS.map((sponsor, index) => (
               <div
                 key={index}

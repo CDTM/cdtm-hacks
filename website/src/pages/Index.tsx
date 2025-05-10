@@ -171,7 +171,7 @@ const Index = () => {
             <br />
             Join us for 36 hours of building in the heart of Europe.
           </p>
-          <a
+          <span
             className="text-lg md:text-xl mb-8 font-bold animate-fade-in text-springText flex items-center justify-center gap-1"
             style={{
               animationDelay: "0.2s",
@@ -197,7 +197,7 @@ const Index = () => {
               </svg>
               Celonis, Munich
             </a>
-          </a>
+          </span>
 
           {/* Mobile buttons - only show on small screens */}
           <div
@@ -287,7 +287,10 @@ const Index = () => {
       </div>
 
       {/* Applications Closed Dialog */}
-      <ApplicationsClosedDialog isOpen={isDialogOpen} onOpenChange={setIsDialogOpen} />
+      <ApplicationsClosedDialog
+        isOpen={isDialogOpen}
+        onOpenChange={setIsDialogOpen}
+      />
 
       {/* Content sections */}
       <About />

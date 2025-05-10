@@ -34,6 +34,17 @@
             margin: 20px 0;
             border: 1px solid #ddd;
         }
+        .section {
+            margin: 20px 0;
+        }
+        .section h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .section p {
+            white-space: pre-wrap;
+            margin: 0;
+        }
     </style>
 </head>
 <body>
@@ -42,21 +53,64 @@
     </div>
     
     <div class="content">
-        <p>Dear team,</p>
+        <p>Dear {{teamName}},</p>
         
         <p>Thank you for submitting your project for CDTM Hacks! We've received your submission and are excited to review it.</p>
         
         <div class="project-info">
             <h2>Project Details</h2>
-            <ul>
-                <li><strong>Project Name:</strong> {{projectName}}</li>
-                <li><strong>GitHub Repository:</strong> <a href="{{githubRepo}}">{{githubRepo}}</a></li>
-                <li><strong>Project Description:</strong></li>
-            </ul>
-            <p>{{projectDescription}}</p>
+            <p>Project Name: {{projectName}}</p>
+
+            <div class="section">
+                <h3>One-Sentence Pitch</h3>
+                <p>{{oneSentencePitch}}</p>
+            </div>
+
+            <div class="section">
+                <h3>What is your project?</h3>
+                <p>{{projectDescription}}</p>
+            </div>
+
+            <div class="section">
+                <h3>How We Built It</h3>
+                <p>{{howWeBuiltIt}}</p>
+            </div>
+
+            <div class="section">
+                <h3>Difficulties You Faced</h3>
+                <p>{{difficulties}}</p>
+            </div>
+
+            <div class="section">
+                <h3>Challenges</h3>
+                <p>{{challenges}}</p>
+            </div>
+
+            <div class="section">
+                <h3>Reasoning for Challenges:</h3>
+                <p>{{reasoningForChallenges}}</p>
+            </div>
+
+            <div class="section">
+                <h3>Links</h3>
+                <ul>
+                    <li><strong>GitHub Repository:</strong> <a href="{{githubRepo}}">{{githubRepo}}</a></li>
+                    <li><strong>Pitch Video:</strong> <a href="{{pitchVideo}}">{{pitchVideo}}</a></li>
+                    <li><strong>Link to Demo / MVP:</strong> <a href="{{demoLink}}">{{demoLink}}</a></li>
+                </ul>
+            </div>
         </div>
 
         <p>Our judges will review your submission. Make sure your pitch video & GitHub repository are accessible and contain all the necessary documentation.</p>
+
+        <div class="section">
+            <h3>Final Presentation Reminder</h3>
+            <p><strong>Just a reminder: Prepare for Your Final Presentation</strong></p>
+            
+            <p>Please note that on Sunday after 10:00 AM, the case partners will review and select the 1st and 2nd place winners for their case. If your project places 1st or 2nd, you will get the chance to deliver a live pitch in front of the independent jury and the audience. The independent jury for the main prize will not review your written submission and will evaluate your performance solely based on your live pitch.</p>
+            
+            <p>You don't need to submit anything in advance for the final presentation; it will be based entirely on your live pitch. The live pitch should include a demo.</p>
+        </div>
 
         <p>If you need to make any changes to your submission, just make a new submission.</p>
 
