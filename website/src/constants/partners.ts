@@ -157,7 +157,9 @@ export const FOOD_SPONSORS: Sponsor[] = [
     link: "https://www.innocentdrinks.co.uk/home",
   },
   {
-    name: "To be announced",
+    name: "LANCH",
+    image: "/images/partners/lanch.png",
+    link: "https://www.lanch.com/",
   },
 ];
 
