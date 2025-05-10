@@ -4,7 +4,7 @@ import * as fs from "fs";
 import * as path from "path";
 import { fileURLToPath } from "url";
 import { stringify } from "csv-stringify/sync";
-import 'dotenv/config';
+import "dotenv/config";
 
 // Get __dirname equivalent in ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -30,18 +30,13 @@ interface ScoringRow {
   "What Is Your Project": string;
   "How You Built It": string;
   "Difficulties You Faced": string;
-  "What You Learned": string;
-  "What is next": string;
 }
 
 async function generateScoringSheets() {
   try {
     // Read CSV file
     const csvContent = fs.readFileSync(
-      path.join(
-        __dirname,
-        "../../submission/submissions.csv"
-      ),
+      path.join(__dirname, "../../submission/submissions.csv"),
       "utf-8",
     );
 
@@ -69,12 +64,28 @@ async function generateScoringSheets() {
         .doc(`${teamId}`)
         .get();
 
+      let teamData: TeamData;
+
       if (!teamDoc.exists) {
         console.warn(`Team with ID ${teamId} not found in Firestore`);
+
+        // dummy data
+        // teamData = {
+        //   name: "Team Name",
+        //   emails: ["team@example.com"],
+        //   case: ["Trade Republic", "avi", "beam"][
+        //     Math.floor(Math.random() * 3)
+        //   ] as "Trade Republic" | "avi" | "beam",
+        // };
+        // console.log(
+        //   `WARNING: Team with code ${teamId} not found in Firestore. Using dummy data.`,
+        // );
+
         continue;
+      } else {
+        teamData = teamDoc.data() as TeamData;
       }
 
-      const teamData = teamDoc.data() as TeamData;
       const scoringRow: ScoringRow = {
         "Team Code": teamId,
         "Team Name": record["2. Give Your Team a Name"],
@@ -86,8 +97,6 @@ async function generateScoringSheets() {
         "What Is Your Project": record["8. What Is Your Project?"],
         "How You Built It": record["9. How You Built It"],
         "Difficulties You Faced": record["10. Difficulties You Faced"],
-        "What You Learned": record["11. What You Learned"],
-        "What is next": record["12. What's Next For Your Project?"],
       };
 
       projectsByCase[teamData.case].push(scoringRow);
@@ -115,8 +124,6 @@ async function generateScoringSheets() {
             "What Is Your Project",
             "How You Built It",
             "Difficulties You Faced",
-            "What You Learned",
-            "What is next",
           ],
         });
 

@@ -87,8 +87,12 @@ The platform consists of:
 0. Setup Google Service Account, Mailgun API Key
 1. Download completed submissions from Formbricks, rename to `submissions.csv`
 2. Copy `submissions.csv` to `platform/submission/submissions.csv`
-3. Run `npx tsx platform/submission/src/genreate-project-page-data.ts`
-4. Commit your changes to deploy the website
-5. Run `npx tsx platform/submission/src/generate-challenge-scoring.ts`
-6. Run `npx tsx platform/submission/src/generate-case-scoring.ts`
-7. Import csv files into Google Sheets
+3. Navigate to `platform/submission`
+4. Run:
+```bash
+npx tsx src/genreate-project-page-data.ts
+npx tsx src/generate-challenge-scoring.ts
+npx tsx src/generate-case-scoring.ts
+```
+5. Commit your changes to deploy the website
+6. Import csv files into Google Sheets
