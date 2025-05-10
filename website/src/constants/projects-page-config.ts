@@ -37,8 +37,7 @@ export const cases: Record<"Trade Republic" | "avi" | "beam", Case> = {
   "Trade Republic": {
     name: "Trade Republic",
     // TODO: Use real case description
-    description:
-      "Build a solution to help retail investors make better investment decisions",
+    description: "TODO (insert action case title)",
     sponsorUrl: "https://traderepublic.com",
     logo: "/images/partners/trade_republic.png",
     logoClass: "max-h-[20px] max-w-[200px]",
@@ -46,8 +45,7 @@ export const cases: Record<"Trade Republic" | "avi" | "beam", Case> = {
   avi: {
     name: "avi",
     // TODO: Use real case description
-    description:
-      "Create an autonomous vehicle solution that improves urban mobility",
+    description: "TODO (insert action case title)",
     sponsorUrl: "https://www.avimedical.com/",
     logo: "/images/partners/avi_logo.png",
     logoClass: "max-h-[20px] max-w-[200px]",
@@ -55,8 +53,7 @@ export const cases: Record<"Trade Republic" | "avi" | "beam", Case> = {
   beam: {
     name: "Beam",
     // TODO: Use real case description
-    description:
-      "Develop a privacy-preserving application using Beam's blockchain technology",
+    description: "TODO (insert action case title)",
     sponsorUrl: "https://beam.ai/",
     logo: "/images/partners/beam.png",
     logoClass: "max-h-[20px] max-w-[200px]",
@@ -112,7 +109,6 @@ export const challenges: Record<string, Challenge> = {
       },
       {
         name: "Everyday Intelligence",
-        url: "https://everydayintelligence.com/",
         logoPath: "/images/partners/everyday_intelligence_logo.svg",
         logoClass: "max-h-[20px] max-w-[200px]",
       },
@@ -142,25 +138,25 @@ export const projects: Project[] = [
   // Trade Republic Projects
   {
     id: "project-tr-1",
-    name: "WealthWave",
+    name: "Placeholder",
     case: "Trade Republic",
-    whatIsProject: "An AI-powered investment assistant that curates daily stock picks based on user-defined strategies and market trends.",
-    howBuilt: "Personalized stock insights delivered daily using AI.",
-    difficulties: "Integrating real-time market data with AI predictions while ensuring accuracy and reliability of recommendations.",
-    oneSentencePitch: "Personalized stock insights delivered daily using AI.",
-    githubUrl: "https://github.com/demo/wealthwave",
+    whatIsProject: "Placeholder",
+    howBuilt: "Placeholder",
+    difficulties: "Placeholder",
+    oneSentencePitch: "Placeholder",
+    githubUrl: "https://github.com/demo/placeholder",
     videoUrl: "https://youtube.com/watch?v=demo1",
     placement: 1,
     challenges: [challenges.visionaries],
   },
   {
     id: "project-tr-2",
-    name: "TradeTribe",
-    case: "Trade Republic",
-    whatIsProject: "A social platform for traders to share portfolios, strategies, and performance, fostering a learning community.",
-    howBuilt: "The social network for savvy retail investors.",
-    difficulties: "Balancing user privacy with social features while maintaining data security and compliance with financial regulations.",
-    oneSentencePitch: "The social network for savvy retail investors.",
+    name: "Placeholder",
+    case: "avi",
+    whatIsProject: "Placeholder",
+    howBuilt: "Placeholder",
+    difficulties: "Placeholder",
+    oneSentencePitch: "Placeholder",
     githubUrl: "https://github.com/demo/tradetribe",
     videoUrl: "https://youtube.com/watch?v=demo2",
     placement: 2,
