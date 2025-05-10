@@ -304,7 +304,7 @@ If you face any situation that makes you feel unsafe or uncomfortable in the hac
 • <strong>"Best Use of La Plateforme/ Mistral models"</strong> by Mistral AI
 • <strong>"Most potential to earn real money"</strong> by Visionaries Club, Everyday Intelligence & Paid
 • <strong>"Best Use of Real-Time Interactive Avatars"</strong> by Beyond Presence
-• <strong>"There is no AI without PI"</strong> by Celonis
+• <strong>"Best use of AI to improve processes"</strong> by Celonis
 • <strong>"Why Not? Biggest Creative Risk"</strong> by Tanso
 
 <h3 class="text-xl font-bold">For every challenge you compete in:</h3>
