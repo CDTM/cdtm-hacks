@@ -67,9 +67,24 @@ export class WebhookService {
     try {
       const formData = data.data.data;
       const teamCode = formData["team-code"] as string;
-      const projectName = formData["project-name"] as string;
-      const githubRepo = formData["github-repo"] as string;
-      const projectDescription = formData["project-description"] as string;
+      const projectName = formData["lrytlj95o6ua2vylb1fi73ha"] as string;
+      const teamName = formData["f9us21kx80ol0k1ln48u9v2l"] as string;
+      const demoLink = formData["djm7t3238fmxa63dvs7q6tvw"] as string;
+      const githubRepo = formData["repository"] as string;
+      const projectDescription = formData["what-is-your-project"] as string;
+      const pitchVideo = formData["pitch-video"] as string;
+      const howWeBuiltIt = formData["how-we-built-it"] as string;
+      const whatYouLearned = formData["what-we-learned"] as string;
+      const difficulties = formData["fug36spozqys4uaah0ncnq2e"] as string;
+      const oneSentencePitch = formData["one-sentence-pitch"] as string;
+      const whatIsNext = formData["what-is-next-for-your-project"] as string;
+      const challenges = formData["nfi6gji4lv321c7ompvk2wm8"] as string;
+
+      const reasoningForVisonaries = formData["ixmth9vbjz6b9c1qotp9wlf2"] as string;
+      const reasoningForCelonis = formData["n8q93po2dd5wsnspuguznrl8"] as string;
+      const reasoningForTanso = formData["feno0rbmyhf8vqyxoqndqnz8"] as string;
+      const reasoningForBeyondPresence = formData["lk4zccnfrdyw8kxvuvtm5y5i"] as string;
+      const reasoningForMistral = formData["ksj41i74afe7gxykvdgkxzun"] as string;
 
       // Get team data from Firestore
       const teamDoc = await this.db
@@ -82,6 +97,27 @@ export class WebhookService {
 
       const teamData = teamDoc.data() as TeamData;
 
+      let reasoningForChallenges = "";
+      if (reasoningForVisonaries) {
+        reasoningForChallenges += `<strong>Reasoning for Visionaries Club, Everyday Intelligence & Paid Challenge:</strong>\n${reasoningForVisonaries}\n\n`;
+      }
+      if (reasoningForCelonis) {
+        reasoningForChallenges += `<strong>Reasoning for Celonis Challenge:</strong>\n${reasoningForCelonis}\n\n`;
+      }
+      if (reasoningForTanso) {
+        reasoningForChallenges += `<strong>Reasoning for Tanso Challenge:</strong>\n${reasoningForTanso}\n\n`;
+      }
+      if (reasoningForBeyondPresence) {
+        reasoningForChallenges += `<strong>Reasoning for Beyond Presence Challenge:</strong>\n${reasoningForBeyondPresence}\n\n`;
+      }
+      if (reasoningForMistral) {
+        reasoningForChallenges += `<strong>Reasoning for Mistral Challenge:</strong>\n${reasoningForMistral}\n\n`;
+      }
+
+      if (!reasoningForChallenges) {
+        reasoningForChallenges = "No reasoning provided";
+      }
+
       // Send confirmation email to all team members
       await Promise.all(
         teamData.emails.map((email) =>
@@ -90,9 +126,19 @@ export class WebhookService {
             subject: "Project Submission Confirmation - CDTM Hacks",
             templateName: "project_submission",
             templateData: {
+              teamName,
               projectName,
               githubRepo,
               projectDescription,
+              pitchVideo,
+              howWeBuiltIt,
+              whatYouLearned,
+              oneSentencePitch,
+              whatIsNext,
+              challenges,
+              reasoningForChallenges,
+              demoLink,
+              difficulties,
             },
           }),
         ),
