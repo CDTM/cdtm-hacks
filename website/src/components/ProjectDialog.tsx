@@ -1,5 +1,5 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Project } from "@/constants/projects";
+import { Project } from "@/constants/projects-page-config";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Trophy, Award } from "lucide-react";
 import { Badge } from "@/components/ui/badge";

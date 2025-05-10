@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { projects, cases, challenges, Project } from "@/constants/projects";
+import { projects, cases, challenges, Project } from "@/constants/projects-page-config";
 import { ProjectDialog } from "@/components/ProjectDialog";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useParams, useNavigate } from "react-router-dom";

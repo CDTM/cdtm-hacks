@@ -1,0 +1,5 @@
+node_modules/
+dist/
+service-account.json 
+key_store
+.env
