@@ -82,14 +82,6 @@ export class WebhookService {
 
       const teamData = teamDoc.data() as TeamData;
 
-      // Store project submission
-      await this.db.collection("Submissions").doc(teamCode.toLowerCase()).set({
-        projectName,
-        githubRepo,
-        projectDescription,
-        submittedAt: admin.firestore.FieldValue.serverTimestamp(),
-      });
-
       // Send confirmation email to all team members
       await Promise.all(
         teamData.emails.map((email) =>
