@@ -308,7 +308,7 @@ If you face any situation that makes you feel unsafe or uncomfortable in the hac
 • <strong>"Why Not? Biggest Creative Risk"</strong> by Tanso
 
 <h3 class="text-xl font-bold">For every challenge you compete in:</h3>
-<p class="mb-4">You have to answer the following question: <strong>Why Your Project Deserves to Win "NAME OF THE CHALLENGE" by COMPANY.</strong> Briefly explain to the challenge judges why your project stands out and deserves to win the challenge.</p>
+<p class="mb-4">You have to answer the following question: <strong>Why Your Project Deserves to Win "NAME OF THE CHALLENGE" by COMPANY.</strong> Briefly explain to the challenge judges why your project stands out and deserves to win the challenge. Maximum 400 characters per challenge.</p>
 
 <h3 class="text-xl font-bold">Additional information:</h3>
 • You can submit as many times as you want. We will use your latest submission.
