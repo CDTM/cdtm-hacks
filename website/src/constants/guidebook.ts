@@ -467,7 +467,7 @@ Your goal is to, on the one hand, transform the patient intake experience: make 
 <p class="mb-2">We're selecting the winner by lottery — but yes, you can boost your odds.</p>\
 <p class="mb-2">✅ <strong>To enter the lottery:</strong></p>\
 <ol class="list-decimal list-inside mb-2 ml-4">\
-  <li>Opt in here → <a href="#" class="text-springBlue hover:underline">Google Forms</a> (Please update this link)</li>\
+  <li>Opt in here → <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0P3aK4hoQ_Cz-f_svljDuMObJx4Y73X6f9XgHElR89Oe1dg/viewform" class="text-springBlue hover:underline">Google Forms</a> (Please update this link)</li>\
   <li>Attend at least one input session</li>\
 </ol>\
 <p class="mb-2">🎯 <strong>Boost your chances with extra entries:</strong></p>\
