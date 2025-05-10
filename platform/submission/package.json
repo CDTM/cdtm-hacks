@@ -1,0 +1,23 @@
+{
+  "name": "submission-converter",
+  "version": "1.0.0",
+  "description": "Convert CSV submissions to TypeScript projects",
+  "type": "module",
+  "main": "dist/convert-submissions.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node --loader ts-node/esm src/convert-submissions.ts",
+    "score": "node --loader ts-node/esm src/generate-scoring.ts"
+  },
+  "dependencies": {
+    "csv-parse": "^5.5.3",
+    "csv-stringify": "^6.4.5",
+    "dotenv": "^16.5.0",
+    "firebase-admin": "^13.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}

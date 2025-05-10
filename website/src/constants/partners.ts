@@ -14,7 +14,7 @@ export const MAIN_SPONSOR: Sponsor = {
 export const CASE_SPONSORS: Sponsor[] = [
   {
     name: "Trade Republic",
-    image: "/images/partners/trade_republic.svg",
+    image: "/images/partners/trade_republic.png",
     link: "https://traderepublic.com/",
   },
   {
@@ -97,6 +97,7 @@ export const TECH_SPONSORS: Sponsor[] = [
     name: "Make",
     image: "/images/partners/make.svg",
     link: "https://make.com/",
+    class: "max-h-[30px]",
   },
   {
     name: "Cognition AI",
@@ -145,6 +146,7 @@ export const FOOD_SPONSORS: Sponsor[] = [
     name: "CHECK24",
     image: "/images/partners/check24.png",
     link: "https://www.check24.de/",
+    class: "max-h-[40px]",
   },
   {
     name: "Fruiton",

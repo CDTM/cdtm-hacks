@@ -71,3 +71,28 @@ The platform consists of:
 - Firestore database for storing team and submission data
 - Mailgun for sending automated emails
 - Discord integration for monitoring and error reporting
+
+## Flow
+
+### Friday: Team Registration
+
+0. Setup Google Service Account, Mailgun API Key
+1. Team registration
+2. Download completed submissions from Formbricks, rename to `hackathon_participants.csv`
+3. Run `platform/team-allocation/team_allocation.py`
+4. Run `platform/team-allocation/send_team_emails.js` (disable test mode in the script)
+
+### Sunday: Submission
+
+0. Setup Google Service Account, Mailgun API Key
+1. Download completed submissions from Formbricks, rename to `submissions.csv`
+2. Copy `submissions.csv` to `platform/submission/submissions.csv`
+3. Navigate to `platform/submission`
+4. Run:
+```bash
+npx tsx src/genreate-project-page-data.ts
+npx tsx src/generate-challenge-scoring.ts
+npx tsx src/generate-case-scoring.ts
+```
+5. Commit your changes to deploy the website
+6. Import csv files into Google Sheets
