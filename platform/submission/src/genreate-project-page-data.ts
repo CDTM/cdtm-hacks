@@ -45,7 +45,7 @@ async function convertSubmissions() {
   try {
     // Read CSV file
     const csvContent = fs.readFileSync(
-      path.join(__dirname, "../example_submissions.csv"),
+      path.join(__dirname, "../submissions.csv"),
       "utf-8"
     );
 

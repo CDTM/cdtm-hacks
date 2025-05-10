@@ -40,7 +40,7 @@ async function generateScoringSheets() {
     const csvContent = fs.readFileSync(
       path.join(
         __dirname,
-        "../../../website/export-submission-2025-05-10-14-19-54.csv",
+        "../../submission/submissions.csv"
       ),
       "utf-8",
     );

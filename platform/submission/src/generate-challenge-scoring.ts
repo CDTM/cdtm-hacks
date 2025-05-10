@@ -29,7 +29,7 @@ async function generateChallengeScoringSheets() {
     const csvContent = fs.readFileSync(
       path.join(
         __dirname,
-        "../../submission/example_submission.csv"
+        "../../submission/submissions.csv"
       ),
       "utf-8"
     );
