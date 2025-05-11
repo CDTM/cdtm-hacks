@@ -97,7 +97,7 @@ const Navbar = ({ backgroundColor = "bg-transparent" }: NavbarProps) => {
           { id: "speakers", label: "Speakers", url: "#speakers" },
           { id: "schedule", label: "Schedule", url: "#schedule" },
           { id: "about-us", label: "Organisers", url: "#about-us" },
-          { id: "guidebook", label: "Guidebook", url: "/guidebook" },
+          { id: "projects", label: "Projects", url: "/projects/2025" },
           {
             id: "github",
             label: "GitHub",
@@ -157,10 +157,10 @@ const Navbar = ({ backgroundColor = "bg-transparent" }: NavbarProps) => {
             Organisers
           </button>
           <a
-            href="/guidebook"
+            href="/projects/2025"
             className="text-springText/80 hover:text-springBlue transition-colors flex items-center gap-2"
           >
-            Guidebook
+            Projects
           </a>
           <a
             href="https://github.com/CDTM/cdtm-hacks"

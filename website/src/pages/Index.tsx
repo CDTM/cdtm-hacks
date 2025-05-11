@@ -180,7 +180,7 @@ const Index = () => {
           <h1
             className={`text-4xl md:text-5xl lg:text-6xl font-bold ${
               isAfterSunday4PM ? "text-white" : "text-springBlue"
-            } mb-4 animate-fade-in`}
+            } mb-4 mt-4 animate-fade-in`}
           >
             CDTM HACKS 2025
           </h1>
@@ -198,7 +198,29 @@ const Index = () => {
             }}
           >
             {isAfterSunday4PM ? (
-              "Thank you for an amazing weekend in the heart of Europe."
+              <>
+                Thank you for an amazing weekend in the heart of Europe.
+                <div className="mt-4 animate-fade-in font-normal">
+                  <p className="text-lg text-white mb-8">
+                    Looking forward to continue building & learning after the
+                    hackathon? Application for the CDTM are open until 30th May.
+                  </p>
+                  <div className="flex flex-col items-center justify-center gap-2 mt-2">
+                    <a
+                      href="https://application.cdtm.com"
+                      className="btn-hover-effect bg-springBlue text-white font-semibold py-4 px-10 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105"
+                    >
+                      Apply now
+                    </a>
+                    <a
+                      href="/projects/2025"
+                      className="mt-2 text-white underline underline-offset-4 hover:text-springBlue transition-colors flex items-center gap-1 text-base font-normal opacity-80"
+                    >
+                      To the projects
+                    </a>
+                  </div>
+                </div>
+              </>
             ) : (
               <>
                 Spring is here - plant your ideas.
@@ -340,7 +362,6 @@ const Index = () => {
       <About />
       <Partners />
       <Speakers />
-      <Schedule />
       <FAQ />
       <AboutUs />
       <Footer />
