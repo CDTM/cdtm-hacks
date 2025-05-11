@@ -33,6 +33,7 @@ interface Project {
       logoClass: string;
     }>;
   }>;
+  demoUrl?: string;
 }
 
 interface TeamData {
@@ -107,6 +108,7 @@ async function convertSubmissions() {
         oneSentencePitch: record["7. One-Sentence Pitch"],
         githubUrl: record["6. GitHub Repository"] || "",
         videoUrl: record["4. Pitch video"],
+        demoUrl: record["5. Link to Your Demo or MVP"] || undefined,
       };
 
       projects.push(project);

@@ -201,7 +201,7 @@ export default function Projects() {
                                                 <CardTitle>{project.name}</CardTitle>
                                             </CardHeader>
                                             <CardContent>
-                                                <CardDescription>{project.whatIsProject}</CardDescription>
+                                                <CardDescription>{project.oneSentencePitch}</CardDescription>
                                             </CardContent>
                                         </Card>
                                     ))}
@@ -237,7 +237,7 @@ export default function Projects() {
                                                 <CardTitle>{project.name}</CardTitle>
                                             </CardHeader>
                                             <CardContent>
-                                                <CardDescription>{project.whatIsProject}</CardDescription>
+                                                <CardDescription>{project.oneSentencePitch}</CardDescription>
                                             </CardContent>
                                         </Card>
                                     ))}

@@ -22,12 +22,20 @@ export function ProjectDialog({ project, open, onOpenChange }: ProjectDialogProp
         
         <div className="space-y-6">
           <div className="aspect-video">
-            <iframe
-              src={project.videoUrl.replace('watch?v=', 'embed/')}
-              className="w-full h-full rounded-lg"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+            {project.videoUrl.includes('youtube.com') || project.videoUrl.includes('youtu.be') ? (
+              <iframe
+                src={project.videoUrl.replace('watch?v=', 'embed/')}
+                className="w-full h-full rounded-lg"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            ) : (
+              <video
+                src={project.videoUrl}
+                controls
+                className="w-full h-full rounded-lg"
+              />
+            )}
           </div>
 
           <div className="space-y-4">
@@ -82,9 +90,17 @@ export function ProjectDialog({ project, open, onOpenChange }: ProjectDialogProp
                   View Source Code
                 </a>
               </Button>
+              {project.demoUrl && (
+                <Button asChild variant="outline">
+                  <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Try Demo
+                  </a>
+                </Button>
+              )}
               <Button asChild>
                 <a href={project.videoUrl} target="_blank" rel="noopener noreferrer">
-                  Watch on YouTube
+                  {project.videoUrl.includes('youtube.com') || project.videoUrl.includes('youtu.be') ? 'Watch on YouTube' : 'Watch Video'}
                 </a>
               </Button>
             </div>

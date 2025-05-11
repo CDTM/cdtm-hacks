@@ -8,6 +8,7 @@ export interface Project {
   oneSentencePitch: string;
   githubUrl: string;
   videoUrl: string;
+  demoUrl?: string;
   placement?: 1 | 2;
   challenges?: Array<Challenge>;
 }
@@ -37,7 +38,7 @@ export const cases: Record<"Trade Republic" | "avi" | "beam", Case> = {
   "Trade Republic": {
     name: "Trade Republic",
     // TODO: Use real case description
-    description: "TODO (insert action case title)",
+    description: ".",
     sponsorUrl: "https://traderepublic.com",
     logo: "/images/partners/trade_republic.png",
     logoClass: "max-h-[20px] max-w-[200px]",
@@ -45,7 +46,7 @@ export const cases: Record<"Trade Republic" | "avi" | "beam", Case> = {
   avi: {
     name: "avi",
     // TODO: Use real case description
-    description: "TODO (insert action case title)",
+    description: ".",
     sponsorUrl: "https://www.avimedical.com/",
     logo: "/images/partners/avi_logo.png",
     logoClass: "max-h-[20px] max-w-[200px]",
@@ -53,7 +54,7 @@ export const cases: Record<"Trade Republic" | "avi" | "beam", Case> = {
   beam: {
     name: "Beam",
     // TODO: Use real case description
-    description: "TODO (insert action case title)",
+    description: ".",
     sponsorUrl: "https://beam.ai/",
     logo: "/images/partners/beam.png",
     logoClass: "max-h-[20px] max-w-[200px]",
