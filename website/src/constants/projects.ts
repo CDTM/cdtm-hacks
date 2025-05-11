@@ -6,9 +6,9 @@ export const projects: Project[] = [
     "id": "project-9800",
     "name": "MediMate",
     "case": "avi",
-    "whatIsProject": "MediMate is an intelligent digital assistant designed to streamline and personalize medical onboarding for patients. Users can easily upload documents (like insurance cards and medical reports) by taking photos, which are then validated. What makes MediMate unique is its conversational approach, available in both text and audio modes. It engages patients in a dynamic dialogue, asking only relevant follow-up questions uniquely tailored to their age, reason for visit, and previously shared data, thus preventing irrelevant inquiries. This adaptability also makes it particularly suitable for users like the elderly, as the process can be completed without any writing. Our system reads and comprehend these documents with impressive accuracy, ensuring high information quality. \n",
-    "howBuilt": "MediMate is an intelligent digital assistant designed to streamline and personalize medical onboarding for patients. Users can easily upload documents (like insurance cards and medical reports) by taking photos, which are then validated. What makes MediMate unique is its conversational approach, available in both text and audio modes. It engages patients in a dynamic dialogue, asking only relevant follow-up questions uniquely tailored to their age, reason for visit, and previously shared data, thus preventing irrelevant inquiries. This adaptability also makes it particularly suitable for users like the elderly, as the process can be completed without any writing. Our system reads and comprehend these documents with impressive accuracy, ensuring high information quality. ",
-    "difficulties": "Ensuring high accuracy of OCR and LLM interpretation across diverse medical document formats, especially large tables, was challenging. Designing a truly adaptive conversational logic that felt natural and efficiently gathered only necessary information required careful iteration. Integrating Python (FastAPI/Flask) with React to deliver a well-functioning backend-frontend required creative backend choices under time constraints. Finally, achieving reliable speech recognition beyond  our MVP\n",
+    "whatIsProject": "MediMate is an intelligent digital assistant designed to streamline and personalize medical onboarding for patients. Users can easily upload documents (like insurance cards and medical reports) by taking photos, which are then validated. What makes MediMate unique is its conversational approach, available in both text and audio modes. It engages patients in a dynamic dialogue, asking only relevant follow-up questions uniquely tailored to their age, reason for visit, and previously shared data, thus preventing irrelevant inquiries. This adaptability also makes it particularly suitable for users like the elderly, as the process can be completed without any writing. Our system reads and comprehend these documents with impressive accuracy, ensuring high information quality. ",
+    "howBuilt": "MediMate is built as both a mobile and web application. Its core intelligence leverages Google's Gemini LLM for natural language understanding within the conversational interface (text/audio), precise document analysis and validation, and generating adaptive questions. We integrated Optical Character Recognition (OCR) to extract text from uploaded images of documents, including tables. The application facilitates direct camera access for seamless document submission. Our stack combines Python for the backend, utilizing FastAPI to handle requests from the React frontend, process data, and return responses. For audio processing and transcription, we employ OpenAI's Whisper. Finally, all patient data and extracted information are processed and structured to create the doctor's summary.",
+    "difficulties": "Ensuring high accuracy of OCR and LLM interpretation across diverse medical document formats, especially large tables, was challenging. Designing a truly adaptive conversational logic that felt natural and efficiently gathered only necessary information required careful iteration. Integrating Python (FastAPI/Flask) with React to deliver a well-functioning backend-frontend required creative backend choices under time constraints. Finally, achieving reliable speech recognition beyond our text MVP",
     "oneSentencePitch": "MediMate transforms medical onboarding into a seamless, personalized experience for patients using an intelligent speech and text assistant, delivering doctors perfectly prepared, actionable insights before every visit.",
     "githubUrl": "https://github.com/ThoranTschoepe/cdtm_hack",
     "videoUrl": "https://www.youtube.com/watch?v=5qjtPFUH56I",
@@ -34,7 +34,18 @@ export const projects: Project[] = [
     "difficulties": "Early on, we spent too much time planning in detail instead of iterating. Our ambitious vision led to overly siloed development, each team member built isolated features that didn’t integrate well. We learned that fast, cross-functional prototyping and small PoCs would have helped us move faster and align more effectively. Connecting frontend, backend, and AI components also posed technical challenges, especially around data formats and the complexity of medical language.",
     "oneSentencePitch": "Ava is an AI-powered avatar that transforms patient check-in into a natural, conversational experience, saving time for medical staff and creating a smoother, more personal first impression for patients.",
     "githubUrl": "https://github.com/freshetomate17/avi-intake-wizard",
-    "videoUrl": "https://www.youtube.com/watch?v=Od6d5cPlIUM"
+    "videoUrl": "https://www.youtube.com/watch?v=EMqP1742KS0"
+  },
+  {
+    "id": "project-1374",
+    "name": "medvoice",
+    "case": "avi",
+    "whatIsProject": "Medvoice empowers all demographics to use digital healthcare services: We improve clinical efficiency by streamlining patient intake and medical report digitalization using real-time conversational and personalized AI phone calls. This approach invites even elderly and digitally averse patients. A voice agent guides patients through medical history and symptom-checking, reducing administrative workload and minimizing errors from incomplete information. Patients can upload relevant medical documents via SMS links, and we use OCR to process paper reports for seamless database integration. Beyond data collection, our system will detect blind spots—for example, missing prescriptions for chronic conditions—and provide real-time feedback to improve healthcare insights.\n",
+    "howBuilt": "We built the system using GPT-4-realtime for natural patient interaction and Twilio for voice and messaging. The entire architecture, including the voice agent, server, and AI, is developed in Python, ensuring flexibility and scalability. Patients upload documents via SMS links, which our server processes using GPT-4-powered OCR for seamless integration. Data is stored in a database where it can be retrieved for future use.",
+    "difficulties": "Since a significant user group is averse to using apps and sharing data, we had to come up with a very simple solution for the user, to really solve their problem. On the technical side, combining the various tools and agents together proved challenging. Since we focused on low-barrier usage, we used the beta GPT-4-realtime model for seamless conversations. This proved very challenging due to a lack of proper API documentation. We spent a lot more time than expected on details that would have \n",
+    "oneSentencePitch": "medvoice makes digital healthcare services accessible to everyone and saves patients and medical staff time and improves care quality through an conversational AI-powered phone assistant.",
+    "githubUrl": "https://github.com/Skario2/VoiceMed",
+    "videoUrl": "https://drive.google.com/file/d/1pXnpl6O3lyUE67qghvLW_nCulqExGtef/view",
   },
   {
     "id": "project-5644",
@@ -151,6 +162,18 @@ export const projects: Project[] = [
     "githubUrl": "https://github.com/Musti7even/workflow-orchestrator-insights.git",
     "videoUrl": "https://www.youtube.com/watch?v=3JpwL6lwU84",
     "demoUrl": "https://wondrous-tetragon-150018.framer.app/"
+  },
+  {
+    "id": "project-5280",
+    "name": "MOV Health",
+    "case": "avi",
+    "whatIsProject": "MOV Health is both a website and PMS, that collects patients information in an empathetic way.\n\nUsers can self service (book appointments, receive medical advice, and upload documents) from a chatbot in the homepage. This solves the pain of going through digital anamnesis.\n\nDoctors can extract relevant information of appointments and patient history from their dashboard.\n\nIt's unique because it is user centric. It has been designed to take into consideration the goals of the users in every step of the process.\n",
+    "howBuilt": "FRONT END\nReact 18\nTypeScript\nVite\nTailwind CSS\nShadcn UI Components\nReact Router DOM\nReact Query\nSupabase Client\nReact Hook Form\nZod for validation\nVarious Radix UI components for accessible UI elements\nLovable\n\nBACK END\nFastAPI\nPython 3.x\nMistral AI Integration\nLangChain\nPydantic\nUvicorn\nPython-dotenv\n",
+    "difficulties": "One of the main challenges we faced was working with the Mistral API, as it's still quite new and lacks sufficient documentation. While we were trying to integrate it programmatically, I discovered that agents currently seem to be usable only through the GUI, with no clear guidance on multi-agent workflows or how to incorporate chain-of-thought (CoT) reasoning within agents. This made it difficult to build more complex or automated interactions. Additionally, some API responses were vague ...",
+    "oneSentencePitch": "MOV Health makes medical onboardings streamlined and useful, both for patients and healthcare professionals.",
+    "githubUrl": "https://github.com/Pranjal7852/cdtm-hack-avi",
+    "videoUrl": "https://www.loom.com/share/9954ae25a4464ad89207efd95234d0c7?sid=c4b62f88-a3e9-456d-9529-7233c088a8c5",
+    "demoUrl": "https://mov-health-hub-page.lovable.app"
   },
   {
     "id": "project-1112",
@@ -291,7 +314,7 @@ export const projects: Project[] = [
     "difficulties": "We lost significant time on two fronts: aligning on a single use case (we pivoted multiple times) and encountering issues with the Beam platform, which lacked debugging options. Additionally, limited technical development skills and time constraints hindered the full development of agent capabilities. Understanding the actual maintenance process for CNC machines also proved more complex than expected, requiring deeper insight into industry-specific workflows.",
     "oneSentencePitch": "Maintaino - the data-driven maintenance administration platform to keep your machines moving so your business never experiences downtimes",
     "githubUrl": "",
-    "videoUrl": "https://www.youtube.com/watch?v=G_WgJGCT28s",
+    "videoUrl": "https://www.youtube.com/watch?v=G_WgJGCT28s&ab_channel=Jo%C3%ABlHainzl",
     "demoUrl": "https://mindful-machine-mend.lovable.app"
   },
   {
