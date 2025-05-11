@@ -4,3 +4,6 @@ service-account.json
 key_store
 .env
 challenge-scoring-sheets/
+case-scoring-sheets/
+scoring-sheets/
+submissions.csv

@@ -55,10 +55,23 @@ async function convertSubmissions() {
       skip_empty_lines: true,
     });
 
+    // Sort records by timestamp in descending order (newest first)
+    records.sort((a, b) => new Date(b.Timestamp).getTime() - new Date(a.Timestamp).getTime());
+
+    // Group submissions by team ID to get only the latest submission
+    const latestSubmissions = new Map<string, any>();
+    for (const record of records) {
+      const teamCode = record["1. What is Your Team ID?"];
+      // Only set if we haven't seen this team ID before (since records are sorted newest first)
+      if (!latestSubmissions.has(teamCode)) {
+        latestSubmissions.set(teamCode, record);
+      }
+    }
+
     const projects: Project[] = [];
 
-    // Process each record
-    for (const record of records) {
+    // Process each record (now only the latest submission per team)
+    for (const record of latestSubmissions.values()) {
       const teamCode = record["1. What is Your Team ID?"];
       
       // Fetch team data from Firestore

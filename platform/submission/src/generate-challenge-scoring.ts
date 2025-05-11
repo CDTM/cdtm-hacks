@@ -40,6 +40,19 @@ async function generateChallengeScoringSheets() {
       skip_empty_lines: true,
     });
 
+    // Sort records by timestamp in descending order (newest first)
+    records.sort((a, b) => new Date(b.Timestamp).getTime() - new Date(a.Timestamp).getTime());
+
+    // Group submissions by team ID to get only the latest submission
+    const latestSubmissions = new Map<string, any>();
+    for (const record of records) {
+      const teamId = record["1. What is Your Team ID?"];
+      // Only set if we haven't seen this team ID before (since records are sorted newest first)
+      if (!latestSubmissions.has(teamId)) {
+        latestSubmissions.set(teamId, record);
+      }
+    }
+
     // Group projects by challenge partner
     const projectsByChallenge: Record<string, ScoringRow[]> = {
       "mistral": [],
@@ -49,8 +62,8 @@ async function generateChallengeScoringSheets() {
       "tanso": [],
     };
 
-    // Process each record
-    for (const record of records) {
+    // Process each record (now only the latest submission per team)
+    for (const record of latestSubmissions.values()) {
       const challenges = record["11. Challenges"] || "";
       
       // Create base scoring row without the challenge-specific pitch
