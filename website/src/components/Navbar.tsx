@@ -51,13 +51,13 @@ const Navbar = ({ backgroundColor = "bg-transparent" }: NavbarProps) => {
 
   // Handle navigation with hash
   const handleNavigation = (hash: string) => {
-    if (location.pathname !== '/') {
+    if (location.pathname !== "/") {
       navigate(`/${hash}`);
     } else {
       // If we're already on the home page, just scroll to the section
       const element = document.querySelector(hash);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   };
@@ -71,7 +71,7 @@ const Navbar = ({ backgroundColor = "bg-transparent" }: NavbarProps) => {
         if (element) {
           // Small delay to ensure the page is fully loaded
           setTimeout(() => {
-            element.scrollIntoView({ behavior: 'smooth' });
+            element.scrollIntoView({ behavior: "smooth" });
           }, 100);
         }
       }
@@ -81,8 +81,8 @@ const Navbar = ({ backgroundColor = "bg-transparent" }: NavbarProps) => {
     handleHashNavigation();
 
     // Handle hash changes
-    window.addEventListener('hashchange', handleHashNavigation);
-    return () => window.removeEventListener('hashchange', handleHashNavigation);
+    window.addEventListener("hashchange", handleHashNavigation);
+    return () => window.removeEventListener("hashchange", handleHashNavigation);
   }, []);
 
   // Define the menu structure
@@ -127,31 +127,31 @@ const Navbar = ({ backgroundColor = "bg-transparent" }: NavbarProps) => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <button
-            onClick={() => handleNavigation('#about')}
+            onClick={() => handleNavigation("#about")}
             className="text-springText/80 hover:text-springBlue transition-colors"
           >
             About
           </button>
           <button
-            onClick={() => handleNavigation('#partners')}
+            onClick={() => handleNavigation("#partners")}
             className="text-springText/80 hover:text-springBlue transition-colors"
           >
             Partners
           </button>
           <button
-            onClick={() => handleNavigation('#speakers')}
+            onClick={() => handleNavigation("#speakers")}
             className="text-springText/80 hover:text-springBlue transition-colors"
           >
             Speakers
           </button>
           <button
-            onClick={() => handleNavigation('#schedule')}
+            onClick={() => handleNavigation("#schedule")}
             className="text-springText/80 hover:text-springBlue transition-colors"
           >
             Schedule
           </button>
           <button
-            onClick={() => handleNavigation('#about-us')}
+            onClick={() => handleNavigation("#about-us")}
             className="text-springText/80 hover:text-springBlue transition-colors flex items-center gap-2"
           >
             Organisers
@@ -170,12 +170,6 @@ const Navbar = ({ backgroundColor = "bg-transparent" }: NavbarProps) => {
           >
             GitHub
           </a>
-          <button
-            onClick={() => setIsDialogOpen(true)}
-            className="btn-hover-effect bg-springBlue text-white font-medium py-2 px-4 rounded-lg"
-          >
-            Apply
-          </button>
         </nav>
 
         {/* Mobile Menu Button */}
