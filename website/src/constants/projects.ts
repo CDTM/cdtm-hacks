@@ -34,7 +34,7 @@ export const projects: Project[] = [
     "difficulties": "Early on, we spent too much time planning in detail instead of iterating. Our ambitious vision led to overly siloed development, each team member built isolated features that didn’t integrate well. We learned that fast, cross-functional prototyping and small PoCs would have helped us move faster and align more effectively. Connecting frontend, backend, and AI components also posed technical challenges, especially around data formats and the complexity of medical language.",
     "oneSentencePitch": "Ava is an AI-powered avatar that transforms patient check-in into a natural, conversational experience, saving time for medical staff and creating a smoother, more personal first impression for patients.",
     "githubUrl": "https://github.com/freshetomate17/avi-intake-wizard",
-    "videoUrl": "https://youtu.be/Od6d5cPlIUM"
+    "videoUrl": "https://www.youtube.com/watch?v=Od6d5cPlIUM"
   },
   {
     "id": "project-5644",
@@ -45,7 +45,7 @@ export const projects: Project[] = [
     "difficulties": "The main difficulty we faced was integrating the OpenAI API into our project, especially issues linked to permissions with the key. Moreover, it was fun but challenging to completely think outside the box and come up with new ideas.\n",
     "oneSentencePitch": "TradeX offers novel personalized insights on an individual’s financial activities, motivational community spirit, and allows anyone and everyone to invest in private equities - something that is not possible elsewhere today.",
     "githubUrl": "https://github.com/constantin-albrecht/trade_republic_cdtm?tab=readme-ov-file/",
-    "videoUrl": "https://www.youtube.com/watch?v=J-zTsc38IdI&feature=youtu.be"
+    "videoUrl": "https://www.youtube.com/watch?v=J-zTsc38IdI"
   },
   {
     "id": "project-1613",
@@ -56,7 +56,7 @@ export const projects: Project[] = [
     "difficulties": "“What platform should we build for?” was an important question throughout the hackathon. After conferring with the avi team we decided to stick to our approach and build a responsive web app. Another technical difficulty was implementing a talking agent because sharing audio between the front- and backend using requests isn’t trivial. We solved the problem by using the OpenAI API to process user audio, generate a text response and return a new stream of audio using the Gemini text-to-speech API.",
     "oneSentencePitch": "A structurization engine for complex, incomplete and variable data.",
     "githubUrl": "https://github.com/amribic/VisitEase",
-    "videoUrl": "https://www.youtube.com/watch?v=swTmXxo5_c0&feature=youtu.be",
+    "videoUrl": "https://www.youtube.com/watch?v=swTmXxo5_c0",
     "demoUrl": "https://visit-ease.vercel.app/"
   },
   {
@@ -115,7 +115,7 @@ export const projects: Project[] = [
     "difficulties": "From a technical viewpoint implementing reliable OCR on heterogeneous, low-quality medical forms was challenging; we had to fine-tune preprocessing and error-correction steps to reduce inaccuracies. On a more personal note, even though the challenge was for a health care provider the we didn’t care for our health during the hackathon, so keeping your eyes open and staying motivated was definitely a challenge we faced and conquered as a team.\n",
     "oneSentencePitch": "N/avi: A smarter way to manage your medical records and navigate the healthcare system - streamlined, secure, and built with patients in mind.",
     "githubUrl": "https://github.com/Max-vS/avi-case",
-    "videoUrl": "https://www.youtube.com/watch?v=2DGlx0Mp2yE&feature=youtu.be"
+    "videoUrl": "https://www.youtube.com/watch?v=2DGlx0Mp2yE"
   },
   {
     "id": "project-3944",
@@ -137,7 +137,7 @@ export const projects: Project[] = [
     "difficulties": "Technical Difficulties:\nExtracting structured data from unstructured feedback formats with pydantic schemas and zero-shot classification. \nIntegrating the main agent with external tools -- mainly with eleven labs and beyond presence. Extracting and processing transcripts from these were the longest processes in our tool.\nGetting the tool call order and performance right: With tools interacting with superbase, free text transcripts, and external agents (including a Slack bot api)",
     "oneSentencePitch": "PeopleWorks enables continuous, personalized and fully automated peer-to-peer feedback across organisations.",
     "githubUrl": "https://github.com/kraftfrosch/hackfleisch",
-    "videoUrl": "https://www.youtube.com/watch?v=Oyvrw4j8W24&feature=youtu.be",
+    "videoUrl": "https://www.youtube.com/watch?v=Oyvrw4j8W24",
     "demoUrl": "https://v0-employee-management-software-rho.vercel.app/"
   },
   {
@@ -173,7 +173,7 @@ export const projects: Project[] = [
     "difficulties": "A key challenge was unifying responses from multiple APIs as well as unstructured formats into a structured format. Integrating the AI avatar was especially complex and time-intensive. Lastly, coordinating smooth communication across diverse frontend, backend, and real-time systems also required creative problem-solving.",
     "oneSentencePitch": "Talk to an AI, not a clipboard — your doctor gets the full story.",
     "githubUrl": "https://github.com/bestler/CDTM-Hackathon",
-    "videoUrl": "https://www.youtube.com/watch?v=zucgH1dtHeU&feature=youtu.be",
+    "videoUrl": "https://www.youtube.com/watch?v=zucgH1dtHeU",
     "demoUrl": "https://dashboard-1056955526781.europe-west3.run.app"
   },
   {
@@ -185,7 +185,7 @@ export const projects: Project[] = [
     "difficulties": "We had some difficulties implementing the real-time video conversational agent.\nDue to API constraints, it was not possible to connect a live stream of the webcam directly to an LLM in any way. To solve this, we utilised a hybrid architecture between Gemini <-> RAG <-> Openai Realtime API with a tool on the realtime API session that periodically queried video annotations that we created with Gemini and stored in a RAG storage.",
     "oneSentencePitch": "Transforming a chaotic intake into a digital boarding pass",
     "githubUrl": "https://github.com/VishiATChoudhary/patient-journey-pilot",
-    "videoUrl": "https://www.youtube.com/watch?v=BpQnxbrkZ5o&feature=youtu.be",
+    "videoUrl": "https://www.youtube.com/watch?v=BpQnxbrkZ5o",
     "demoUrl": "https://preview--patient-journey-pilot.lovable.app"
   },
   {
@@ -221,7 +221,7 @@ export const projects: Project[] = [
     "difficulties": "The main challenges we faced were, first of all, trying to understand the patient. What is he looking for? What is he struggling with? The other thing we were primarily challenged with was the amount of different data formats that exist: While some documents are already structured pretty well (like tables), especially hand-written additions made the import process quite messy.",
     "oneSentencePitch": "avi.pulse is revolutionizing healthcare accessibility by enabling patients to easily manage all their health data - without a single stack of a paper",
     "githubUrl": "https://github.com/nictru/cdtm-avi",
-    "videoUrl": "https://www.youtube.com/watch?v=NuxSYas6LXc&feature=youtu.be",
+    "videoUrl": "https://www.youtube.com/watch?v=NuxSYas6LXc",
     "demoUrl": "https://avi-cdtm.netlify.app/"
   },
   {
@@ -233,7 +233,7 @@ export const projects: Project[] = [
     "difficulties": "Our biggest challenge was building a simple but impactful UI: Helping users immediately understand how today’s decisions affect their future, without needing to grasp complex math. Visualizing this was tough, but enabling users to cancel subscriptions directly in the app was even harder, considering a legally and technically feasible integration. We solved this by thinking outside the box and creating a seamless experience requiring minimal user effort.",
     "oneSentencePitch": "Closing tomorrow’s pension gap by optimizing today’s personal finances - making compounding assets tangible and turning them into real growth",
     "githubUrl": "https://github.com/Lovisk8lk/future-flow-insights",
-    "videoUrl": "https://www.youtube.com/watch?v=KkaECUZTqAc&feature=youtu.be",
+    "videoUrl": "https://www.youtube.com/watch?v=KkaECUZTqAc",
     "demoUrl": "https://preview--future-flow-insights.lovable.app"
   },
   {
@@ -245,7 +245,7 @@ export const projects: Project[] = [
     "difficulties": "We had no prior experience with Unity or AR, so ramping up quickly was a challenge. The hardest part was minimizing end-to-end latency between the headset, Python backend, and AI services, which required optimizing data flow and asynchronous communication.\n",
     "oneSentencePitch": "Solving the skilled labor gap with AI-powered AR instructions",
     "githubUrl": "https://github.com/MichaelBonacina/WorkAR-backend & https://github.com/andreemic/workar-unity",
-    "videoUrl": "https://www.youtube.com/watch?v=jQKgnva78Bg&feature=youtu.be"
+    "videoUrl": "https://www.youtube.com/watch?v=jQKgnva78Bg"
   },
   {
     "id": "project-3794",
@@ -291,7 +291,7 @@ export const projects: Project[] = [
     "difficulties": "We lost significant time on two fronts: aligning on a single use case (we pivoted multiple times) and encountering issues with the Beam platform, which lacked debugging options. Additionally, limited technical development skills and time constraints hindered the full development of agent capabilities. Understanding the actual maintenance process for CNC machines also proved more complex than expected, requiring deeper insight into industry-specific workflows.",
     "oneSentencePitch": "Maintaino - the data-driven maintenance administration platform to keep your machines moving so your business never experiences downtimes",
     "githubUrl": "",
-    "videoUrl": "https://www.youtube.com/watch?v=G_WgJGCT28s&ab_channel=Jo%C3%ABlHainzl",
+    "videoUrl": "https://www.youtube.com/watch?v=G_WgJGCT28s",
     "demoUrl": "https://mindful-machine-mend.lovable.app"
   },
   {
@@ -315,7 +315,7 @@ export const projects: Project[] = [
     "difficulties": "We faced challenges in ensuring GPT-generated chart specs were valid, JSON-parseable, and aligned with user intent. Managing two data domains (banking vs. trading) required accurate prompt classification. We also had to solve data serialization issues and work around limitations in natural language understanding for ambiguous queries.",
     "oneSentencePitch": "A natural language-driven finance dashboard that turns user prompts into custom interactive data visualizations for both banking and trading activity.",
     "githubUrl": "https://github.com/juliusbrehme/CDTM",
-    "videoUrl": "https://www.youtube.com/watch?v=HjkRbxvxlBQ&feature=youtu.be",
+    "videoUrl": "https://www.youtube.com/watch?v=HjkRbxvxlBQ",
     "demoUrl": "https://juliusbrehme.github.io/app/"
   },
   {
@@ -350,7 +350,7 @@ export const projects: Project[] = [
     "difficulties": "Initially we found it challenging to integrate the AI APIs into our project. We were really enthusiastic about the AI coding Tools provided but sooner than later realized that relying too much on them can cause greater difficulties and time waste in the future to connect the front- and backend. At certain times we also had issues with our internal communication and faced redundant work but we fixed it by using the Jira system and creating tickets to improve our work process. ",
     "oneSentencePitch": "SwipeRepublic, just a swipe away from investing in you.",
     "githubUrl": "https://github.com/CDTMFloMooJaKa/SwipeRepublic",
-    "videoUrl": "https://www.youtube.com/watch?v=QG_v-Zfu9i4&ab_channel=JosephGawlik",
+    "videoUrl": "https://www.youtube.com/watch?v=QG_v-Zfu9i4",
     "demoUrl": "https://trade-republic-replica-ui.vercel.app"
   },
   {
@@ -362,7 +362,7 @@ export const projects: Project[] = [
     "difficulties": "First of all, the understanding of portfolios in a scientific way is challenging. However, a scientific risk analysis of a portfolio is strongly preferred and necessary to comply with our legacy banking approach.\nMoreover, the use and integration of the python library for this scientific risk analysis that calculate risk scores for a given set of data points was complicated to fit with our data format.",
     "oneSentencePitch": "We extend the TradeRepublic app with a community feature, which enables users to track portfolio updates of selected friends in order to facilitate the entry into the trading and investment world.",
     "githubUrl": "https://github.com/kevinfischer4/cdtmTR",
-    "videoUrl": "https://www.youtube.com/watch?v=btB1ypOGnqA&feature=youtu.be",
+    "videoUrl": "https://www.youtube.com/watch?v=btB1ypOGnqA",
     "demoUrl": "https://kevinfischer4.github.io/cdtmTR/"
   }
 ];

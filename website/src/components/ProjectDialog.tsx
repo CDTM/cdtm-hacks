@@ -30,11 +30,12 @@ export function ProjectDialog({ project, open, onOpenChange }: ProjectDialogProp
                 allowFullScreen
               />
             ) : (
-              <video
-                src={project.videoUrl}
-                controls
-                className="w-full h-full rounded-lg"
-              />
+              <a href={project.videoUrl} target="_blank" rel="noopener noreferrer" className="w-full h-full rounded-lg flex items-center justify-center bg-gray-100 hover:bg-gray-200">
+                <div className="flex flex-col items-center gap-2">
+                  <ExternalLink className="w-8 h-8 text-gray-500" />
+                  <span className="text-sm text-gray-600">Click to open video</span>
+                </div>
+              </a>
             )}
           </div>
 
