@@ -71,7 +71,7 @@ const Index = () => {
     };
   }, []);
   const now = new Date();
-  const isAfterSunday4PM = now > new Date("2025-05-11T16:00:00+02:00"); // Sunday, May 11th, 4PM German time
+  const isAfterSunday4PM = true; // Sunday, May 11th, 4PM German time
   return (
     <div className="min-h-[80vh] overflow-x-hidden bg-springPaleBlue">
       <Navbar
@@ -238,19 +238,21 @@ const Index = () => {
           )}
 
           {/* Mobile buttons - only show on small screens */}
-          <div
-            className="flex flex-col gap-4 animate-fade-in md:hidden"
-            style={{
-              animationDelay: "0.3s",
-            }}
-          >
-            <button
-              onClick={() => setIsDialogOpen(true)}
-              className="btn-hover-effect bg-springBlue text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all"
+          {!isAfterSunday4PM && (
+            <div
+              className="flex flex-col gap-4 animate-fade-in md:hidden"
+              style={{
+                animationDelay: "0.3s",
+              }}
             >
-              Apply
-            </button>
-          </div>
+              <button
+                onClick={() => setIsDialogOpen(true)}
+                className="btn-hover-effect bg-springBlue text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all"
+              >
+                Apply
+              </button>
+            </div>
+          )}
         </div>
         {/* Curved transition and wooden sign - hide on mobile */}
         <div className="absolute bottom-0 left-0 w-full z-20 hidden md:block">
@@ -271,56 +273,60 @@ const Index = () => {
           </svg>
 
           {/* Wooden Sign with flowers */}
-          <svg
-            width="200"
-            height="200"
-            viewBox="0 0 100 100"
-            className="absolute left-[25%] bottom-[40px] transform -translate-x-1/2 cursor-pointer"
-            style={{
-              transformOrigin: "50% 95%",
-              transition: "transform 0.1s ease-out",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translate(-50%) rotateZ(2deg)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "translate(-50%) rotateZ(0deg)";
-            }}
-            onClick={() => setIsDialogOpen(true)}
-          >
-            {/* Shadow */}
-            <ellipse cx="50" cy="95" rx="10" ry="2" fill="rgba(0,0,0,0.05)" />
+          {!isAfterSunday4PM && (
+            <svg
+              width="200"
+              height="200"
+              viewBox="0 0 100 100"
+              className="absolute left-[25%] bottom-[40px] transform -translate-x-1/2 cursor-pointer"
+              style={{
+                transformOrigin: "50% 95%",
+                transition: "transform 0.1s ease-out",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform =
+                  "translate(-50%) rotateZ(2deg)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform =
+                  "translate(-50%) rotateZ(0deg)";
+              }}
+              onClick={() => setIsDialogOpen(true)}
+            >
+              {/* Shadow */}
+              <ellipse cx="50" cy="95" rx="10" ry="2" fill="rgba(0,0,0,0.05)" />
 
-            {/* Pole with rounded bottom */}
-            <rect x="47" y="65" width="6" height="30" fill="#8B4513" rx="1" />
+              {/* Pole with rounded bottom */}
+              <rect x="47" y="65" width="6" height="30" fill="#8B4513" rx="1" />
 
-            {/* Sign board */}
-            <g transform="translate(20,15)">
-              {/* Main board with shadow */}
-              <rect
-                x="0"
-                y="20"
-                width="60"
-                height="30"
-                rx="4"
-                fill="#A0522D"
-                filter="drop-shadow(1px 2px 1px rgba(0,0,0,0.15))"
-              />
+              {/* Sign board */}
+              <g transform="translate(20,15)">
+                {/* Main board with shadow */}
+                <rect
+                  x="0"
+                  y="20"
+                  width="60"
+                  height="30"
+                  rx="4"
+                  fill="#A0522D"
+                  filter="drop-shadow(1px 2px 1px rgba(0,0,0,0.15))"
+                />
 
-              {/* Text */}
-              <text
-                x="30"
-                y="39"
-                textAnchor="middle"
-                fill="white"
-                fontFamily="Arial"
-                fontSize="12"
-                fontWeight="bold"
-              >
-                Apply
-              </text>
-            </g>
-          </svg>
+                {/* Text */}
+                <text
+                  x="30"
+                  y="39"
+                  textAnchor="middle"
+                  fill="white"
+                  fontFamily="Arial"
+                  fontSize="12"
+                  fontWeight="bold"
+                >
+                  Apply
+                </text>
+              </g>
+            </svg>
+          )}
         </div>
       </div>
 
