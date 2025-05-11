@@ -70,29 +70,53 @@ const Index = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const now = new Date();
+  const isAfterSunday4PM = now > new Date("2025-05-11T16:00:00+02:00"); // Sunday, May 11th, 4PM German time
   return (
     <div className="min-h-[80vh] overflow-x-hidden bg-springPaleBlue">
-      <Navbar backgroundColor="bg-springPaleBlue/30" />
+      <Navbar
+        backgroundColor={isAfterSunday4PM ? "bg-white" : "bg-springPaleBlue/30"}
+      />
       {/* Hero section with parallax effect */}
       <div
         ref={parallaxRef}
         className="parallax-container flex flex-col items-center relative min-h-screen"
       >
         {/* Green gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-green-50/30 to-white/10 z-0"></div>
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            background: isAfterSunday4PM
+              ? "linear-gradient(to bottom, rgba(13, 25, 45, 0.7), rgba(13, 25, 45, 1))"
+              : "linear-gradient(to bottom, rgba(240, 255, 240, 0.3), rgba(255, 255, 255, 0.1))",
+          }}
+        ></div>
 
-        {/* Sun layer - rising sun effect */}
+        {/* Sun/Moon layer - rising sun/moon effect */}
         <div
           ref={sunLayerRef}
           className="parallax-layer z-1 top-[35%] md:top-[25%]"
           style={{
-            background: `radial-gradient(circle at center 120%, #FFE17D 0%, #FFA41B 20%, #F7F2E380 70%, transparent 75%)`,
-            height: "30vh",
-            width: "30vh",
-            borderRadius: "50%",
-            left: "5%",
-            opacity: 0.85,
-            boxShadow: "0 0 50px 5px rgba(255, 209, 82, 0.6)",
+            ...(isAfterSunday4PM
+              ? {
+                  backgroundImage: "url('/images/parallax/moon.svg')",
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                  height: "30vh",
+                  width: "30vh",
+                  left: "75%",
+                  opacity: 0.85,
+                }
+              : {
+                  background: `radial-gradient(circle at center 120%, #FFE17D 0%, #FFA41B 20%, #F7F2E380 70%, transparent 75%)`,
+                  height: "30vh",
+                  width: "30vh",
+                  borderRadius: "50%",
+                  left: "5%",
+                  opacity: 0.85,
+                  boxShadow: "0 0 50px 5px rgba(255, 209, 82, 0.6)",
+                }),
           }}
         />
 
@@ -129,7 +153,7 @@ const Index = () => {
           ref={fgLayerRef}
           className="parallax-layer z-4"
           style={{
-            backgroundImage: `url("/images/parallax/spring-elements.svg")`,
+            backgroundImage: `url("/images/parallax/spring-elements-without-hiker.svg")`,
             backgroundPosition: "bottom center",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
@@ -153,51 +177,65 @@ const Index = () => {
 
         {/* Hero content */}
         <div className="container mx-auto px-4 pt-[12vh] relative z-10 text-center flex flex-col items-center justify-center h-full">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-springBlue mb-4 animate-fade-in">
+          <h1
+            className={`text-4xl md:text-5xl lg:text-6xl font-bold ${
+              isAfterSunday4PM ? "text-white" : "text-springBlue"
+            } mb-4 animate-fade-in`}
+          >
             CDTM HACKS 2025
           </h1>
           <p
             className={`text-xl md:text-2xl mb-2 max-w-2xl animate-fade-in ${
-              isWideAspectRatio ? "text-white font-bold" : "text-springText"
+              isWideAspectRatio || isAfterSunday4PM
+                ? "text-white font-bold"
+                : "text-springText"
             }`}
             style={{
               animationDelay: "0.1s",
-              ...(isWideAspectRatio && {
+              ...((isWideAspectRatio || isAfterSunday4PM) && {
                 textShadow: "0px 0px 3px rgb(0 0 0.5)",
               }),
             }}
           >
-            Spring is here - plant your ideas.
-            <br />
-            Join us for 36 hours of building in the heart of Europe.
+            {isAfterSunday4PM ? (
+              "Thank you for an amazing weekend in the heart of Europe."
+            ) : (
+              <>
+                Spring is here - plant your ideas.
+                <br />
+                Join us for 36 hours of building in the heart of Europe.
+              </>
+            )}
           </p>
-          <span
-            className="text-lg md:text-xl mb-8 font-bold animate-fade-in text-springText flex items-center justify-center gap-1"
-            style={{
-              animationDelay: "0.2s",
-            }}
-          >
-            09. - 11. May 2025 at
-            <a
-              href="https://maps.app.goo.gl/db8BYVF8pj7DVLcCA"
-              target="_blank"
-              className="underline flex items-center justify-center gap-1"
+          {!isAfterSunday4PM && (
+            <span
+              className="text-lg md:text-xl mb-8 font-bold animate-fade-in text-springText flex items-center justify-center gap-1"
+              style={{
+                animationDelay: "0.2s",
+              }}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 mb-1 hidden md:block"
-                viewBox="0 0 20 20"
-                fill="currentColor"
+              09. - 11. May 2025 at
+              <a
+                href="https://maps.app.goo.gl/db8BYVF8pj7DVLcCA"
+                target="_blank"
+                className="underline flex items-center justify-center gap-1"
               >
-                <path
-                  fillRule="evenodd"
-                  d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              Celonis, Munich
-            </a>
-          </span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 mb-1 hidden md:block"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Celonis, Munich
+              </a>
+            </span>
+          )}
 
           {/* Mobile buttons - only show on small screens */}
           <div
