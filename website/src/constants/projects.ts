@@ -9,7 +9,7 @@ export const projects: Project[] = [
     "whatIsProject": "Placeholder",
     "howBuilt": "Placeholder",
     "difficulties": "Placeholder",
-    "oneSentencePitch": "Placeholder",
+    "oneSentencePitch": "Reinvent the First Touchpoint in Healthcare: Build a Seamless, Intelligent Patient Intake Experience for Clinics and Care Teams",
     "githubUrl": "https://github.com/alphabits/placeholder",
     "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=1"
   },
@@ -20,7 +20,7 @@ export const projects: Project[] = [
     "whatIsProject": "Placeholder",
     "howBuilt": "Placeholder",
     "difficulties": "Placeholder",
-    "oneSentencePitch": "Placeholder",
+    "oneSentencePitch": "Reimagine the Future of Personal Finance: Design the Next-Gen Interface to Make Wealth Truly Accessible",
     "githubUrl": "https://github.com/alphabits/placeholder",
     "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=2"
   },
@@ -31,7 +31,7 @@ export const projects: Project[] = [
     "whatIsProject": "Placeholder",
     "howBuilt": "Placeholder",
     "difficulties": "Placeholder",
-    "oneSentencePitch": "Placeholder",
+    "oneSentencePitch": "Invent the Future of Work with Intelligent Agents",
     "githubUrl": "https://github.com/alphabits/placeholder",
     "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=3"
   }
