@@ -114,7 +114,7 @@ export const projects: Project[] = [
     "difficulties": "A significant challenge was designing an intuitive user experience that would make complex financial concepts accessible to users while maintaining flexibility and professionalism, integrating diverse modules (voice, GPT, animation) into a seamless UX involved debugging cross-module compatibility issues.\nWe overcame these challenges through iterative design, performance profiling, and careful consideration of user feedback. ",
     "oneSentencePitch": "Interstellar Exchange is an innovative financial visualization platform that transforms traditional banking interfaces into an intuitive experience where users can organize, visualize, and interact with their financial data in a more natural and engaging way.",
     "githubUrl": "https://github.com/CDTMHackathon2025/fresh-canvas-unfold",
-    "videoUrl": "https://www.youtube.com/watch?v=PeW8F32_YEc",
+    "videoUrl": "https://www.youtube.com/watch?v=sWt-ulNrH4M",
     "demoUrl": "https://lovable.dev/projects/f1df7593-51dd-461b-b243-dd589756bf33"
   },
   {
