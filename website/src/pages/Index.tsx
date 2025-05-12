@@ -105,7 +105,7 @@ const Index = () => {
                   backgroundPosition: "center",
                   height: "30vh",
                   width: "30vh",
-                  left: "75%",
+                  left: "25%",
                   opacity: 0.85,
                 }
               : {
