@@ -34,7 +34,7 @@ export const projects: Project[] = [
     "difficulties": "Early on, we spent too much time planning in detail instead of iterating. Our ambitious vision led to overly siloed development, each team member built isolated features that didn’t integrate well. We learned that fast, cross-functional prototyping and small PoCs would have helped us move faster and align more effectively. Connecting frontend, backend, and AI components also posed technical challenges, especially around data formats and the complexity of medical language.",
     "oneSentencePitch": "Ava is an AI-powered avatar that transforms patient check-in into a natural, conversational experience, saving time for medical staff and creating a smoother, more personal first impression for patients.",
     "githubUrl": "https://github.com/freshetomate17/avi-intake-wizard",
-    "videoUrl": "https://www.youtube.com/watch?v=EMqP1742KS0"
+    "videoUrl": "https://www.youtube.com/watch?v=Od6d5cPlIUM"
   },
   {
     "id": "project-1374",
@@ -314,7 +314,7 @@ export const projects: Project[] = [
     "difficulties": "We lost significant time on two fronts: aligning on a single use case (we pivoted multiple times) and encountering issues with the Beam platform, which lacked debugging options. Additionally, limited technical development skills and time constraints hindered the full development of agent capabilities. Understanding the actual maintenance process for CNC machines also proved more complex than expected, requiring deeper insight into industry-specific workflows.",
     "oneSentencePitch": "Maintaino - the data-driven maintenance administration platform to keep your machines moving so your business never experiences downtimes",
     "githubUrl": "",
-    "videoUrl": "https://www.youtube.com/watch?v=G_WgJGCT28s&ab_channel=Jo%C3%ABlHainzl",
+    "videoUrl": "https://www.youtube.com/watch?v=G_WgJGCT28s",
     "demoUrl": "https://mindful-machine-mend.lovable.app"
   },
   {
