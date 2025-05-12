@@ -1,5 +1,5 @@
 // This file is auto-generated. Do not edit manually.
-import { Project } from "./projects-page-config";
+import { challenges, Project } from "./projects-page-config";
 
 export const projects: Project[] = [
   {
@@ -126,7 +126,9 @@ export const projects: Project[] = [
     "difficulties": "From a technical viewpoint implementing reliable OCR on heterogeneous, low-quality medical forms was challenging; we had to fine-tune preprocessing and error-correction steps to reduce inaccuracies. On a more personal note, even though the challenge was for a health care provider the we didn’t care for our health during the hackathon, so keeping your eyes open and staying motivated was definitely a challenge we faced and conquered as a team.\n",
     "oneSentencePitch": "N/avi: A smarter way to manage your medical records and navigate the healthcare system - streamlined, secure, and built with patients in mind.",
     "githubUrl": "https://github.com/Max-vS/avi-case",
-    "videoUrl": "https://www.youtube.com/watch?v=2DGlx0Mp2yE"
+    "videoUrl": "https://www.youtube.com/watch?v=2DGlx0Mp2yE",
+    "placement": 2,
+    "overallPlacement": 1
   },
   {
     "id": "project-3944",
@@ -149,7 +151,8 @@ export const projects: Project[] = [
     "oneSentencePitch": "PeopleWorks enables continuous, personalized and fully automated peer-to-peer feedback across organisations.",
     "githubUrl": "https://github.com/kraftfrosch/hackfleisch",
     "videoUrl": "https://www.youtube.com/watch?v=Oyvrw4j8W24",
-    "demoUrl": "https://v0-employee-management-software-rho.vercel.app/"
+    "demoUrl": "https://v0-employee-management-software-rho.vercel.app/",
+    "challenges": [challenges.celonis]
   },
   {
     "id": "project-9874",
@@ -161,7 +164,8 @@ export const projects: Project[] = [
     "oneSentencePitch": "Opus is your scalable AI-powered workforce, automating HR, customer support, and analytics to supercharge organizational productivity across all departments.",
     "githubUrl": "https://github.com/Musti7even/workflow-orchestrator-insights.git",
     "videoUrl": "https://www.youtube.com/watch?v=3JpwL6lwU84",
-    "demoUrl": "https://wondrous-tetragon-150018.framer.app/"
+    "demoUrl": "https://wondrous-tetragon-150018.framer.app/",
+    "placement": 1
   },
   {
     "id": "project-5280",
@@ -197,7 +201,9 @@ export const projects: Project[] = [
     "oneSentencePitch": "Talk to an AI, not a clipboard — your doctor gets the full story.",
     "githubUrl": "https://github.com/bestler/CDTM-Hackathon",
     "videoUrl": "https://www.youtube.com/watch?v=zucgH1dtHeU",
-    "demoUrl": "https://dashboard-1056955526781.europe-west3.run.app"
+    "demoUrl": "https://dashboard-1056955526781.europe-west3.run.app",
+    "placement": 1,
+    "challenges": [challenges.mistral, challenges['beyond-presence']]
   },
   {
     "id": "project-7269",
@@ -221,7 +227,8 @@ export const projects: Project[] = [
     "oneSentencePitch": "The only app you need to manage every part of your financial life, to democratize wealth.",
     "githubUrl": "https://github.com/CDTM-Hackathon-2025/cosmic-cool-things",
     "videoUrl": "https://linktr.ee/ByteForce_CDTM",
-    "demoUrl": "https://www.youtube.com/watch?v=wu5BNnAtn1A"
+    "demoUrl": "https://www.youtube.com/watch?v=wu5BNnAtn1A",
+    "placement": 1
   },
   {
     "id": "project-5730",
@@ -257,7 +264,9 @@ export const projects: Project[] = [
     "oneSentencePitch": "Closing tomorrow’s pension gap by optimizing today’s personal finances - making compounding assets tangible and turning them into real growth",
     "githubUrl": "https://github.com/Lovisk8lk/future-flow-insights",
     "videoUrl": "https://www.youtube.com/watch?v=KkaECUZTqAc",
-    "demoUrl": "https://preview--future-flow-insights.lovable.app"
+    "demoUrl": "https://preview--future-flow-insights.lovable.app",
+    "placement": 2,
+    "overallPlacement": 3
   },
   {
     "id": "project-2576",
@@ -268,7 +277,8 @@ export const projects: Project[] = [
     "difficulties": "We had no prior experience with Unity or AR, so ramping up quickly was a challenge. The hardest part was minimizing end-to-end latency between the headset, Python backend, and AI services, which required optimizing data flow and asynchronous communication.\n",
     "oneSentencePitch": "Solving the skilled labor gap with AI-powered AR instructions",
     "githubUrl": "https://github.com/MichaelBonacina/WorkAR-backend & https://github.com/andreemic/workar-unity",
-    "videoUrl": "https://www.youtube.com/watch?v=jQKgnva78Bg"
+    "videoUrl": "https://www.youtube.com/watch?v=jQKgnva78Bg",
+    "challenges": [challenges.tanso]
   },
   {
     "id": "project-3794",
@@ -280,7 +290,8 @@ export const projects: Project[] = [
     "oneSentencePitch": "Streamline hiring by sourcing and screening candidates through human-centered agents.",
     "githubUrl": "",
     "videoUrl": "https://www.youtube.com/watch?v=cYkDRgcaKMQ",
-    "demoUrl": "https://pedalworks-interviewee.lovable.app/"
+    "demoUrl": "https://pedalworks-interviewee.lovable.app/",
+    "challenges": [challenges.visionaries]
   },
   {
     "id": "project-7535",
@@ -315,7 +326,10 @@ export const projects: Project[] = [
     "oneSentencePitch": "Maintaino - the data-driven maintenance administration platform to keep your machines moving so your business never experiences downtimes",
     "githubUrl": "",
     "videoUrl": "https://www.youtube.com/watch?v=G_WgJGCT28s",
-    "demoUrl": "https://mindful-machine-mend.lovable.app"
+    "demoUrl": "https://mindful-machine-mend.lovable.app",
+    "placement": 2,
+    "challenges": [challenges.visionaries],
+    "overallPlacement": 2
   },
   {
     "id": "project-2827",

@@ -10,6 +10,7 @@ export interface Project {
   videoUrl: string;
   demoUrl?: string;
   placement?: 1 | 2;
+  overallPlacement?: 1 | 2 | 3;
   challenges?: Array<Challenge>;
 }
 
@@ -38,7 +39,7 @@ export const cases: Record<"Trade Republic" | "avi" | "beam", Case> = {
   "Trade Republic": {
     name: "Trade Republic",
     // TODO: Use real case description
-    description: ".",
+    description: "Build the future of finance by reimagining how people interact with their money—beyond balances and transactions—using any technology to create radically new, intuitive financial experiences for everyone.",
     sponsorUrl: "https://traderepublic.com",
     logo: "/images/partners/trade_republic.png",
     logoClass: "max-h-[20px] max-w-[200px]",
@@ -46,7 +47,7 @@ export const cases: Record<"Trade Republic" | "avi" | "beam", Case> = {
   avi: {
     name: "avi",
     // TODO: Use real case description
-    description: ".",
+    description: "Build a seamless patient intake experience that captures the full medical picture—fast for patients, powerful for clinicians.",
     sponsorUrl: "https://www.avimedical.com/",
     logo: "/images/partners/avi_logo.png",
     logoClass: "max-h-[20px] max-w-[200px]",
@@ -54,7 +55,7 @@ export const cases: Record<"Trade Republic" | "avi" | "beam", Case> = {
   beam: {
     name: "Beam",
     // TODO: Use real case description
-    description: ".",
+    description: "Build an AI-powered solution that transforms how PedalWorks (a fictional bicycle manufacturing company) operates—automating real workflows, rethinking processes, and pushing the limits of no-code innovation with Beam.",
     sponsorUrl: "https://beam.ai/",
     logo: "/images/partners/beam.png",
     logoClass: "max-h-[20px] max-w-[200px]",

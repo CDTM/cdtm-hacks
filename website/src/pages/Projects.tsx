@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { MAIN_SPONSOR, CASE_SPONSORS, CHALLENGE_SPONSORS, TECH_SPONSORS, FOOD_SPONSORS, VENUE_SPONSORS } from "@/constants/partners";
 import { projects } from "@/constants/projects";
+import { WinnerPodium } from "@/components/WinnerPodium";
 
 // Define the order of cases
 const caseOrder = ['Trade Republic', 'avi', 'beam'] as const;
@@ -34,6 +35,12 @@ export default function Projects() {
     const { projectId } = useParams();
     const navigate = useNavigate();
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+    // Get overall winners based on overallPlacement
+    const overallWinners = projects
+        .filter(project => project.overallPlacement !== undefined)
+        .sort((a, b) => (a.overallPlacement || 0) - (b.overallPlacement || 0))
+        .slice(0, 3);
 
     // Group and sort projects by case
     const projectsByCase = projects.reduce((acc, project) => {
@@ -169,6 +176,9 @@ export default function Projects() {
                         </p>
                     </header>
 
+                    {/* Add WinnerPodium component */}
+                    <WinnerPodium winners={overallWinners} />
+
                     <h2 className="text-2xl font-semibold mb-2">Cases</h2>
                     <p className="text-gray-600 mb-8">
                         Each case is sponsored by a company and focuses on a particular domain or technology area.
@@ -293,7 +303,7 @@ export default function Projects() {
                                                         onClick={() => handleProjectSelect(project)}
                                                     >
                                                         <div className="font-medium">{project.name}</div>
-                                                        <div className="text-sm text-gray-500">{project.whatIsProject}</div>
+                                                        <div className="text-sm text-gray-500">{project.oneSentencePitch}</div>
                                                     </div>
                                                 ))}
                                             </div>
