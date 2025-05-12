@@ -13,12 +13,7 @@ const SpeakerPlaceholder = () => (
         background: `linear-gradient(45deg, #eaf3fd, #a8d0ff)`,
       }}
     />
-    <div className="absolute inset-0 flex items-center justify-center">
-      <div className="flex flex-col items-center gap-2">
-        <Lock className="w-6 h-6 text-gray-400" />
-        <span className="text-sm text-gray-400">To be announced</span>
-      </div>
-    </div>
+
   </div>
 );
 

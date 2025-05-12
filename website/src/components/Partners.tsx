@@ -216,12 +216,6 @@ const Partners = () => {
             </div>
           </div>
         </div>
-
-        <div className="mt-8 text-center">
-          <p className="text-lg font-medium text-springBlue/70 italic">
-            More partners to be announced soon
-          </p>
-        </div>
       </div>
     </section>
   );
