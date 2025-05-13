@@ -227,7 +227,8 @@ export const projects: Project[] = [
     "githubUrl": "https://github.com/CDTM-Hackathon-2025/cosmic-cool-things",
     "demoUrl": "https://linktr.ee/ByteForce_CDTM",
     "videoUrl": "https://www.youtube.com/watch?v=wu5BNnAtn1A",
-    "placement": 1
+    "placement": 1,
+    "overallPlacement": 3
   },
   {
     "id": "project-5730",
@@ -265,7 +266,6 @@ export const projects: Project[] = [
     "videoUrl": "https://www.youtube.com/watch?v=KkaECUZTqAc",
     "demoUrl": "https://preview--future-flow-insights.lovable.app",
     "placement": 2,
-    "overallPlacement": 3
   },
   {
     "id": "project-2576",
