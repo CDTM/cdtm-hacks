@@ -3,3 +3,16 @@ confirmed_participants.csv
 applications.csv
 tshirt_sizes.csv
 study_programs.csv
+opt_in_for_talent_pool_applications.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables
+.env
+
+# Downloaded files
+downloaded_cvs/
+cvs/
