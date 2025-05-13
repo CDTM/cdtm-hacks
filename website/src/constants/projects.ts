@@ -138,7 +138,6 @@ export const projects: Project[] = [
     "howBuilt": "We built the project using React and TypeScript, with Tailwind CSS for styling. Supabase handles backend, authentication, and database. Voice input is managed via the Web Audio API, and context-aware responses are generated using the OpenAI API. Framer Motion provides animations, Lucide React supplies icons, and React Context manages global state.",
     "difficulties": "Our biggest challenge was integrating the various technical components, such as the LLM and the conversational agent, while ensuring secure and smooth data exchange. Additionally, managing the interaction between different programming languages added complexity to the development process. Furthermore, it was a challenge to ensure that the AI understands the knowledge level of the person and adopts correspondingly. ",
     "oneSentencePitch": "FinEdu AI is an intelligent voice assistant that replaces complex app navigation with a simple and hyper-personalized, conversational way to manage your finances - no more complex UI and tapping in the app needed.",
-    "githubUrl": "https://github.com/azzabaatout/cdtm-hacks",
     "videoUrl": "https://www.youtube.com/watch?v=8MqSNhjHQOU",
   },
   {
