@@ -6,7 +6,7 @@ export interface Project {
   howBuilt: string;
   difficulties: string;
   oneSentencePitch: string;
-  githubUrl: string;
+  githubUrl?: string;
   videoUrl: string;
   demoUrl?: string;
   placement?: 1 | 2;
