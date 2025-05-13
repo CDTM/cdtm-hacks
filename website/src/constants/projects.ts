@@ -113,9 +113,9 @@ export const projects: Project[] = [
     "howBuilt": "The project is built using a modern tech stack centered around React and TypeScript, providing a robust foundation for building complex user interfaces. We utilized Vite for fast development and optimized builds, while shadcn-ui and Tailwind CSS enabled us to create a polished, responsive design system. The application features a custom canvas implementation for financial data visualization, and interactive components. We implemented a modular architecture with separate services for data management, custom hooks for state management, and reusable components for consistent user experience. ",
     "difficulties": "A significant challenge was designing an intuitive user experience that would make complex financial concepts accessible to users while maintaining flexibility and professionalism, integrating diverse modules (voice, GPT, animation) into a seamless UX involved debugging cross-module compatibility issues.\nWe overcame these challenges through iterative design, performance profiling, and careful consideration of user feedback. ",
     "oneSentencePitch": "Interstellar Exchange is an innovative financial visualization platform that transforms traditional banking interfaces into an intuitive experience where users can organize, visualize, and interact with their financial data in a more natural and engaging way.",
-    "githubUrl": "https://github.com/CDTMHackathon2025/fresh-canvas-unfold",
+    "githubUrl": "https://github.com/CDTMHackathon2025/InterstellarExchange",
     "videoUrl": "https://www.youtube.com/watch?v=sWt-ulNrH4M",
-    "demoUrl": "https://lovable.dev/projects/f1df7593-51dd-461b-b243-dd589756bf33"
+    "demoUrl": "https://fresh-canvas-unfold.lovable.app/space"
   },
   {
     "id": "project-4775",
@@ -226,8 +226,8 @@ export const projects: Project[] = [
     "difficulties": "- Building a front end as developers with no front-end dev experience might result in a wild ride -> luckily, tools like Lovable can be impressively useful! most important thing is to focus on fast iteration instead of lengthy prompts\n- Making sure the other person really understands what you envision for how a feature should look like and be used when implemented -> use tools like Figma to quickly visualize your idea so other people see what you are thinking about",
     "oneSentencePitch": "The only app you need to manage every part of your financial life, to democratize wealth.",
     "githubUrl": "https://github.com/CDTM-Hackathon-2025/cosmic-cool-things",
-    "videoUrl": "https://linktr.ee/ByteForce_CDTM",
-    "demoUrl": "https://www.youtube.com/watch?v=wu5BNnAtn1A",
+    "demoUrl": "https://linktr.ee/ByteForce_CDTM",
+    "videoUrl": "https://www.youtube.com/watch?v=wu5BNnAtn1A",
     "placement": 1
   },
   {
