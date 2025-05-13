@@ -41,7 +41,7 @@ export function WinnerPodium({ winners }: WinnerPodiumProps) {
             <div className="flex flex-col items-center mb-8">
                 <h2 className="text-2xl font-semibold mb-4 text-center">Overall Winners</h2>
                 <div className="flex items-center gap-2 text-gray-600">
-                    <span>Sponsored by</span>
+                    <span>Main prize sponsored by</span>
                     <img 
                         src="/images/partners/speedinvest.png" 
                         alt="Speedinvest Logo" 
@@ -49,10 +49,10 @@ export function WinnerPodium({ winners }: WinnerPodiumProps) {
                     />
                 </div>
             </div>
-            <div className="flex items-end justify-center gap-4 h-64">
+            <div className="flex items-end justify-center gap-4 h-6448">
                 {/* Second Place */}
                 {winners[1] && (
-                    <div className="w-1/3">
+                    <div className="w-1/3 text-center">
                         <div 
                             className={getPodiumStyle(2)}
                             onClick={() => handlePodiumClick(winners[1])}
@@ -67,7 +67,7 @@ export function WinnerPodium({ winners }: WinnerPodiumProps) {
                 
                 {/* First Place */}
                 {winners[0] && (
-                    <div className="w-1/3">
+                    <div className="w-1/3 text-center">
                         <div 
                             className={getPodiumStyle(1)}
                             onClick={() => handlePodiumClick(winners[0])}
@@ -82,7 +82,7 @@ export function WinnerPodium({ winners }: WinnerPodiumProps) {
                 
                 {/* Third Place */}
                 {winners[2] && (
-                    <div className="w-1/3">
+                    <div className="w-1/3 text-center">
                         <div 
                             className={getPodiumStyle(3)}
                             onClick={() => handlePodiumClick(winners[2])}
