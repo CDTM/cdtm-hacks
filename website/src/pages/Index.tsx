@@ -95,7 +95,7 @@ const Index = () => {
         {/* Sun/Moon layer - rising sun/moon effect */}
         <div
           ref={sunLayerRef}
-          className="parallax-layer z-1 top-[35%] md:top-[25%]"
+          className="parallax-layer z-1 top-[25%] md:top-[15%]"
           style={{
             ...(isAfterSunday4PM
               ? {
@@ -103,9 +103,9 @@ const Index = () => {
                   backgroundSize: "contain",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
-                  height: "30vh",
-                  width: "30vh",
-                  left: "25%",
+                  height: "15vh",
+                  width: "15vh",
+                  left: "2%",
                   opacity: 0.85,
                 }
               : {
